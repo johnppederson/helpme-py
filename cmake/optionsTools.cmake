@@ -1,7 +1,5 @@
 # This file was taken verbatim from Psi4's build system, written mostly by Lori A. Burns.
 
-
-
 ###This file contains functions used throughout the Psi4 build.  Like source
 ###code, the build system should be factored and common code extracted out into
 ###functions/macros.  If you find repetitive code throughout the build scripts

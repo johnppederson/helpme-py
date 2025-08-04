@@ -1,0 +1,25 @@
+[build-system]
+requires = ["scikit-build-core", "pybind11", "numpy", "setuptools-scm"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "helpme_py"
+dynamic = ["version"]
+license = {file = "LICENSE"}
+description = "helPME-py: A Python Utility for Particle Mesh Ewald based on helPME"
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.optional-dependencies]
+docs = ["sphinx", "breathe", "doxygen", "sphinx-book-theme"]
+docs-pdf = ["latex"]
+
+[tool.setuptools_scm]
+
+[tool.scikit-build.metadata.version]
+provider = "scikit_build_core.metadata.setuptools_scm"
+
+[tool.scikit-build.cmake.define]
+HELPME_INSTALL_CPP = false
+BUILD_TESTING = false
+BUILD_DOCS = false

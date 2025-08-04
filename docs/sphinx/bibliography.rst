@@ -32,7 +32,7 @@ Bibliography
     J. W. Perram , H. G. Petersen, and S. W. De Leeuw,
     *Mol. Phys.*, **65**, 875 (1988).
 
-.. [Sagui:2004:73]
+.. .. [Sagui:2004:73]
    `Towards an accurate representation of electrostatics in classical force fields: Efficient implementation of multipolar interactions in biomolecular simulations <http://dx.doi.org/10.1063/1.1630791>`_,
    C. Sagui, L. G. Pedersen, and T. A. Darden,
    *J. Chem. Phys.*, **120**, 73 (2004).

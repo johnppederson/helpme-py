@@ -1,3 +1,0 @@
-ignore:
-  - "external/.*"       # External components are not written by us; ignore
-  - "single_include/.*" # The individual headers are all tested in unit tests

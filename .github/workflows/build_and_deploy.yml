@@ -1,0 +1,77 @@
+name: PyPI Deployment
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build-wheels:
+    name: Build ${{matrix.os}} wheels
+    runs-on: ${{matrix.os}}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-13]
+        python-version: ["cp310", "cp311", "cp312", "cp313", "cp314"]
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Build wheels using cibuildwheel
+      uses: pypa/cibuildwheel@v3.0.0
+      env:
+        CIBW_ENABLE: cpython-prerelease
+        CIBW_BUILD: ${{matrix.python-version}}-*
+        CIBW_BEFORE_ALL_MACOS: |
+          git fetch --tags --force --unshallow
+          brew install fftw libomp
+        CIBW_ENVIRONMENT_MACOS: >
+          LDFLAGS="-L/usr/local/opt/libomp/lib"
+          CPPFLAGS="-I/usr/local/opt/libomp/include"
+          CMAKE_PREFIX_PATH="/usr/local/opt/libomp"
+        MACOSX_DEPLOYMENT_TARGET: "13.0"
+        CIBW_BEFORE_ALL_LINUX: |
+          git fetch --tags --force --unshallow
+          if [ -f /etc/redhat-release ]; then
+            yum install -y fftw-devel blas-devel libgomp
+          elif [ -f /etc/alpine-release ]; then
+            apk add --no-cache fftw-dev openblas-dev
+          elif [ -f /etc/debian_version ]; then
+            apt-get update
+            apt-get install -y libfftw3-dev libopenblas-dev libgomp1
+          else
+            echo "Unsupported Linux base image"
+            exit 1
+          fi
+        CIBW_BEFORE_BUILD: |
+          pip install scikit-build-core pybind11 numpy
+        CIBW_BUILD_VERBOSITY: 1
+        CIBW_TEST_REQUIRES: numpy
+        CIBW_TEST_COMMAND: python {package}/tests/fullexample.py
+
+    - name: Upload wheel artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: wheels-${{matrix.os}}-${{matrix.python-version}}
+        path: wheelhouse/*.whl
+
+  publish:
+    name: Upload to PyPI
+    needs: [build-wheels]
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/helpme-py
+    steps:
+    - name: Download all wheel artifacts
+      uses: actions/download-artifact@v4
+      with:
+        path: dist
+        merge-multiple: true
+
+    - name: Publish to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{secrets.PYPI_API_TOKEN}}
+        packages-dir: dist

@@ -1,0 +1,38 @@
+name: Docs
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libfftw3-dev libopenblas-dev libgomp1 doxygen
+
+      - name: Install Python Dependencies
+        run: |
+          pip install "pybind11[global]" numpy sphinx breathe exhale furo
+
+      - name: Build Documentation
+        run: |
+          mkdir build
+          cmake -H. -Bbuild -DCMAKE_INSTALL_PREFIX=./build -DBUILD_TESTING=OFF
+          cd build
+          make
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/sphinx/html

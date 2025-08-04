@@ -1,26 +1,31 @@
-set(sources_list
-        helpme.cc
-        )
+add_library(helpme STATIC helpme.cc)
+target_include_directories(helpme
+    PUBLIC
+        ${PROJECT_SOURCE_DIR}/include
+        ${EXTERNAL_INCLUDES}
+)
+target_link_libraries(helpme
+    PRIVATE
+        ${EXTERNAL_LIBRARIES}
+)
 
-include_directories(${FFTW_INCLUDES})
-include_directories(${MKL_INCLUDE_DIR})
-add_library(helpmestatic STATIC ${sources_list})
-target_link_libraries(helpmestatic ${FFTW_LIBRARIES})
-add_library(helpme SHARED ${sources_list})
-target_link_libraries(helpme ${FFTW_LIBRARIES})
-
-if(Fortran_ENABLED AND CMAKE_Fortran_COMPILER_ID MATCHES Intel)
-    #Enable call to for_rtl_init_() which is required if using the
-    #Intel fortran compiler
-    target_compile_definitions(helpmestatic PRIVATE -DINTEL_Fortran_ENABLED)
-endif()
-
-set_target_properties(helpmestatic PROPERTIES OUTPUT_NAME helpme EXPORT_NAME helpme)
-
-# Make sure headers are installed
-install(DIRECTORY . DESTINATION include FILES_MATCHING PATTERN "*.h")
-
-install(TARGETS helpmestatic helpme
+if(HELPME_INSTALL_CPP)
+    install(TARGETS helpme
         RUNTIME DESTINATION bin
         LIBRARY DESTINATION lib
-        ARCHIVE DESTINATION lib)
+        ARCHIVE DESTINATION lib
+    )
+endif()
+
+pybind11_add_module(helpme_py MODULE pywrappers.cc)
+target_link_libraries(helpme_py
+    PRIVATE
+        helpme
+        ${EXTERNAL_LIBRARIES}
+)
+target_include_directories(helpme_py
+    PRIVATE
+        ${PROJECT_SOURCE_DIR}/include
+        ${EXTERNAL_INCLUDES}
+)
+install(TARGETS helpme_py LIBRARY DESTINATION .)

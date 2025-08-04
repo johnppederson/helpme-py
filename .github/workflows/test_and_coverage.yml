@@ -1,0 +1,75 @@
+name: Build
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libfftw3-dev libopenblas-dev libgomp1 \
+                                  openmpi-bin libopenmpi-dev catch2 \
+                                  libxml2-utils
+
+      - name: Install Python dependencies
+        run: |
+          pip install "pybind11[global]" numpy gcovr
+
+      - name: Build 
+        run: |
+          mkdir build
+          cmake -H. -Bbuild -DCMAKE_INSTALL_PREFIX=./build \
+                    -DBUILD_DOCS=OFF -DBUILD_TESTING=ON \
+                    -DCMAKE_CXX_FLAGS="--coverage -O0 -g" \
+                    -DCMAKE_C_FLAGS="--coverage -O0 -g"
+          cd build
+          make
+
+      - name: Run tests
+        working-directory: build
+        env:
+          OMPI_MCA_rmaps_base_oversubscribe: "1"
+        run: |
+          ctest --output-on-failure -j2
+          cp ../tests/fullexample.py src/
+          cd src
+          python -m unittest fullexample.py
+
+      - name: Generate coverage XML
+        working-directory: build
+        run: |
+          gcovr -r ../include --merge-mode-functions=separate \
+                --gcov-ignore-parse-errors=suspicious_hits.warn \
+                --xml -o coverage.xml .
+
+      - name: Extract line‐coverage %
+        working-directory: build
+        id: extract
+        run: |
+          LINE_RATE=$(xmllint --xpath 'string(//coverage/@line-rate)' coverage.xml)
+          PCT=$(awk "BEGIN {printf \"%d\", ${LINE_RATE} * 100}")
+          echo "COVERAGE=${PCT}" >> $GITHUB_ENV
+
+      - name: Create coverage badge
+        uses: schneegans/dynamic-badges-action@v1.7.0
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: ${{ secrets.GIST_ID }}
+          filename: coverage.json
+          label: coverage
+          message: ${{ env.COVERAGE }}%
+          valColorRange: ${{ env.COVERAGE }}
+          minColorRange: 0
+          maxColorRange: 100

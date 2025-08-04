@@ -14,8 +14,8 @@
 
 extern "C" {
 
-typedef enum { XAligned = 0, ShapeMatrix = 1 } LatticeType;
-typedef enum { ZYX = 0 } NodeOrder;
+// typedef enum { XAligned = 0, ShapeMatrix = 1 } LatticeType;
+// typedef enum { ZYX = 0 } NodeOrder;
 
 PMEInstanceD* helpme_createD() {
     try {
@@ -119,11 +119,11 @@ void helpme_setup_compressedF(PMEInstanceF* pme, short rPower, float kappa, int 
 
 #if HAVE_MPI == 1
 void helpme_setup_parallelD(PMEInstanceD* pme, int rPower, double kappa, int splineOrder, int dimA, int dimB, int dimC,
-                            double scaleFactor, int nThreads, MPI_Comm communicator, NodeOrder nodeOrder, int numNodesA,
-                            int numNodesB, int numNodesC) {
+                            double scaleFactor, int nThreads, MPI_Comm communicator, helpme::NodeOrder nodeOrder,
+                            int numNodesA, int numNodesB, int numNodesC) {
     try {
-        pme->setupParallel(rPower, kappa, splineOrder, dimA, dimB, dimC, scaleFactor, nThreads, communicator,
-                           PMEInstanceD::NodeOrder(nodeOrder), numNodesA, numNodesB, numNodesC);
+        pme->setupParallel(rPower, kappa, splineOrder, dimA, dimB, dimC, scaleFactor, nThreads, communicator, nodeOrder,
+                           numNodesA, numNodesB, numNodesC);
     } catch (std::runtime_error& e) {
         std::cerr << e.what() << std::endl;
         exit(1);
@@ -134,11 +134,11 @@ void helpme_setup_parallelD(PMEInstanceD* pme, int rPower, double kappa, int spl
 }
 
 void helpme_setup_parallelF(PMEInstanceF* pme, int rPower, float kappa, int splineOrder, int dimA, int dimB, int dimC,
-                            float scaleFactor, int nThreads, MPI_Comm communicator, NodeOrder nodeOrder, int numNodesA,
-                            int numNodesB, int numNodesC) {
+                            float scaleFactor, int nThreads, MPI_Comm communicator, helpme::NodeOrder nodeOrder,
+                            int numNodesA, int numNodesB, int numNodesC) {
     try {
-        pme->setupParallel(rPower, kappa, splineOrder, dimA, dimB, dimC, scaleFactor, nThreads, communicator,
-                           PMEInstanceF::NodeOrder(nodeOrder), numNodesA, numNodesB, numNodesC);
+        pme->setupParallel(rPower, kappa, splineOrder, dimA, dimB, dimC, scaleFactor, nThreads, communicator, nodeOrder,
+                           numNodesA, numNodesB, numNodesC);
     } catch (std::runtime_error& e) {
         std::cerr << e.what() << std::endl;
         exit(1);
@@ -150,12 +150,11 @@ void helpme_setup_parallelF(PMEInstanceF* pme, int rPower, float kappa, int spli
 
 void helpme_setup_compressed_parallelD(PMEInstanceD* pme, int rPower, double kappa, int splineOrder, int dimA, int dimB,
                                        int dimC, int maxKA, int maxKB, int maxKC, double scaleFactor, int nThreads,
-                                       MPI_Comm communicator, NodeOrder nodeOrder, int numNodesA, int numNodesB,
+                                       MPI_Comm communicator, helpme::NodeOrder nodeOrder, int numNodesA, int numNodesB,
                                        int numNodesC) {
     try {
         pme->setupCompressedParallel(rPower, kappa, splineOrder, dimA, dimB, dimC, maxKA, maxKB, maxKC, scaleFactor,
-                                     nThreads, communicator, PMEInstanceD::NodeOrder(nodeOrder), numNodesA, numNodesB,
-                                     numNodesC);
+                                     nThreads, communicator, nodeOrder, numNodesA, numNodesB, numNodesC);
     } catch (std::runtime_error& e) {
         std::cerr << e.what() << std::endl;
         exit(1);
@@ -167,12 +166,11 @@ void helpme_setup_compressed_parallelD(PMEInstanceD* pme, int rPower, double kap
 
 void helpme_setup_compressed_parallelF(PMEInstanceF* pme, int rPower, float kappa, int splineOrder, int dimA, int dimB,
                                        int dimC, int maxKA, int maxKB, int maxKC, float scaleFactor, int nThreads,
-                                       MPI_Comm communicator, NodeOrder nodeOrder, int numNodesA, int numNodesB,
+                                       MPI_Comm communicator, helpme::NodeOrder nodeOrder, int numNodesA, int numNodesB,
                                        int numNodesC) {
     try {
         pme->setupCompressedParallel(rPower, kappa, splineOrder, dimA, dimB, dimC, maxKA, maxKB, maxKC, scaleFactor,
-                                     nThreads, communicator, PMEInstanceF::NodeOrder(nodeOrder), numNodesA, numNodesB,
-                                     numNodesC);
+                                     nThreads, communicator, nodeOrder, numNodesA, numNodesB, numNodesC);
     } catch (std::runtime_error& e) {
         std::cerr << e.what() << std::endl;
         exit(1);
@@ -188,9 +186,9 @@ MPI_Comm f_MPI_Comm_f2c(int Fcomm) { return MPI_Comm_f2c(Fcomm); }
 #endif
 
 void helpme_set_lattice_vectorsD(PMEInstanceD* pme, double A, double B, double C, double alpha, double beta,
-                                 double gamma, LatticeType latticeType) {
+                                 double gamma, helpme::LatticeType latticeType) {
     try {
-        pme->setLatticeVectors(A, B, C, alpha, beta, gamma, PMEInstanceD::LatticeType(latticeType));
+        pme->setLatticeVectors(A, B, C, alpha, beta, gamma, latticeType);
     } catch (std::runtime_error& e) {
         std::cerr << e.what() << std::endl;
         exit(1);
@@ -201,9 +199,9 @@ void helpme_set_lattice_vectorsD(PMEInstanceD* pme, double A, double B, double C
 }
 
 void helpme_set_lattice_vectorsF(PMEInstanceF* pme, float A, float B, float C, float alpha, float beta, float gamma,
-                                 LatticeType latticeType) {
+                                 helpme::LatticeType latticeType) {
     try {
-        pme->setLatticeVectors(A, B, C, alpha, beta, gamma, PMEInstanceF::LatticeType(latticeType));
+        pme->setLatticeVectors(A, B, C, alpha, beta, gamma, latticeType);
     } catch (std::runtime_error& e) {
         std::cerr << e.what() << std::endl;
         exit(1);

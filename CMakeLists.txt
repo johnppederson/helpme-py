@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.3 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
 ################  Options: Overview and Not Otherwise Mentioned  ###############
 #
@@ -27,39 +27,58 @@ cmake_minimum_required(VERSION 3.3 FATAL_ERROR)
 #    - SPHINX_ROOT "Root directory for Sphinx: 'bin/sphinx-build' (or similar) should be in this dir."
 #
 
-project(helpme
-        LANGUAGES C CXX)
-set(helpme_URL "http://www.github.com/andysim/helpme")
-set(helpme_EMAIL "andrew.simmonett@nih.gov")
-set(helpme_LICENSE "BSD-3-clause")
-set(helpme_DESCRIPTION "helPME: an efficient library for particle mesh Ewald")
-
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
-
-set (CMAKE_CXX_STANDARD 11)
-
-#
-# Language bindings options
-#
-include(custom_color_messages)
-option(ENABLE_fortran "Enables the building of Fortran bindings (needs Fortran compiler)" ON)
-if(ENABLE_fortran)
-    enable_language(Fortran)
-    set(Fortran_ENABLED ON)
+# Get version info.
+find_package(Git QUIET)
+if(Git_FOUND)
+    execute_process(
+        COMMAND ${GIT_EXECUTABLE} describe --tags --abbrev=0
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        OUTPUT_VARIABLE GIT_VERSION
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+    )
+    message(STATUS "${Cyan}Configuring build for helPME-py version ${GIT_VERSION}${ColourReset}")
+else()
+    set(GIT_VERSION "0.0.0-unknown")
+    message(STATUS "${Red}Git not found, project version info unavailable${ColourReset}")
 endif()
 
-#
-# Build options
-#
+# Define project information.
+project(helpme
+    VERSION ${GIT_VERSION}
+    DESCRIPTION "helPME-py: an efficient library for particle mesh Ewald"
+    HOMEPAGE_URL "http://www.github.com/johnppederson/helpme-py"
+    LANGUAGES C CXX
+)
+add_compile_definitions(VERSION="${GIT_VERSION}")
+
+# Append path to custom cmake macros.
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+
+# Include cmake custom macros.
+include(custom_color_messages)
 include(optionsTools)
-option_with_default(TEST_NTHREADS "Number of tests used in threaded tests, if OpenMP is used" 2)
-option_with_print(ENABLE_OPENMP "Enables OpenMP parallelization" ON)
+include(CTest)
+
+# Set C++ standards.
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+# Define build options.
+option_with_default(TEST_NTHREADS "Number of tests used in threaded \
+                                   tests, if OpenMP is used" 2)
+option_with_default(ERF_SCREEN_VAL "The value at which to consider the \
+                                    error function equal to one (a lower \
+                                    value makes the error function \
+                                    evaluation faster but less \
+                                    accurate).  Values <=5 will fail \
+                                    CTest suite." 6)
+option_with_default(HELPME_INSTALL_CPP "Install C++ headers/libs" ON)
+option_with_print(BUILD_DOCS "Build documentation" ON)
+option_with_print(ENABLE_OpenMP "Enables OpenMP parallelization" ON)
 option_with_print(ENABLE_MPI "Enables MPI parallelization" ON)
 option_with_print(ENABLE_BLAS "Enables BLAS usage" ON)
-option_with_flags(ENABLE_CODE_COVERAGE "Enables details on code coverage" OFF
-                  "-ftest-coverage -fprofile-arcs -fPIC -O0 -g")
-option_with_flags(ENABLE_BOUNDS_CHECK "Enables bounds check in Fortran" OFF
-                  "-ftrapuv -check all -fpstkchk" "-fcheck=all" "-fbounds-check -fcheck-array-temporaries")
 option_with_flags(ENABLE_ASAN "Enables address sanitizer" OFF
                   "-fsanitize=address" "-fno-omit-frame-pointer")
 option_with_flags(ENABLE_MSAN "Enables address sanitizer" OFF
@@ -69,37 +88,21 @@ option_with_flags(ENABLE_TSAN "Enables thread sanitizer" OFF
 option_with_flags(ENABLE_UBSAN "Enables undefined behavior sanitizer" OFF
                   "-fsanitize=undefined" "-fno-omit-frame-pointer")
 
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0")
+# Set C/C++ debug flags.
 set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -O0")
-set(CMAKE_Fortran_FLAGS_DEBUG "${CMAKE_Fortran_FLAGS_DEBUG} -O0")
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0")
 
-# BLAS
-if(ENABLE_BLAS)
-    # Attempt to distinguish MKL from other BLAS routines.  This doesn't work as-is :(
-    include(FindMKL)
-    find_package(MKL QUIET)
-    if(MKL_FOUND)
-        add_definitions(-DHAVE_MKL)
-        set(BLAS_FOUND TRUE)
-        set(BLAS_LIBRARIES ${MKL_GNU} ${MKL_SEQUENTIAL} ${MKL_CORE})
-    else()
-        set(MKL_INCLUDE_DIR "")
-        find_package(BLAS QUIET)
-    endif()
-endif()
-
-if(BLAS_FOUND)
-    add_definitions(-DHAVE_BLAS)
-    message(STATUS "${Cyan}Found BLAS: ${BLAS_LIBRARIES}${ColourReset}")
+# The C++ library is linked explicitly because exception handling on macOS appears to be broken otherwise.
+# !!! Check the above.
+# Handle different C++ libraries.
+if(CMAKE_CXX_COMPILER_ID MATCHES "AppleClang")
+    set(cpplib c++)
 else()
-    if(ENABLE_BLAS)
-        message(STATUS "${Red}BLAS not found${ColourReset}")
-    else()
-        message(STATUS "${Red}BLAS not searched for${ColourReset}")
-    endif()
+    set(cpplib stdc++)
 endif()
 
-# FFTW
+# Find FFTW.
+include(FindFFTW)
 find_package(FFTW REQUIRED)
 if(HAVE_FFTWF)
     add_definitions(-DHAVE_FFTWF=1)
@@ -111,82 +114,111 @@ if(HAVE_FFTWL)
     add_definitions(-DHAVE_FFTWL=1)
 endif()
 
-# OpenMP
-if(ENABLE_OPENMP)
-    find_package(OpenMP)
-endif()
+# Set external includes.
+set(EXTERNAL_INCLUDES
+    ${FFTW_INCLUDES}
+)
 
-if(OPENMP_FOUND)
-    add_definitions(-DHAVE_OPENMP)
-    if(DEFINED CMAKE_C_COMPILER_ID)
-        set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
-    endif()
-    if(DEFINED CMAKE_CXX_COMPILER_ID)
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
-    endif()
-    if(DEFINED CMAKE_Fortran_COMPILER_ID)
-        set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} ${OpenMP_Fortran_FLAGS}")
-    endif()
-endif()
+# Set external libraries.
+set(EXTERNAL_LIBRARIES
+    ${cpplib}
+    ${FFTW_LIBRARIES}
+)
 
-# MPI
-if(ENABLE_MPI)
-    find_package(MPI)
-endif()
-
-if(MPI_CXX_FOUND)
-    message(STATUS "${Cyan}Found MPI: ${MPI_INCLUDE_PATH}${ColourReset}")
-    set(HAVE_MPI TRUE)
-    add_definitions("-DHAVE_MPI=1")
-else()
-    if(ENABLE_MPI)
-        message(STATUS "${Red}MPI not found${ColourReset}")
+# Find BLAS, if enabled.
+if(ENABLE_BLAS)
+    # Attempt to distinguish MKL from other BLAS routines.  This doesn't work as-is :(
+    # !!! Test to see if the above is true.
+    include(FindMKL)
+    find_package(MKL CONFIG QUIET)
+    if(MKL_FOUND)
+        add_definitions(-DHAVE_MKL)
+        set(EXTERNAL_INCLUDES
+            ${EXTERNAL_INCLUDES}
+            ${MKL_INCLUDE_DIR}
+        )
+        set(BLAS_LIBRARIES ${MKL_GNU} ${MKL_SEQUENTIAL} ${MKL_CORE})
+        set(BLAS_FOUND TRUE)
     else()
-        message(STATUS "${Red}MPI not searched for${ColourReset}")
+        find_package(BLAS QUIET)
+    endif()
+    if(BLAS_FOUND)
+        add_definitions(-DHAVE_BLAS)
+        set(EXTERNAL_LIBRARIES
+            ${EXTERNAL_LIBRARIES}
+            ${BLAS_LIBRARIES}
+        )
+        message(STATUS "${Cyan}Found BLAS: ${BLAS_LIBRARIES}${ColourReset}")
+    else()
+        message(STATUS "${Red}BLAS not found, continuing without BLAS${ColourReset}")
     endif()
 endif()
 
-# Handle different C++ libraries
-if(CMAKE_CXX_COMPILER_ID MATCHES "AppleClang")
-    set(cpplib c++)
-else()
-    set(cpplib stdc++)
+# Find OpenMP, if enabled.
+if(ENABLE_OpenMP)
+    find_package(OpenMP QUIET)
+    if(OpenMP_CXX_FOUND)
+        add_definitions(-DHAVE_OpenMP)
+        set(EXTERNAL_LIBRARIES
+            ${EXTERNAL_LIBRARIES}
+            OpenMP::OpenMP_CXX
+        )
+        set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+        message(STATUS "${Cyan}Found OpenMP: ${OpenMP_CXX_LIBRARIES}${ColourReset}")
+        message(STATUS "${Cyan}OpenMP C FLAGS: ${OpenMP_C_FLAGS}${ColourReset}")
+        message(STATUS "${Cyan}OpenMP CXX FLAGS: ${OpenMP_CXX_FLAGS}${ColourReset}")
+    else()
+        message(STATUS "${Red}OpenMP not found, continuing without OpenMP${ColourReset}")
+    endif()
 endif()
 
-# The C++ library is linked explicitly because exception handling on macOS appears to be broken otherwise.
-set(EXTERNAL_LIBRARIES ${BLAS_LIBRARIES} ${FFTW_LIBRARIES} ${cpplib})
+# Find MPI, if enabled.
 if(ENABLE_MPI)
-    set(EXTERNAL_LIBRARIES ${EXTERNAL_LIBRARIES} ${MPI_CXX_LIBRARIES})
-endif()
-
-option(ENABLE_Python "Enables the building of Python bindings" ON)
-if(ENABLE_Python)
-# Find Python
-    set(Python_ADDITIONAL_VERSIONS 3.9 3.8 3.7 3.6)
-    find_package(PythonLibsNew 3.6 REQUIRED)
-    message(STATUS "${Cyan}Found Python ${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}${ColourReset}: ${PYTHON_EXECUTABLE} (found version ${PYTHON_VERSION_STRING})")
-    set(Python_ENABLED ON) # For now, we just always assume this is on
-    add_subdirectory(external/pybind11)
-    add_subdirectory(python)
-endif()
-
-# Documentation
-find_package(Doxygen)
-find_package(Sphinx)
-find_package(Latex)
-if(DOXYGEN_EXECUTABLE)
-    if(SPHINX_EXECUTABLE)
-        add_subdirectory(docs)
+    find_package(MPI QUIET)
+    if(MPI_CXX_FOUND)
+        add_definitions(-DHAVE_MPI)
+        set(EXTERNAL_LIBRARIES
+            ${EXTERNAL_LIBRARIES}
+            MPI::MPI_CXX
+        )
+        message(STATUS "${Cyan}Found MPI: ${MPI_INCLUDE_PATH}${ColourReset}")
+    else()
+        message(STATUS "${Red}MPI not found, continuing without MPI${ColourReset}")
     endif()
 endif()
+
+# Pass the error function screening threshold to the compiler.
+add_compile_definitions(ERF_SCREEN_VAL=${ERF_SCREEN_VAL})
+
+# Find Python.
+set(PYBIND11_NEWPYTHON ON)
+set(Python_EXECUTABLE "${PYTHON_EXECUTABLE}")   # -.
+set(Python_INCLUDE_DIR "${PYTHON_INCLUDE_DIR}") #  |-These are for the scikit-build system
+set(Python_LIBRARY "${PYTHON_LIBRARY}")         # -'
+find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Module)
+find_package(pybind11 CONFIG REQUIRED)
+
+# Add subdirectories.
 add_subdirectory(src)
-
-
-#
-# Testing
-#
-include(CTest)
 if(BUILD_TESTING)
-    add_subdirectory (test)
+    find_package(Catch2 3 REQUIRED)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
+if(BUILD_DOCS)
+    find_package(Doxygen REQUIRED)
+    find_package(Sphinx REQUIRED)
+    find_package(LATEX)
+    if(LATEX_FOUND)
+        message(STATUS "${Cyan}Found LaTeX${ColourReset}")
+    else()
+        message(STATUS "${Red}LaTeX not found, continuing without LaTeX${ColourReset}")
+    endif()
+    add_subdirectory(docs)
 endif()
 
+# Install headers.
+if(HELPME_INSTALL_CPP)
+    install(DIRECTORY ${PROJECT_SOURCE_DIR}/include DESTINATION .)
+endif()

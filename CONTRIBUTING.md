@@ -36,7 +36,7 @@ Contributions and bug fixes are welcomed. Here's how to get involved.
   branch](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/)
   a name related to the change you're going to make.
 * When you are ready for others to examine and comment on your new feature,
-  navigate to your fork of Psi4 on GitHub and open a [pull
+  navigate to your fork of HelPME on GitHub and open a [pull
   request](https://help.github.com/articles/using-pull-requests/) (PR). Note
   that after you launch a PR from one of your fork's branches, all subsequent
   commits to that branch will be added to the open pull request automatically.
