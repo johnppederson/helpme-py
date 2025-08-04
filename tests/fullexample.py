@@ -1,4 +1,5 @@
 import os
+import sys
 import unittest
 
 import helpme_py as pme
@@ -153,12 +154,13 @@ class TestHelpme(unittest.TestCase):
             pme.MatrixF(1)
         with self.assertRaises(RuntimeError):
             pme.MatrixF([[[1,2]]])
-        matD = pme.MatrixD(np.array([[0., 1.]]))
-        self.assertEqual(matD.__buffer__(0).format, "B")
-        matF = pme.MatrixF(np.array([[0., 1.]]))
-        self.assertEqual(matF.__buffer__(0).format, "B")
-        pl = pme.PairList(np.array([[0., 1.]]))
-        self.assertEqual(pl.__buffer__(0).format, "B")
+        if sys.version_info.minor > 11:
+            matD = pme.MatrixD(np.array([[0., 1.]]))
+            self.assertEqual(matD.__buffer__(0).format, "B")
+            matF = pme.MatrixF(np.array([[0., 1.]]))
+            self.assertEqual(matF.__buffer__(0).format, "B")
+            pl = pme.PairList(np.array([[0., 1.]]))
+            self.assertEqual(pl.__buffer__(0).format, "B")
 
     def test_double(self):
         # Instantiate double precision PME object.
