@@ -29,7 +29,7 @@ jobs:
           mkdir build
           cmake -H. -Bbuild -DCMAKE_INSTALL_PREFIX=./build -DBUILD_TESTING=OFF
           cd build
-          make
+          make -j1
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
