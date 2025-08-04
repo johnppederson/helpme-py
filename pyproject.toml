@@ -8,10 +8,11 @@ dynamic = ["version"]
 license = {file = "LICENSE"}
 description = "helPME-py: A Python Utility for Particle Mesh Ewald based on helPME"
 requires-python = ">=3.10"
+dependencies = ["numpy>1.23.0"]
 readme = "README.md"
 
 [project.optional-dependencies]
-docs = ["sphinx", "breathe", "doxygen", "sphinx-book-theme"]
+docs = ["sphinx", "breathe", "exhale", "doxygen", "furo"]
 docs-pdf = ["latex"]
 
 [tool.setuptools_scm]

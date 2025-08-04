@@ -113,8 +113,7 @@ enumerated below.
 
 ## Requirements
 helPME-py is written in C++17, and should work with any modern 
-C++ compiler.  There are no other requirements once the Python bindings
-are built, though NumPy is recommended.
+C++ compiler.  NumPy is a required dependency for the Python API.
 
 ## helPME Authors
 Andrew C. Simmonett (NIH)
