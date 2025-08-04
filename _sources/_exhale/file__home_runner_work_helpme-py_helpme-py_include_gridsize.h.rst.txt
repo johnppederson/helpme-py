@@ -1,0 +1,56 @@
+
+.. _file__home_runner_work_helpme-py_helpme-py_include_gridsize.h:
+
+File gridsize.h
+===============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_helpme-py_helpme-py_include>` (``/home/runner/work/helpme-py/helpme-py/include``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+Definition (``/home/runner/work/helpme-py/helpme-py/include/gridsize.h``)
+-------------------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``algorithm``
+
+- ``cmath``
+
+- ``initializer_list``
+
+- ``vector``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_helpme.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_helpme`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_gridsize_8h_1aa3f765da5cede2c9dd980dd017ea482a`
+
+- :ref:`exhale_function_gridsize_8h_1a9c4101833a2cc86ce601f86b04e3a266`
+

@@ -1,0 +1,60 @@
+
+.. _file__home_runner_work_helpme-py_helpme-py_include_string_utils.h:
+
+File string_utils.h
+===================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_helpme-py_helpme-py_include>` (``/home/runner/work/helpme-py/helpme-py/include``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+Definition (``/home/runner/work/helpme-py/helpme-py/include/string_utils.h``)
+-----------------------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``complex``
+
+- ``iomanip``
+
+- ``iostream``
+
+- ``sstream``
+
+- ``string`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_string_utils.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_helpme.h`
+
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_matrix.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_helpme`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_string__utils_8h_1aef57d45b9222018896b91592aef25a7d`
+
+- :ref:`exhale_function_string__utils_8h_1a1ce7000d3e3817d45cb40bdf2be06d9d`
+

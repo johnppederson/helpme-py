@@ -1,0 +1,113 @@
+
+.. _file__home_runner_work_helpme-py_helpme-py_include_gamma.h:
+
+File gamma.h
+============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_helpme-py_helpme-py_include>` (``/home/runner/work/helpme-py/helpme-py/include``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+
+Contains C++ implementations of templated gamma and incomplete gamma functions, computed using recursion. 
+
+
+Definition (``/home/runner/work/helpme-py/helpme-py/include/gamma.h``)
+----------------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``cmath``
+
+- ``limits``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_helpme.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_helpme`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structhelpme_1_1gammaRecursion`
+
+- :ref:`exhale_struct_structhelpme_1_1gammaRecursion_3_01Real_00_010_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01true_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01true_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1gammaRecursion_3_01Real_00_01twoS_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1incompleteGammaRecursion`
+
+- :ref:`exhale_struct_structhelpme_1_1incompleteGammaRecursion_3_01Real_00_010_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01true_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1incompleteGammaRecursion_3_01Real_00_012_00_01true_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1incompleteGammaRecursion_3_01Real_00_01twoS_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1incompleteVirialGammaRecursion`
+
+- :ref:`exhale_struct_structhelpme_1_1incompleteVirialGammaRecursion_3_01Real_00_01twoS_00_01false_01_4`
+
+- :ref:`exhale_class_structhelpme_1_1gammaComputer`
+
+- :ref:`exhale_class_structhelpme_1_1incompleteGammaComputer`
+
+- :ref:`exhale_class_structhelpme_1_1incompleteGammaVirialComputer`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_gamma_8h_1ae3220144f11764cfb80fd0b52cdc8d1c`
+
+- :ref:`exhale_function_gamma_8h_1af69fa5014260f0318885ae090808ae9b`
+
+- :ref:`exhale_function_gamma_8h_1a77f6384117afcfa71cbb3b27b579d21b`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_gamma_8h_1ac9bd36966441fb675ed2dcc2a4503569`
+
+- :ref:`exhale_define_gamma_8h_1a13deb336ed7209c93b54b8c8cd493c3e`
+
+- :ref:`exhale_define_gamma_8h_1a6ffe0d727158120ca49b38a1fed8c5d0`
+
+- :ref:`exhale_define_gamma_8h_1a5aada0be6b5613c6f01cb54962c77f7f`
+

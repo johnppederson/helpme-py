@@ -1,0 +1,14 @@
+.. _exhale_enum_helpme_8h_1a51cde3faab477dd22811f194283ff534:
+
+Enum AlgorithmType
+==================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_helpme.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: helpme::AlgorithmType
+   :project: HelPME

@@ -1,0 +1,17 @@
+.. _exhale_class_structhelpme_1_1incompleteGammaComputer:
+
+Template Class incompleteGammaComputer
+======================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_gamma.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: helpme::incompleteGammaComputer
+   :project: HelPME
+   :members:
+   :protected-members:
+   :undoc-members:

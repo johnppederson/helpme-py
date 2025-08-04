@@ -1,0 +1,14 @@
+.. _exhale_define_mpi__wrapper_8h_1a48497a4ae8b25b3b7c0f0bdad766a564:
+
+Define PRINT
+============
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_mpi_wrapper.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: PRINT
+   :project: HelPME

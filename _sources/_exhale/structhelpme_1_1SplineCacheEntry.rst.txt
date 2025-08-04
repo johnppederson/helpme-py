@@ -1,0 +1,17 @@
+.. _exhale_struct_structhelpme_1_1SplineCacheEntry:
+
+Template Struct SplineCacheEntry
+================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_helpme.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: helpme::SplineCacheEntry
+   :project: HelPME
+   :members:
+   :protected-members:
+   :undoc-members:

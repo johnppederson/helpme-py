@@ -1,0 +1,17 @@
+.. _exhale_class_classhelpme_1_1PMEInstance:
+
+Template Class PMEInstance
+==========================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_helpme.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: helpme::PMEInstance
+   :project: HelPME
+   :members:
+   :protected-members:
+   :undoc-members:

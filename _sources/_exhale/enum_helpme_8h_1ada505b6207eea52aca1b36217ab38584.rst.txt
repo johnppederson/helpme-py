@@ -1,0 +1,14 @@
+.. _exhale_enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584:
+
+Enum LatticeType
+================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_helpme.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: helpme::LatticeType
+   :project: HelPME

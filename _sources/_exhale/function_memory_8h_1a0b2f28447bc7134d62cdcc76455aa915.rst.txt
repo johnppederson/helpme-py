@@ -1,0 +1,14 @@
+.. _exhale_function_memory_8h_1a0b2f28447bc7134d62cdcc76455aa915:
+
+Template Function helpme::operator==
+====================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_memory.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: helpme::operator==(const FFTWAllocator<T1>&, const FFTWAllocator<T2>&)
+   :project: HelPME

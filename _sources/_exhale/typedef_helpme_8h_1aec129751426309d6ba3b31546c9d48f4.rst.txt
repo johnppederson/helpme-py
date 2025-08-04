@@ -1,0 +1,14 @@
+.. _exhale_typedef_helpme_8h_1aec129751426309d6ba3b31546c9d48f4:
+
+Typedef PMEInstanceD
+====================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_helpme.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: PMEInstanceD
+   :project: HelPME

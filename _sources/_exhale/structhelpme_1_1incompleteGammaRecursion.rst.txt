@@ -1,0 +1,17 @@
+.. _exhale_struct_structhelpme_1_1incompleteGammaRecursion:
+
+Template Struct incompleteGammaRecursion
+========================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_gamma.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: helpme::incompleteGammaRecursion
+   :project: HelPME
+   :members:
+   :protected-members:
+   :undoc-members:

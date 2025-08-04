@@ -1,0 +1,32 @@
+﻿helpme\_py.PairList
+===================
+
+.. currentmodule:: helpme_py
+
+.. autoclass:: PairList
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PairList.__init__
+   
+   
+
+
+   
+   
+   
+
+
+   
+   
+   
+    
+   
+    
+   

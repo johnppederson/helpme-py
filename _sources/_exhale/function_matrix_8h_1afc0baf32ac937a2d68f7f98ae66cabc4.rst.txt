@@ -1,0 +1,14 @@
+.. _exhale_function_matrix_8h_1afc0baf32ac937a2d68f7f98ae66cabc4:
+
+Template Function helpme::operator<<(std::ostream&, Matrix<Real> const&)
+========================================================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_matrix.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: helpme::operator<<(std::ostream&, Matrix<Real> const&)
+   :project: HelPME

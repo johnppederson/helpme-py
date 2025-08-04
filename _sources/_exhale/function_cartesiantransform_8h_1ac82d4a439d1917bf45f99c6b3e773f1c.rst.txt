@@ -1,0 +1,14 @@
+.. _exhale_function_cartesiantransform_8h_1ac82d4a439d1917bf45f99c6b3e773f1c:
+
+Template Function helpme::makeCartesianRotationMatrix
+=====================================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_cartesiantransform.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: helpme::makeCartesianRotationMatrix(int, const Matrix<Real>&)
+   :project: HelPME

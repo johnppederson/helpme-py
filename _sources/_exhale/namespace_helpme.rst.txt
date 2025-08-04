@@ -1,0 +1,160 @@
+
+.. _namespace_helpme:
+
+Namespace helpme
+================
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structhelpme_1_1FFTWAllocator_1_1rebind`
+
+- :ref:`exhale_struct_structhelpme_1_1FFTWTypes`
+
+- :ref:`exhale_struct_structhelpme_1_1FFTWTypes_1_1EmptyPlan`
+
+- :ref:`exhale_struct_structhelpme_1_1gammaRecursion`
+
+- :ref:`exhale_struct_structhelpme_1_1gammaRecursion_3_01Real_00_010_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01true_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01true_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1gammaRecursion_3_01Real_00_01twoS_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1incompleteGammaRecursion`
+
+- :ref:`exhale_struct_structhelpme_1_1incompleteGammaRecursion_3_01Real_00_010_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01true_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1incompleteGammaRecursion_3_01Real_00_012_00_01true_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1incompleteGammaRecursion_3_01Real_00_01twoS_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1incompleteVirialGammaRecursion`
+
+- :ref:`exhale_struct_structhelpme_1_1incompleteVirialGammaRecursion_3_01Real_00_01twoS_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1Matrix_1_1sliceIterator`
+
+- :ref:`exhale_struct_structhelpme_1_1MPITypes`
+
+- :ref:`exhale_struct_structhelpme_1_1MPIWrapper`
+
+- :ref:`exhale_struct_structhelpme_1_1normIntegerPowerComputer`
+
+- :ref:`exhale_struct_structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01true_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01true_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1raiseNormToIntegerPower`
+
+- :ref:`exhale_struct_structhelpme_1_1raiseToIntegerPower`
+
+- :ref:`exhale_struct_structhelpme_1_1raiseToIntegerPower_3_01Real_00_010_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1SplineCacheEntry`
+
+- :ref:`exhale_class_classhelpme_1_1BSpline`
+
+- :ref:`exhale_class_classhelpme_1_1FFTWAllocator`
+
+- :ref:`exhale_class_classhelpme_1_1FFTWWrapper`
+
+- :ref:`exhale_class_structhelpme_1_1gammaComputer`
+
+- :ref:`exhale_class_structhelpme_1_1incompleteGammaComputer`
+
+- :ref:`exhale_class_structhelpme_1_1incompleteGammaVirialComputer`
+
+- :ref:`exhale_class_classhelpme_1_1Matrix`
+
+- :ref:`exhale_class_classhelpme_1_1PMEInstance`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_helpme_8h_1a51cde3faab477dd22811f194283ff534`
+
+- :ref:`exhale_enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584`
+
+- :ref:`exhale_enum_helpme_8h_1a2196fee10c55373e383cf857b14412c3`
+
+- :ref:`exhale_enum_helpme_8h_1a4fc4f8282a7e47f5d842c715ea72b059`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_gridsize_8h_1aa3f765da5cede2c9dd980dd017ea482a`
+
+- :ref:`exhale_function_helpme_8h_1aaa4a78096ea81a5bf563e895cdaf6269`
+
+- :ref:`exhale_function_cartesiantransform_8h_1a347e94f6ebf33fc9794b2dc3a4ad62a5`
+
+- :ref:`exhale_function_cartesiantransform_8h_1a256bfb8cf9356b69d856a27dccfd2e33`
+
+- :ref:`exhale_function_fletcher_8h_1a2bbabb174c1355716ad9df5df662433d`
+
+- :ref:`exhale_function_fletcher_8h_1a08b980c39ff76d028da19e0812423c9a`
+
+- :ref:`exhale_function_fletcher_8h_1a1331638675e33795086e972eac269939`
+
+- :ref:`exhale_function_tensor__utils_8h_1aa914531b506590c7e190f316613e7757`
+
+- :ref:`exhale_function_gridsize_8h_1a9c4101833a2cc86ce601f86b04e3a266`
+
+- :ref:`exhale_function_string__utils_8h_1aef57d45b9222018896b91592aef25a7d`
+
+- :ref:`exhale_function_lapack__wrapper_8h_1aef145a683586d54c5754b683096213c4`
+
+- :ref:`exhale_function_cartesiantransform_8h_1ac82d4a439d1917bf45f99c6b3e773f1c`
+
+- :ref:`exhale_function_cartesiantransform_8h_1a060e019d9442546d5e5168ee0a5c146f`
+
+- :ref:`exhale_function_helpme_8h_1a871c5c618f66191ab3a8d5d6a88257fd`
+
+- :ref:`exhale_function_gamma_8h_1ae3220144f11764cfb80fd0b52cdc8d1c`
+
+- :ref:`exhale_function_memory_8h_1a88c8090bcb1e9078a040f3f72ec70f16`
+
+- :ref:`exhale_function_mpi__wrapper_8h_1a05382ee67d55f47b99cbe6479b217a5d`
+
+- :ref:`exhale_function_matrix_8h_1afc0baf32ac937a2d68f7f98ae66cabc4`
+
+- :ref:`exhale_function_memory_8h_1a0b2f28447bc7134d62cdcc76455aa915`
+
+- :ref:`exhale_function_tensor__utils_8h_1af32cd01638ca35b3cffa9ca4a4b712d5`
+
+- :ref:`exhale_function_tensor__utils_8h_1a51a39b3d3aac289b016c8afb39d9afd9`
+
+- :ref:`exhale_function_gamma_8h_1af69fa5014260f0318885ae090808ae9b`
+
+- :ref:`exhale_function_gamma_8h_1a77f6384117afcfa71cbb3b27b579d21b`
+
+- :ref:`exhale_function_string__utils_8h_1a1ce7000d3e3817d45cb40bdf2be06d9d`
+
+- :ref:`exhale_function_matrix_8h_1af7e32876fd7852b062331d7b405a8198`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_memory_8h_1a406b75ea7a95d56e638065f2876a36ae`

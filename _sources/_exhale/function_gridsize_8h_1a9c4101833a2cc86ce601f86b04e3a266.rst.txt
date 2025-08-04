@@ -1,0 +1,14 @@
+.. _exhale_function_gridsize_8h_1a9c4101833a2cc86ce601f86b04e3a266:
+
+Template Function helpme::findGridSize
+======================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_gridsize.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: helpme::findGridSize(T, const std::initializer_list<T>&)
+   :project: HelPME

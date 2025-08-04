@@ -1,0 +1,17 @@
+.. _exhale_class_classhelpme_1_1FFTWWrapper:
+
+Template Class FFTWWrapper
+==========================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_fftw_wrapper.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: helpme::FFTWWrapper
+   :project: HelPME
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,14 @@
+.. _exhale_function_tensor__utils_8h_1a51a39b3d3aac289b016c8afb39d9afd9:
+
+Template Function helpme::permuteABCtoCBA
+=========================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_tensor_utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: helpme::permuteABCtoCBA(Real const *__restrict__, int const, int const, int const, Real *__restrict__, size_t)
+   :project: HelPME

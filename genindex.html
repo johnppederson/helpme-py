@@ -1,0 +1,1385 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="#" /><link rel="search" title="Search" href="search.html" />
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 --><title>Index - helPME-py documentation</title>
+<link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=25af2a20" />
+    <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">helPME-py  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  <span class="sidebar-brand-text">helPME-py  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="py_api.html">Python API Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Python API Documentation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/helpme_py.LatticeType.html">helpme_py.LatticeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/helpme_py.PairList.html">helpme_py.PairList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/helpme_py.MatrixD.html">helpme_py.MatrixD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/helpme_py.PMEInstanceD.html">helpme_py.PMEInstanceD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/helpme_py.MatrixF.html">helpme_py.MatrixF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/helpme_py.PMEInstanceF.html">helpme_py.PMEInstanceF</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="_exhale/cpp_api.html">C++ API Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of C++ API Documentation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/namespace_helpme.html">Namespace helpme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1FFTWAllocator_1_1rebind.html">Template Struct FFTWAllocator::rebind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1FFTWTypes.html">Template Struct FFTWTypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1FFTWTypes_1_1EmptyPlan.html">Struct FFTWTypes::EmptyPlan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1gammaRecursion.html">Template Struct gammaRecursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_010_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 0, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 1, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01true_01_4.html">Template Struct gammaRecursion&lt; Real, 1, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 2, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01true_01_4.html">Template Struct gammaRecursion&lt; Real, 2, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, twoS, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1incompleteGammaRecursion.html">Template Struct incompleteGammaRecursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_010_00_01false_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 0, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01false_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 1, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01true_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 1, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_012_00_01true_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 2, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, twoS, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1incompleteVirialGammaRecursion.html">Template Struct incompleteVirialGammaRecursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1incompleteVirialGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct incompleteVirialGammaRecursion&lt; Real, twoS, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html">Struct Matrix::sliceIterator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1MPITypes.html">Template Struct MPITypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1MPIWrapper.html">Template Struct MPIWrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1normIntegerPowerComputer.html">Template Struct normIntegerPowerComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01false_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, false, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01true_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, false, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01true_00_01false_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, true, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1raiseNormToIntegerPower.html">Template Struct raiseNormToIntegerPower</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1raiseToIntegerPower.html">Template Struct raiseToIntegerPower</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1raiseToIntegerPower_3_01Real_00_010_01_4.html">Template Struct raiseToIntegerPower&lt; Real, 0 &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1SplineCacheEntry.html">Template Struct SplineCacheEntry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/classhelpme_1_1BSpline.html">Template Class BSpline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/classhelpme_1_1FFTWAllocator.html">Template Class FFTWAllocator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/classhelpme_1_1FFTWWrapper.html">Template Class FFTWWrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/class_structhelpme_1_1gammaComputer.html">Template Class gammaComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/class_structhelpme_1_1incompleteGammaComputer.html">Template Class incompleteGammaComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/class_structhelpme_1_1incompleteGammaVirialComputer.html">Template Class incompleteGammaVirialComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/classhelpme_1_1Matrix.html">Template Class Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/classhelpme_1_1PMEInstance.html">Template Class PMEInstance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/classsplineCacheEntry.html">Class splineCacheEntry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/enum_helpme_8h_1a51cde3faab477dd22811f194283ff534.html">Enum AlgorithmType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584.html">Enum LatticeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/enum_helpme_8h_1a2196fee10c55373e383cf857b14412c3.html">Enum NodeOrder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/enum_helpme_8h_1a4fc4f8282a7e47f5d842c715ea72b059.html">Enum PolarizationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_gridsize_8h_1aa3f765da5cede2c9dd980dd017ea482a.html">Template Function helpme::allDivisors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_helpme_8h_1aaa4a78096ea81a5bf563e895cdaf6269.html">Function helpme::cartAddress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_cartesiantransform_8h_1a347e94f6ebf33fc9794b2dc3a4ad62a5.html">Function helpme::cartesianAddress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_cartesiantransform_8h_1a256bfb8cf9356b69d856a27dccfd2e33.html">Template Function helpme::cartesianTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_fletcher_8h_1a2bbabb174c1355716ad9df5df662433d.html">Template Function helpme::compute_fletcher_checksum16</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_fletcher_8h_1a08b980c39ff76d028da19e0812423c9a.html">Template Function helpme::compute_fletcher_checksum32</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_fletcher_8h_1a1331638675e33795086e972eac269939.html">Template Function helpme::compute_fletcher_checksum64</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_tensor__utils_8h_1aa914531b506590c7e190f316613e7757.html">Template Function helpme::contractABxCWithDxC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_gridsize_8h_1a9c4101833a2cc86ce601f86b04e3a266.html">Template Function helpme::findGridSize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_string__utils_8h_1aef57d45b9222018896b91592aef25a7d.html">Template Function helpme::formatNumber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_lapack__wrapper_8h_1aef145a683586d54c5754b683096213c4.html">Template Function helpme::JacobiCyclicDiagonalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_cartesiantransform_8h_1ac82d4a439d1917bf45f99c6b3e773f1c.html">Template Function helpme::makeCartesianRotationMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_cartesiantransform_8h_1a060e019d9442546d5e5168ee0a5c146f.html">Template Function helpme::matrixVectorProduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_helpme_8h_1a871c5c618f66191ab3a8d5d6a88257fd.html">Function helpme::nCartesian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_gamma_8h_1ae3220144f11764cfb80fd0b52cdc8d1c.html">Template Function helpme::nonTemplateGammaComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_memory_8h_1a88c8090bcb1e9078a040f3f72ec70f16.html">Template Function helpme::operator!=</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_matrix_8h_1afc0baf32ac937a2d68f7f98ae66cabc4.html">Template Function helpme::operator&lt;&lt;(std::ostream&amp;, Matrix&lt;Real&gt; const&amp;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_mpi__wrapper_8h_1a05382ee67d55f47b99cbe6479b217a5d.html">Template Function helpme::operator&lt;&lt;(std::ostream&amp;, const std::unique_ptr&lt;MPIWrapper&lt;Real&gt;&gt;&amp;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_memory_8h_1a0b2f28447bc7134d62cdcc76455aa915.html">Template Function helpme::operator==</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_tensor__utils_8h_1af32cd01638ca35b3cffa9ca4a4b712d5.html">Template Function helpme::permuteABCtoACB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_tensor__utils_8h_1a51a39b3d3aac289b016c8afb39d9afd9.html">Template Function helpme::permuteABCtoCBA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_gamma_8h_1af69fa5014260f0318885ae090808ae9b.html">Template Function helpme::screened_erf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_gamma_8h_1a77f6384117afcfa71cbb3b27b579d21b.html">Template Function helpme::screened_erfc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_string__utils_8h_1a1ce7000d3e3817d45cb40bdf2be06d9d.html">Template Function helpme::stringify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_matrix_8h_1af7e32876fd7852b062331d7b405a8198.html">Template Function helpme::transposeMemoryInPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/define_helpme_8h_1a3457e9c167e8c5fc5e78409291a671c8.html">Define ENABLE_KERNEL_WITH_INVERSE_R_EXPONENT_OF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/define_gamma_8h_1ac9bd36966441fb675ed2dcc2a4503569.html">Define HELPME_ERF_VAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/define_gamma_8h_1a13deb336ed7209c93b54b8c8cd493c3e.html">Define HELPME_PI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/define_gamma_8h_1a6ffe0d727158120ca49b38a1fed8c5d0.html">Define HELPME_SQRTPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/define_gamma_8h_1a5aada0be6b5613c6f01cb54962c77f7f.html">Define HELPME_SQRTTWO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/define_mpi__wrapper_8h_1a48497a4ae8b25b3b7c0f0bdad766a564.html">Define PRINT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/typedef_memory_8h_1a406b75ea7a95d56e638065f2876a36ae.html">Typedef helpme::vector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/typedef_helpme_8h_1aec129751426309d6ba3b31546c9d48f4.html">Typedef PMEInstanceD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/typedef_helpme_8h_1a6eef86d57d6da6e5bc38401a93c3ba85.html">Typedef PMEInstanceF</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          
+<section class="genindex-section">
+  <h1 id="index">Index</h1>
+  <div class="genindex-jumpbox"><a href="#_"><strong>_</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#H"><strong>H</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#X"><strong>X</strong></a></div>
+</section>
+<section id="_" class="genindex-section">
+  <h2>_</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="_autosummary/helpme_py.LatticeType.html#helpme_py.LatticeType.__init__">__init__() (helpme_py.LatticeType method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.MatrixD.html#helpme_py.MatrixD.__init__">(helpme_py.MatrixD method)</a>
+</li>
+          <li><a href="_autosummary/helpme_py.MatrixF.html#helpme_py.MatrixF.__init__">(helpme_py.MatrixF method)</a>
+</li>
+          <li><a href="_autosummary/helpme_py.PairList.html#helpme_py.PairList.__init__">(helpme_py.PairList method)</a>
+</li>
+          <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.__init__">(helpme_py.PMEInstanceD method)</a>
+</li>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.__init__">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="C" class="genindex-section">
+  <h2>C</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.compute_E_adj">compute_E_adj() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.compute_E_adj">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.compute_E_all">compute_E_all() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.compute_E_all">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.compute_E_dir">compute_E_dir() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.compute_E_dir">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.compute_E_rec">compute_E_rec() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.compute_E_rec">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.compute_E_self">compute_E_self() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.compute_E_self">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.compute_EF_adj">compute_EF_adj() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.compute_EF_adj">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.compute_EF_all">compute_EF_all() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.compute_EF_all">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.compute_EF_dir">compute_EF_dir() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.compute_EF_dir">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.compute_EF_rec">compute_EF_rec() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.compute_EF_rec">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.compute_EFV_adj">compute_EFV_adj() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.compute_EFV_adj">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.compute_EFV_all">compute_EFV_all() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.compute_EFV_all">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.compute_EFV_dir">compute_EFV_dir() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.compute_EFV_dir">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.compute_EFV_rec">compute_EFV_rec() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.compute_EFV_rec">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.compute_P_adj">compute_P_adj() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.compute_P_adj">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.compute_P_rec">compute_P_rec() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.compute_P_rec">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.compute_PDP_adj">compute_PDP_adj() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.compute_PDP_adj">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="E" class="genindex-section">
+  <h2>E</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="_exhale/define_helpme_8h_1a3457e9c167e8c5fc5e78409291a671c8.html#c.ENABLE_KERNEL_WITH_INVERSE_R_EXPONENT_OF">ENABLE_KERNEL_WITH_INVERSE_R_EXPONENT_OF (C macro)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="H" class="genindex-section">
+  <h2>H</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="_exhale/enum_helpme_8h_1a51cde3faab477dd22811f194283ff534.html#_CPPv4N6helpme13AlgorithmTypeE">helpme::AlgorithmType (C++ enum)</a>
+</li>
+        <li><a href="_exhale/enum_helpme_8h_1a51cde3faab477dd22811f194283ff534.html#_CPPv4N6helpme13AlgorithmType13CompressedPMEE">helpme::AlgorithmType::CompressedPME (C++ enumerator)</a>
+</li>
+        <li><a href="_exhale/enum_helpme_8h_1a51cde3faab477dd22811f194283ff534.html#_CPPv4N6helpme13AlgorithmType3PMEE">helpme::AlgorithmType::PME (C++ enumerator)</a>
+</li>
+        <li><a href="_exhale/enum_helpme_8h_1a51cde3faab477dd22811f194283ff534.html#_CPPv4N6helpme13AlgorithmType9UndefinedE">helpme::AlgorithmType::Undefined (C++ enumerator)</a>
+</li>
+        <li><a href="_exhale/function_gridsize_8h_1aa3f765da5cede2c9dd980dd017ea482a.html#_CPPv4I0EN6helpme11allDivisorsEb1TRKNSt16initializer_listI1TEE">helpme::allDivisors (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1BSpline.html#_CPPv4I0EN6helpme7BSplineE">helpme::BSpline (C++ class)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1BSpline.html#_CPPv4NK6helpme7BSpline24assertSplineIsSufficientEii">helpme::BSpline::assertSplineIsSufficient (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1BSpline.html#_CPPv4N6helpme7BSpline7BSplineEs4Realss">helpme::BSpline::BSpline (C++ function)</a>, <a href="_exhale/classhelpme_1_1BSpline.html#_CPPv4N6helpme7BSpline7BSplineEv">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1BSpline.html#_CPPv4N6helpme7BSpline16derivativeLevel_E">helpme::BSpline::derivativeLevel_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1BSpline.html#_CPPv4NK6helpme7BSpline19differentiateSplineEPK4RealP4RealRKs">helpme::BSpline::differentiateSpline (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1BSpline.html#_CPPv4N6helpme7BSpline15invSplineModuliEsNSt6vectorIiEE">helpme::BSpline::invSplineModuli (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1BSpline.html#_CPPv4NK6helpme7BSpline17makeSplineInPlaceEP4RealRK4RealRKs">helpme::BSpline::makeSplineInPlace (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1BSpline.html#_CPPv4NK6helpme7BSplineixERKi">helpme::BSpline::operator[] (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1BSpline.html#_CPPv4N6helpme7BSpline6order_E">helpme::BSpline::order_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1BSpline.html#_CPPv4NK6helpme7BSpline10splineDataEv">helpme::BSpline::splineData (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1BSpline.html#_CPPv4N6helpme7BSpline8splines_E">helpme::BSpline::splines_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1BSpline.html#_CPPv4NK6helpme7BSpline17startingGridPointEv">helpme::BSpline::startingGridPoint (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1BSpline.html#_CPPv4N6helpme7BSpline18startingGridPoint_E">helpme::BSpline::startingGridPoint_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1BSpline.html#_CPPv4N6helpme7BSpline6updateEs4Realss">helpme::BSpline::update (C++ function)</a>
+</li>
+        <li><a href="_exhale/function_helpme_8h_1aaa4a78096ea81a5bf563e895cdaf6269.html#_CPPv4N6helpme11cartAddressEiii">helpme::cartAddress (C++ function)</a>
+</li>
+        <li><a href="_exhale/function_cartesiantransform_8h_1a347e94f6ebf33fc9794b2dc3a4ad62a5.html#_CPPv4N6helpme16cartesianAddressEiii">helpme::cartesianAddress (C++ function)</a>
+</li>
+        <li><a href="_exhale/function_cartesiantransform_8h_1a256bfb8cf9356b69d856a27dccfd2e33.html#_CPPv4I0EN6helpme18cartesianTransformE6MatrixI4RealEibRK6MatrixI4RealERK6MatrixI4RealE">helpme::cartesianTransform (C++ function)</a>
+</li>
+        <li><a href="_exhale/function_fletcher_8h_1a2bbabb174c1355716ad9df5df662433d.html#_CPPv4I0EN6helpme27compute_fletcher_checksum16E8uint16_tPK4Real6size_t">helpme::compute_fletcher_checksum16 (C++ function)</a>
+</li>
+        <li><a href="_exhale/function_fletcher_8h_1a08b980c39ff76d028da19e0812423c9a.html#_CPPv4I0EN6helpme27compute_fletcher_checksum32E8uint32_tPK4Real6size_t">helpme::compute_fletcher_checksum32 (C++ function)</a>
+</li>
+        <li><a href="_exhale/function_fletcher_8h_1a1331638675e33795086e972eac269939.html#_CPPv4I0EN6helpme27compute_fletcher_checksum64E8uint64_tPK4Real6size_t">helpme::compute_fletcher_checksum64 (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4I0EN6helpme13FFTWAllocatorE">helpme::FFTWAllocator (C++ class)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4NK6helpme13FFTWAllocator7addressE15const_reference">helpme::FFTWAllocator::address (C++ function)</a>, <a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4NK6helpme13FFTWAllocator7addressE9reference">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator8allocateE9size_typePKv">helpme::FFTWAllocator::allocate (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator13const_pointerE">helpme::FFTWAllocator::const_pointer (C++ type)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator15const_referenceE">helpme::FFTWAllocator::const_reference (C++ type)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator9constructE7pointerRK1T">helpme::FFTWAllocator::construct (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator10deallocateE7pointer9size_type">helpme::FFTWAllocator::deallocate (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator7destroyE7pointer">helpme::FFTWAllocator::destroy (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator15difference_typeE">helpme::FFTWAllocator::difference_type (C++ type)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4I0EN6helpme13FFTWAllocator13FFTWAllocatorERK13FFTWAllocatorI1UE">helpme::FFTWAllocator::FFTWAllocator (C++ function)</a>, <a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator13FFTWAllocatorERK13FFTWAllocator">[1]</a>, <a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator13FFTWAllocatorEv">[2]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4NK6helpme13FFTWAllocator8max_sizeEv">helpme::FFTWAllocator::max_size (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4I0EN6helpme13FFTWAllocatoraSER13FFTWAllocator13FFTWAllocatorI1UE">helpme::FFTWAllocator::operator= (C++ function)</a>, <a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocatoraSE13FFTWAllocator">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator7pointerE">helpme::FFTWAllocator::pointer (C++ type)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4I0EN6helpme13FFTWAllocator6rebindE">helpme::FFTWAllocator::rebind (C++ struct)</a>, <a href="_exhale/structhelpme_1_1FFTWAllocator_1_1rebind.html#_CPPv4I0EN6helpme13FFTWAllocator6rebindE">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator6rebind5otherE">helpme::FFTWAllocator::rebind::other (C++ type)</a>, <a href="_exhale/structhelpme_1_1FFTWAllocator_1_1rebind.html#_CPPv4N6helpme13FFTWAllocator6rebind5otherE">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator9referenceE">helpme::FFTWAllocator::reference (C++ type)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator9size_typeE">helpme::FFTWAllocator::size_type (C++ type)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator10value_typeE">helpme::FFTWAllocator::value_type (C++ type)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocatorD0Ev">helpme::FFTWAllocator::~FFTWAllocator (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4I0EN6helpme9FFTWTypesE">helpme::FFTWTypes (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes9cleanFFTWEv">helpme::FFTWTypes::cleanFFTW (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes11CleanupFFTWE">helpme::FFTWTypes::CleanupFFTW (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes7ComplexE">helpme::FFTWTypes::Complex (C++ type)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes11DestroyPlanE">helpme::FFTWTypes::DestroyPlan (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes9EmptyPlanE">helpme::FFTWTypes::EmptyPlan (C++ struct)</a>, <a href="_exhale/structhelpme_1_1FFTWTypes_1_1EmptyPlan.html#_CPPv4N6helpme9FFTWTypes9EmptyPlanE">[1]</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes9EmptyPlan6unusedE">helpme::FFTWTypes::EmptyPlan::unused (C++ member)</a>, <a href="_exhale/structhelpme_1_1FFTWTypes_1_1EmptyPlan.html#_CPPv4N6helpme9FFTWTypes9EmptyPlan6unusedE">[1]</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes9execPlan1E4Plan">helpme::FFTWTypes::execPlan1 (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes9execPlan3E4PlanPvPv">helpme::FFTWTypes::execPlan3 (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes27ExecuteComplexToComplexPlanE">helpme::FFTWTypes::ExecuteComplexToComplexPlan (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes24ExecuteComplexToRealPlanE">helpme::FFTWTypes::ExecuteComplexToRealPlan (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes24ExecuteRealToComplexPlanE">helpme::FFTWTypes::ExecuteRealToComplexPlan (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes13isImplementedE">helpme::FFTWTypes::isImplemented (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes24MakeComplexToComplexPlanE">helpme::FFTWTypes::MakeComplexToComplexPlan (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes21MakeComplexToRealPlanE">helpme::FFTWTypes::MakeComplexToRealPlan (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes9makePlan4E6size_tPvPvi">helpme::FFTWTypes::makePlan4 (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes9makePlan5E6size_tPvPvii">helpme::FFTWTypes::makePlan5 (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes21MakeRealToComplexPlanE">helpme::FFTWTypes::MakeRealToComplexPlan (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes4PlanE">helpme::FFTWTypes::Plan (C++ type)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4I0EN6helpme11FFTWWrapperE">helpme::FFTWWrapper (C++ class)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper18complexToRealPlan_E">helpme::FFTWWrapper::complexToRealPlan_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper13fftDimension_E">helpme::FFTWWrapper::fftDimension_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper11FFTWWrapperE6size_t">helpme::FFTWWrapper::FFTWWrapper (C++ function)</a>, <a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper11FFTWWrapperERK11FFTWWrapper">[1]</a>, <a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper11FFTWWrapperERR11FFTWWrapper">[2]</a>, <a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper11FFTWWrapperEv">[3]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper19forwardInPlacePlan_E">helpme::FFTWWrapper::forwardInPlacePlan_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper12forwardPlan_E">helpme::FFTWWrapper::forwardPlan_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper19inverseInPlacePlan_E">helpme::FFTWWrapper::inverseInPlacePlan_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper12inversePlan_E">helpme::FFTWWrapper::inversePlan_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapperaSERK11FFTWWrapper">helpme::FFTWWrapper::operator= (C++ function)</a>, <a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapperaSERR11FFTWWrapper">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper18realToComplexPlan_E">helpme::FFTWWrapper::realToComplexPlan_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper9transformEP4RealPNSt7complexI4RealEE">helpme::FFTWWrapper::transform (C++ function)</a>, <a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper9transformEPNSt7complexI4RealEEP4Real">[1]</a>, <a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper9transformEPNSt7complexI4RealEEPNSt7complexI4RealEEi">[2]</a>, <a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper9transformEPNSt7complexI4RealEEi">[3]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper15transformFlags_E">helpme::FFTWWrapper::transformFlags_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapperD0Ev">helpme::FFTWWrapper::~FFTWWrapper (C++ function)</a>
+</li>
+        <li><a href="_exhale/function_gridsize_8h_1a9c4101833a2cc86ce601f86b04e3a266.html#_CPPv4I0EN6helpme12findGridSizeEi1TRKNSt16initializer_listI1TEE">helpme::findGridSize (C++ function)</a>
+</li>
+        <li><a href="_exhale/function_string__utils_8h_1aef57d45b9222018896b91592aef25a7d.html#_CPPv4I0_NSt9enable_ifINSt17is_floating_pointI1TE5valueEiE4typeEEN6helpme12formatNumberENSt6stringERK1Tii">helpme::formatNumber (C++ function)</a>
+</li>
+        <li><a href="_exhale/class_structhelpme_1_1gammaComputer.html#_CPPv4I0_iEN6helpme13gammaComputerE">helpme::gammaComputer (C++ class)</a>
+</li>
+        <li><a href="_exhale/class_structhelpme_1_1gammaComputer.html#_CPPv4N6helpme13gammaComputer5valueE">helpme::gammaComputer::value (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1gammaRecursion.html#_CPPv4I0_i_bEN6helpme14gammaRecursionE">helpme::gammaRecursion (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1gammaRecursion.html#_CPPv4N6helpme14gammaRecursion5valueE">helpme::gammaRecursion::value (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_010_00_01false_01_4.html#_CPPv4I0EN6helpme14gammaRecursionI4RealXL0EEXL0EEEE">helpme::gammaRecursion&lt;Real, 0, false&gt; (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_010_00_01false_01_4.html#_CPPv4N6helpme14gammaRecursionI4RealXL0EEXL0EEE5valueE">helpme::gammaRecursion&lt;Real, 0, false&gt;::value (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01false_01_4.html#_CPPv4I0EN6helpme14gammaRecursionI4RealXL1EEXL0EEEE">helpme::gammaRecursion&lt;Real, 1, false&gt; (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01false_01_4.html#_CPPv4N6helpme14gammaRecursionI4RealXL1EEXL0EEE5valueE">helpme::gammaRecursion&lt;Real, 1, false&gt;::value (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01true_01_4.html#_CPPv4I0EN6helpme14gammaRecursionI4RealXL1EEXL1EEEE">helpme::gammaRecursion&lt;Real, 1, true&gt; (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01true_01_4.html#_CPPv4N6helpme14gammaRecursionI4RealXL1EEXL1EEE5valueE">helpme::gammaRecursion&lt;Real, 1, true&gt;::value (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01false_01_4.html#_CPPv4I0EN6helpme14gammaRecursionI4RealXL2EEXL0EEEE">helpme::gammaRecursion&lt;Real, 2, false&gt; (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01false_01_4.html#_CPPv4N6helpme14gammaRecursionI4RealXL2EEXL0EEE5valueE">helpme::gammaRecursion&lt;Real, 2, false&gt;::value (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01true_01_4.html#_CPPv4I0EN6helpme14gammaRecursionI4RealXL2EEXL1EEEE">helpme::gammaRecursion&lt;Real, 2, true&gt; (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01true_01_4.html#_CPPv4N6helpme14gammaRecursionI4RealXL2EEXL1EEE5valueE">helpme::gammaRecursion&lt;Real, 2, true&gt;::value (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#_CPPv4I0_iEN6helpme14gammaRecursionI4Real4twoSXL0EEEE">helpme::gammaRecursion&lt;Real, twoS, false&gt; (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#_CPPv4N6helpme14gammaRecursionI4Real4twoSXL0EEE5valueE">helpme::gammaRecursion&lt;Real, twoS, false&gt;::value (C++ member)</a>
+</li>
+        <li><a href="_exhale/class_structhelpme_1_1incompleteGammaComputer.html#_CPPv4I0_iEN6helpme23incompleteGammaComputerE">helpme::incompleteGammaComputer (C++ class)</a>
+</li>
+        <li><a href="_exhale/class_structhelpme_1_1incompleteGammaComputer.html#_CPPv4N6helpme23incompleteGammaComputer7computeE4Real">helpme::incompleteGammaComputer::compute (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1incompleteGammaRecursion.html#_CPPv4I0_i_bEN6helpme24incompleteGammaRecursionE">helpme::incompleteGammaRecursion (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1incompleteGammaRecursion.html#_CPPv4N6helpme24incompleteGammaRecursion7computeE4Real">helpme::incompleteGammaRecursion::compute (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_010_00_01false_01_4.html#_CPPv4I0EN6helpme24incompleteGammaRecursionI4RealXL0EEXL0EEEE">helpme::incompleteGammaRecursion&lt;Real, 0, false&gt; (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_010_00_01false_01_4.html#_CPPv4N6helpme24incompleteGammaRecursionI4RealXL0EEXL0EEE7computeE4Real">helpme::incompleteGammaRecursion&lt;Real, 0, false&gt;::compute (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01false_01_4.html#_CPPv4I0EN6helpme24incompleteGammaRecursionI4RealXL1EEXL0EEEE">helpme::incompleteGammaRecursion&lt;Real, 1, false&gt; (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01false_01_4.html#_CPPv4N6helpme24incompleteGammaRecursionI4RealXL1EEXL0EEE7computeE4Real">helpme::incompleteGammaRecursion&lt;Real, 1, false&gt;::compute (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01true_01_4.html#_CPPv4I0EN6helpme24incompleteGammaRecursionI4RealXL1EEXL1EEEE">helpme::incompleteGammaRecursion&lt;Real, 1, true&gt; (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01true_01_4.html#_CPPv4N6helpme24incompleteGammaRecursionI4RealXL1EEXL1EEE7computeE4Real">helpme::incompleteGammaRecursion&lt;Real, 1, true&gt;::compute (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_012_00_01true_01_4.html#_CPPv4I0EN6helpme24incompleteGammaRecursionI4RealXL2EEXL1EEEE">helpme::incompleteGammaRecursion&lt;Real, 2, true&gt; (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_012_00_01true_01_4.html#_CPPv4N6helpme24incompleteGammaRecursionI4RealXL2EEXL1EEE7computeE4Real">helpme::incompleteGammaRecursion&lt;Real, 2, true&gt;::compute (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#_CPPv4I0_iEN6helpme24incompleteGammaRecursionI4Real4twoSXL0EEEE">helpme::incompleteGammaRecursion&lt;Real, twoS, false&gt; (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#_CPPv4N6helpme24incompleteGammaRecursionI4Real4twoSXL0EEE7computeE4Real">helpme::incompleteGammaRecursion&lt;Real, twoS, false&gt;::compute (C++ function)</a>
+</li>
+        <li><a href="_exhale/class_structhelpme_1_1incompleteGammaVirialComputer.html#_CPPv4I0_iEN6helpme29incompleteGammaVirialComputerE">helpme::incompleteGammaVirialComputer (C++ class)</a>
+</li>
+        <li><a href="_exhale/class_structhelpme_1_1incompleteGammaVirialComputer.html#_CPPv4N6helpme29incompleteGammaVirialComputer7computeE4Real">helpme::incompleteGammaVirialComputer::compute (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1incompleteVirialGammaRecursion.html#_CPPv4I0_i_bEN6helpme30incompleteVirialGammaRecursionE">helpme::incompleteVirialGammaRecursion (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1incompleteVirialGammaRecursion.html#_CPPv4N6helpme30incompleteVirialGammaRecursion7computeE4Real">helpme::incompleteVirialGammaRecursion::compute (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1incompleteVirialGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#_CPPv4I0_iEN6helpme30incompleteVirialGammaRecursionI4Real4twoSXL0EEEE">helpme::incompleteVirialGammaRecursion&lt;Real, twoS, false&gt; (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1incompleteVirialGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#_CPPv4N6helpme30incompleteVirialGammaRecursionI4Real4twoSXL0EEE7computeE4Real">helpme::incompleteVirialGammaRecursion&lt;Real, twoS, false&gt;::compute (C++ function)</a>
+</li>
+        <li><a href="_exhale/function_lapack__wrapper_8h_1aef145a683586d54c5754b683096213c4.html#_CPPv4I0EN6helpme27JacobiCyclicDiagonalizationEvP4RealP4RealPK4Reali">helpme::JacobiCyclicDiagonalization (C++ function)</a>
+</li>
+        <li><a href="_exhale/enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584.html#_CPPv4N6helpme11LatticeTypeE">helpme::LatticeType (C++ enum)</a>
+</li>
+        <li><a href="_exhale/enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584.html#_CPPv4N6helpme11LatticeType11ShapeMatrixE">helpme::LatticeType::ShapeMatrix (C++ enumerator)</a>
+</li>
+        <li><a href="_exhale/enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584.html#_CPPv4N6helpme11LatticeType9UndefinedE">helpme::LatticeType::Undefined (C++ enumerator)</a>
+</li>
+        <li><a href="_exhale/enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584.html#_CPPv4N6helpme11LatticeType8XAlignedE">helpme::LatticeType::XAligned (C++ enumerator)</a>
+</li>
+        <li><a href="_exhale/function_cartesiantransform_8h_1ac82d4a439d1917bf45f99c6b3e773f1c.html#_CPPv4I0EN6helpme27makeCartesianRotationMatrixE6MatrixI4RealEiRK6MatrixI4RealE">helpme::makeCartesianRotationMatrix (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4I0EN6helpme6MatrixE">helpme::Matrix (C++ class)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix14allocatedData_E">helpme::Matrix::allocatedData_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4I0_NSt9enable_ifINSt17is_floating_pointI1TE5valueEiE4typeEENK6helpme6Matrix12almostEqualsEbRK6Matrix4Real">helpme::Matrix::almostEquals (C++ function)</a>, <a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4I0_NSt9enable_ifIXntNSt17is_floating_pointI1TE5valueEEiE4typeEENK6helpme6Matrix12almostEqualsEbRK6Matrix4Real">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix14applyOperationERKNSt8functionIFvR4RealEEE">helpme::Matrix::applyOperation (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix27applyOperationToEachElementERKNSt8functionIFvR4RealEEE">helpme::Matrix::applyOperationToEachElement (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix14assertSameSizeERK6Matrix">helpme::Matrix::assertSameSize (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix12assertSquareEv">helpme::Matrix::assertSquare (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix15assertSymmetricERK4Real">helpme::Matrix::assertSymmetric (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix5beginEv">helpme::Matrix::begin (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4I0ENK6helpme6Matrix4castE6MatrixI7NewRealEv">helpme::Matrix::cast (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix6cbeginEv">helpme::Matrix::cbegin (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix4cendEv">helpme::Matrix::cend (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix5cloneEv">helpme::Matrix::clone (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix3colE6size_t">helpme::Matrix::col (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix5data_E">helpme::Matrix::data_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix11diagonalizeE9SortOrder">helpme::Matrix::diagonalize (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix3dotERK6Matrix">helpme::Matrix::dot (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix3endEv">helpme::Matrix::end (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13incrementWithERK4Real">helpme::Matrix::incrementWith (C++ function)</a>, <a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13incrementWithERK6Matrix">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix7inverseEv">helpme::Matrix::inverse (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix10isNearZeroE4Real">helpme::Matrix::isNearZero (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix6MatrixE6size_t6size_t">helpme::Matrix::Matrix (C++ function)</a>, <a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix6MatrixENSt16initializer_listI4RealEE">[1]</a>, <a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix6MatrixENSt16initializer_listINSt16initializer_listI4RealEEEE">[2]</a>, <a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix6MatrixEP4Real6size_t6size_t">[3]</a>, <a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix6MatrixERKNSt6stringE">[4]</a>, <a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix6MatrixEv">[5]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix8multiplyERK6Matrix">helpme::Matrix::multiply (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix5nColsEv">helpme::Matrix::nCols (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix6nCols_E">helpme::Matrix::nCols_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix5nRowsEv">helpme::Matrix::nRows (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix6nRows_E">helpme::Matrix::nRows_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6MatrixclERKNSt4pairIiiEE">helpme::Matrix::operator() (C++ function)</a>, <a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6MatrixclEii">[1]</a>, <a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6MatrixclERKNSt4pairIiiEE">[2]</a>, <a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6MatrixclEii">[3]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6MatrixmlE4Real">helpme::Matrix::operator* (C++ function)</a>, <a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6MatrixmlERK6Matrix">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6MatrixpLERK4Real">helpme::Matrix::operator+= (C++ function)</a>, <a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6MatrixpLERK6Matrix">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6MatrixixEi">helpme::Matrix::operator[] (C++ function)</a>, <a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6MatrixixEi">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix3rowE6size_t">helpme::Matrix::row (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix11setConstantE4Real">helpme::Matrix::setConstant (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix7setZeroEv">helpme::Matrix::setZero (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIteratorE">helpme::Matrix::sliceIterator (C++ struct)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIteratorE">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIterator16assertContiguousERK13sliceIterator">helpme::Matrix::sliceIterator::assertContiguous (C++ function)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIterator16assertContiguousERK13sliceIterator">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIterator14assertSameSizeERK13sliceIterator">helpme::Matrix::sliceIterator::assertSameSize (C++ function)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIterator14assertSameSizeERK13sliceIterator">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIterator5beginEv">helpme::Matrix::sliceIterator::begin (C++ function)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIterator5beginEv">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIterator6begin_E">helpme::Matrix::sliceIterator::begin_ (C++ member)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIterator6begin_E">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIterator6cbeginEv">helpme::Matrix::sliceIterator::cbegin (C++ function)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIterator6cbeginEv">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIterator4cendEv">helpme::Matrix::sliceIterator::cend (C++ function)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIterator4cendEv">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIterator3endEv">helpme::Matrix::sliceIterator::end (C++ function)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIterator3endEv">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIterator4end_E">helpme::Matrix::sliceIterator::end_ (C++ member)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIterator4end_E">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIteratorneERK13sliceIterator">helpme::Matrix::sliceIterator::operator!= (C++ function)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIteratorneERK13sliceIterator">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIteratormlEv">helpme::Matrix::sliceIterator::operator* (C++ function)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIteratormlEv">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIteratormLE4Real">helpme::Matrix::sliceIterator::operator*= (C++ function)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIteratormLE4Real">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIteratorppEv">helpme::Matrix::sliceIterator::operator++ (C++ function)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIteratorppEv">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIteratorpLE4Real">helpme::Matrix::sliceIterator::operator+= (C++ function)</a>, <a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIteratorpLERK13sliceIterator">[1]</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIteratorpLE4Real">[2]</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIteratorpLERK13sliceIterator">[3]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIteratormiERK13sliceIterator">helpme::Matrix::sliceIterator::operator- (C++ function)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIteratormiERK13sliceIterator">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIteratormIE4Real">helpme::Matrix::sliceIterator::operator-= (C++ function)</a>, <a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIteratormIERK13sliceIterator">[1]</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIteratormIE4Real">[2]</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIteratormIERK13sliceIterator">[3]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIteratordVE4Real">helpme::Matrix::sliceIterator::operator/= (C++ function)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIteratordVE4Real">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIteratorixE6size_t">helpme::Matrix::sliceIterator::operator[] (C++ function)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIteratorixE6size_t">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIterator4ptr_E">helpme::Matrix::sliceIterator::ptr_ (C++ member)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIterator4ptr_E">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIterator4sizeEv">helpme::Matrix::sliceIterator::size (C++ function)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIterator4sizeEv">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIterator13sliceIteratorEP4RealP4Real6size_t">helpme::Matrix::sliceIterator::sliceIterator (C++ function)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIterator13sliceIteratorEP4RealP4Real6size_t">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIterator7stride_E">helpme::Matrix::sliceIterator::stride_ (C++ member)</a>, <a href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIterator7stride_E">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix9SortOrderE">helpme::Matrix::SortOrder (C++ enum)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix9SortOrder9AscendingE">helpme::Matrix::SortOrder::Ascending (C++ enumerator)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix9SortOrder10DescendingE">helpme::Matrix::SortOrder::Descending (C++ enumerator)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix9transposeEv">helpme::Matrix::transpose (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix16transposeInPlaceEv">helpme::Matrix::transposeInPlace (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix5writeERNSt7ostreamE">helpme::Matrix::write (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix11writeToFileERKNSt6stringEiib">helpme::Matrix::writeToFile (C++ function)</a>
+</li>
+        <li><a href="_exhale/function_cartesiantransform_8h_1a060e019d9442546d5e5168ee0a5c146f.html#_CPPv4I0EN6helpme19matrixVectorProductEvRK6MatrixI4RealEPK4RealP4Real">helpme::matrixVectorProduct (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPITypes.html#_CPPv4I0EN6helpme8MPITypesE">helpme::MPITypes (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPITypes.html#_CPPv4N6helpme8MPITypes12complexType_E">helpme::MPITypes::complexType_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPITypes.html#_CPPv4N6helpme8MPITypes8MPITypesEv">helpme::MPITypes::MPITypes (C++ function)</a>, <a href="_exhale/structhelpme_1_1MPITypes.html#_CPPv4N6helpme8MPITypes8MPITypesEv">[1]</a>, <a href="_exhale/structhelpme_1_1MPITypes.html#_CPPv4N6helpme8MPITypes8MPITypesEv">[2]</a>, <a href="_exhale/structhelpme_1_1MPITypes.html#_CPPv4N6helpme8MPITypes8MPITypesEv">[3]</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPITypes.html#_CPPv4N6helpme8MPITypes9realType_E">helpme::MPITypes::realType_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4I0EN6helpme10MPIWrapperE">helpme::MPIWrapper (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper9allGatherEP4RealP4Reali">helpme::MPIWrapper::allGather (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper8allToAllEP4RealP4Reali">helpme::MPIWrapper::allToAll (C++ function)</a>, <a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper8allToAllEPNSt7complexI4RealEEPNSt7complexI4RealEEi">[1]</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4NK6helpme10MPIWrapper27assertNodePartitioningValidEiiii">helpme::MPIWrapper::assertNodePartitioningValid (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper7barrierEv">helpme::MPIWrapper::barrier (C++ function)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper16mpiCommunicator_E">helpme::MPIWrapper::mpiCommunicator_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper10MPIWrapperERK8MPI_Commiii">helpme::MPIWrapper::MPIWrapper (C++ function)</a>, <a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper10MPIWrapperEv">[1]</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper7myRank_E">helpme::MPIWrapper::myRank_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper9numNodes_E">helpme::MPIWrapper::numNodes_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper10numNodesX_E">helpme::MPIWrapper::numNodesX_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper10numNodesY_E">helpme::MPIWrapper::numNodesY_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper10numNodesZ_E">helpme::MPIWrapper::numNodesZ_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapperlsERNSt7ostreamERK10MPIWrapper">helpme::MPIWrapper::operator&lt;&lt; (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper6reduceEP4RealP4Realii">helpme::MPIWrapper::reduce (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper18reduceScatterBlockEP4RealP4Reali">helpme::MPIWrapper::reduceScatterBlock (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper5splitEii">helpme::MPIWrapper::split (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper6types_E">helpme::MPIWrapper::types_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapperD0Ev">helpme::MPIWrapper::~MPIWrapper (C++ function)</a>
+</li>
+        <li><a href="_exhale/function_helpme_8h_1a871c5c618f66191ab3a8d5d6a88257fd.html#_CPPv4N6helpme10nCartesianEi">helpme::nCartesian (C++ function)</a>
+</li>
+        <li><a href="_exhale/enum_helpme_8h_1a2196fee10c55373e383cf857b14412c3.html#_CPPv4N6helpme9NodeOrderE">helpme::NodeOrder (C++ enum)</a>
+</li>
+        <li><a href="_exhale/enum_helpme_8h_1a2196fee10c55373e383cf857b14412c3.html#_CPPv4N6helpme9NodeOrder9UndefinedE">helpme::NodeOrder::Undefined (C++ enumerator)</a>
+</li>
+        <li><a href="_exhale/enum_helpme_8h_1a2196fee10c55373e383cf857b14412c3.html#_CPPv4N6helpme9NodeOrder3ZYXE">helpme::NodeOrder::ZYX (C++ enumerator)</a>
+</li>
+        <li><a href="_exhale/function_gamma_8h_1ae3220144f11764cfb80fd0b52cdc8d1c.html#_CPPv4I0EN6helpme24nonTemplateGammaComputerE4Reali">helpme::nonTemplateGammaComputer (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1normIntegerPowerComputer.html#_CPPv4I0_i_b_bEN6helpme24normIntegerPowerComputerE">helpme::normIntegerPowerComputer (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1normIntegerPowerComputer.html#_CPPv4N6helpme24normIntegerPowerComputer7computeE4Real">helpme::normIntegerPowerComputer::compute (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01false_01_4.html#_CPPv4I0_iEN6helpme24normIntegerPowerComputerI4Real1nXL0EEXL0EEEE">helpme::normIntegerPowerComputer&lt;Real, n, false, false&gt; (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01false_01_4.html#_CPPv4N6helpme24normIntegerPowerComputerI4Real1nXL0EEXL0EEE7computeE4Real">helpme::normIntegerPowerComputer&lt;Real, n, false, false&gt;::compute (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01true_01_4.html#_CPPv4I0_iEN6helpme24normIntegerPowerComputerI4Real1nXL0EEXL1EEEE">helpme::normIntegerPowerComputer&lt;Real, n, false, true&gt; (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01true_01_4.html#_CPPv4N6helpme24normIntegerPowerComputerI4Real1nXL0EEXL1EEE7computeE4Real">helpme::normIntegerPowerComputer&lt;Real, n, false, true&gt;::compute (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01true_00_01false_01_4.html#_CPPv4I0_iEN6helpme24normIntegerPowerComputerI4Real1nXL1EEXL0EEEE">helpme::normIntegerPowerComputer&lt;Real, n, true, false&gt; (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01true_00_01false_01_4.html#_CPPv4N6helpme24normIntegerPowerComputerI4Real1nXL1EEXL0EEE7computeE4Real">helpme::normIntegerPowerComputer&lt;Real, n, true, false&gt;::compute (C++ function)</a>
+</li>
+        <li><a href="_exhale/function_memory_8h_1a88c8090bcb1e9078a040f3f72ec70f16.html#_CPPv4I00EN6helpmeneEbRK13FFTWAllocatorI2T1ERK13FFTWAllocatorI2T2E">helpme::operator!= (C++ function)</a>
+</li>
+        <li><a href="_exhale/function_matrix_8h_1afc0baf32ac937a2d68f7f98ae66cabc4.html#_CPPv4I0EN6helpmelsERNSt7ostreamERNSt7ostreamERK6MatrixI4RealE">helpme::operator&lt;&lt; (C++ function)</a>, <a href="_exhale/function_mpi__wrapper_8h_1a05382ee67d55f47b99cbe6479b217a5d.html#_CPPv4I0EN6helpmelsERNSt7ostreamERNSt7ostreamERKNSt10unique_ptrI10MPIWrapperI4RealEEE">[1]</a>
+</li>
+        <li><a href="_exhale/function_memory_8h_1a0b2f28447bc7134d62cdcc76455aa915.html#_CPPv4I00EN6helpmeeqEbRK13FFTWAllocatorI2T1ERK13FFTWAllocatorI2T2E">helpme::operator== (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4I0_NSt9enable_ifINSt17is_floating_pointI4RealE5valueEiE4typeEEN6helpme11PMEInstanceE">helpme::PMEInstance (C++ class)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance9adjEFFxn_E">helpme::PMEInstance::adjEFFxn_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4I_iEN6helpme11PMEInstance9adjEFImplENSt5tupleI4Real4RealEE4Real4Real4Real">helpme::PMEInstance::adjEFImpl (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance8adjEFxn_E">helpme::PMEInstance::adjEFxn_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4I_iEN6helpme11PMEInstance8adjEImplE4Real4Real4Real">helpme::PMEInstance::adjEImpl (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance20algorithmHasChanged_E">helpme::PMEInstance::algorithmHasChanged_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14algorithmType_E">helpme::PMEInstance::algorithmType_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15angMomIterator_E">helpme::PMEInstance::angMomIterator_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4NK6helpme11PMEInstance17assertInitializedEv">helpme::PMEInstance::assertInitialized (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance8boxVecs_E">helpme::PMEInstance::boxVecs_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance24cachedInfluenceFunction_E">helpme::PMEInstance::cachedInfluenceFunction_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance26cacheInfluenceFunctionFxn_E">helpme::PMEInstance::cacheInfluenceFunctionFxn_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4I_iEN6helpme11PMEInstance26cacheInfluenceFunctionImplEviiiiii4RealR7RealVecRK7RealMat4Real4RealPK4RealPK4RealPK4RealPKiPKiPKii">helpme::PMEInstance::cacheInfluenceFunctionImpl (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance21cacheLineSizeInReals_E">helpme::PMEInstance::cacheLineSizeInReals_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance6cellA_E">helpme::PMEInstance::cellA_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance10cellAlpha_E">helpme::PMEInstance::cellAlpha_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance6cellB_E">helpme::PMEInstance::cellB_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance9cellBeta_E">helpme::PMEInstance::cellBeta_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance6cellC_E">helpme::PMEInstance::cellC_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance10cellGamma_E">helpme::PMEInstance::cellGamma_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance10cellVolumeEv">helpme::PMEInstance::cellVolume (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance23checkMinimumImageCutoffEi">helpme::PMEInstance::checkMinimumImageCutoff (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance22complexGridDimensionA_E">helpme::PMEInstance::complexGridDimensionA_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance26compressedForwardTransformEP4Real">helpme::PMEInstance::compressedForwardTransform (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance26compressedInverseTransformEP4Real">helpme::PMEInstance::compressedInverseTransform (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance25compressionCoefficientsA_E">helpme::PMEInstance::compressionCoefficientsA_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance25compressionCoefficientsB_E">helpme::PMEInstance::compressionCoefficientsB_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance25compressionCoefficientsC_E">helpme::PMEInstance::compressionCoefficientsC_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11computeEAdjERK8PairListiRK7RealMatRK7RealMat">helpme::PMEInstance::computeEAdj (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11computeEAllERK8PairListRK8PairListiRK7RealMatRK7RealMat">helpme::PMEInstance::computeEAll (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11computeEDirERK8PairListiRK7RealMatRK7RealMat">helpme::PMEInstance::computeEDir (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12computeEFAdjERK8PairListiRK7RealMatRK7RealMatR7RealMat">helpme::PMEInstance::computeEFAdj (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12computeEFAllERK8PairListRK8PairListiRK7RealMatRK7RealMatR7RealMat">helpme::PMEInstance::computeEFAll (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12computeEFDirERK8PairListiRK7RealMatRK7RealMatR7RealMat">helpme::PMEInstance::computeEFDir (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12computeEFRecEiRK7RealMatRK7RealMatR7RealMat">helpme::PMEInstance::computeEFRec (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance13computeEFVAdjERK8PairListiRK7RealMatRK7RealMatR7RealMatR7RealMat">helpme::PMEInstance::computeEFVAdj (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance13computeEFVAllERK8PairListRK8PairListiRK7RealMatRK7RealMatR7RealMatR7RealMat">helpme::PMEInstance::computeEFVAll (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance13computeEFVDirERK8PairListiRK7RealMatRK7RealMatR7RealMatR7RealMat">helpme::PMEInstance::computeEFVDir (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance13computeEFVRecEiRK7RealMatRK7RealMatR7RealMatR7RealMat">helpme::PMEInstance::computeEFVRec (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance36computeEFVRecIsotropicInducedDipolesEiRK7RealMatRK7RealMat16PolarizationTypeRK7RealMatR7RealMatR7RealMat">helpme::PMEInstance::computeEFVRecIsotropicInducedDipoles (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11computeERecEiRK7RealMatRK7RealMat">helpme::PMEInstance::computeERec (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11computeESlfEiRK7RealMat">helpme::PMEInstance::computeESlf (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11computePAdjEiRK7RealMatRK7RealMatRK7RealMatR7RealMatRb">helpme::PMEInstance::computePAdj (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance21computePAtAtomicSitesERK7RealMatRK7RealMatR7RealMat4Real">helpme::PMEInstance::computePAtAtomicSites (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance13computePDPAdjEiRK7RealMatRK7RealMatRK7RealMatR7RealMatRb">helpme::PMEInstance::computePDPAdj (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11computePRecEiRK7RealMatRK7RealMatRK7RealMatiR7RealMat">helpme::PMEInstance::computePRec (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance17computePRecHelperEiRK7RealMatRK7RealMatRK7RealMatiR7RealMatR7RealMat">helpme::PMEInstance::computePRecHelper (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12computePVRecEiRK7RealMatRK7RealMatRK7RealMatiR7RealMatR7RealMat">helpme::PMEInstance::computePVRec (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance9convolveEEP4Real">helpme::PMEInstance::convolveE (C++ function)</a>, <a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance9convolveEEP7Complex">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance10convolveEVEP7ComplexR7RealMat">helpme::PMEInstance::convolveEV (C++ function)</a>, <a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance10convolveEVEPK4RealRP4RealR7RealMat">[1]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance24convolveEVCompressedFxn_E">helpme::PMEInstance::convolveEVCompressedFxn_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14convolveEVFxn_E">helpme::PMEInstance::convolveEVFxn_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4I_iEN6helpme11PMEInstance14convolveEVImplE4Realbiiiiiii4RealP7ComplexRK7RealMat4Real4RealPK4RealPK4RealPK4RealPKiPKiPKiR7RealMati">helpme::PMEInstance::convolveEVImpl (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance9dirEFFxn_E">helpme::PMEInstance::dirEFFxn_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4I_iEN6helpme11PMEInstance9dirEFImplENSt5tupleI4Real4RealEE4Real4Real4Real">helpme::PMEInstance::dirEFImpl (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance8dirEFxn_E">helpme::PMEInstance::dirEFxn_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4I_iEN6helpme11PMEInstance8dirEImplE4Real4Real4Real">helpme::PMEInstance::dirEImpl (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11fftHelperA_E">helpme::PMEInstance::fftHelperA_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11fftHelperB_E">helpme::PMEInstance::fftHelperB_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11fftHelperC_E">helpme::PMEInstance::fftHelperC_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance30filterAtomsAndBuildSplineCacheEiRK7RealMat">helpme::PMEInstance::filterAtomsAndBuildSplineCache (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15firstKSumTermA_E">helpme::PMEInstance::firstKSumTermA_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15firstKSumTermB_E">helpme::PMEInstance::firstKSumTermB_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15firstKSumTermC_E">helpme::PMEInstance::firstKSumTermC_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16forwardTransformEP4Real">helpme::PMEInstance::forwardTransform (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15fractionalPhis_E">helpme::PMEInstance::fractionalPhis_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance13gridAtomList_E">helpme::PMEInstance::gridAtomList_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15gridDimensionA_E">helpme::PMEInstance::gridDimensionA_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15gridDimensionB_E">helpme::PMEInstance::gridDimensionB_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15gridDimensionC_E">helpme::PMEInstance::gridDimensionC_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance24gridDimensionHasChanged_E">helpme::PMEInstance::gridDimensionHasChanged_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14gridIteratorA_E">helpme::PMEInstance::gridIteratorA_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14gridIteratorB_E">helpme::PMEInstance::gridIteratorB_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14gridIteratorC_E">helpme::PMEInstance::gridIteratorC_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16inverseTransformEP7Complex">helpme::PMEInstance::inverseTransform (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance6kappa_E">helpme::PMEInstance::kappa_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16kappaHasChanged_E">helpme::PMEInstance::kappaHasChanged_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12latticeType_E">helpme::PMEInstance::latticeType_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4NK6helpme11PMEInstance12makeBSplinesEPK4Reals">helpme::PMEInstance::makeBSplines (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4NK6helpme11PMEInstance16makeGridIteratorEiiii">helpme::PMEInstance::makeGridIterator (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance18minimumImageDeltaRERKN6helpme6MatrixI4RealE13sliceIteratorERKN6helpme6MatrixI4RealE13sliceIteratorE">helpme::PMEInstance::minimumImageDeltaR (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance7mValsA_E">helpme::PMEInstance::mValsA_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance7mValsB_E">helpme::PMEInstance::mValsB_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance7mValsC_E">helpme::PMEInstance::mValsC_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance24myComplexGridDimensionA_E">helpme::PMEInstance::myComplexGridDimensionA_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance18myFirstGridPointA_E">helpme::PMEInstance::myFirstGridPointA_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance18myFirstGridPointB_E">helpme::PMEInstance::myFirstGridPointB_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance18myFirstGridPointC_E">helpme::PMEInstance::myFirstGridPointC_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance17myGridDimensionA_E">helpme::PMEInstance::myGridDimensionA_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance17myGridDimensionB_E">helpme::PMEInstance::myGridDimensionB_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance17myGridDimensionC_E">helpme::PMEInstance::myGridDimensionC_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12myNodeRankA_E">helpme::PMEInstance::myNodeRankA_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12myNodeRankB_E">helpme::PMEInstance::myNodeRankB_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12myNodeRankC_E">helpme::PMEInstance::myNodeRankC_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16myNumKSumTermsA_E">helpme::PMEInstance::myNumKSumTermsA_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16myNumKSumTermsB_E">helpme::PMEInstance::myNumKSumTermsB_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16myNumKSumTermsC_E">helpme::PMEInstance::myNumKSumTermsC_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance9nThreads_E">helpme::PMEInstance::nThreads_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance18numAtomsPerThread_E">helpme::PMEInstance::numAtomsPerThread_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14numKSumTermsA_E">helpme::PMEInstance::numKSumTermsA_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14numKSumTermsB_E">helpme::PMEInstance::numKSumTermsB_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14numKSumTermsC_E">helpme::PMEInstance::numKSumTermsC_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance10numNodesA_E">helpme::PMEInstance::numNodesA_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance10numNodesB_E">helpme::PMEInstance::numNodesB_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance10numNodesC_E">helpme::PMEInstance::numNodesC_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance19numNodesHasChanged_E">helpme::PMEInstance::numNodesHasChanged_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance9probeGridEPK4RealiRK7RealMatR7RealMatP4Real">helpme::PMEInstance::probeGrid (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance13probeGridImplEPK4RealRKiRK6SplineRK6SplineRK6SplineP4Real">helpme::PMEInstance::probeGridImpl (C++ function)</a>, <a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance13probeGridImplERKiPK4RealRKiRKiRK6SplineRK6SplineRK6SplineP4RealPK4RealP4Real">[1]</a>, <a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4NK6helpme11PMEInstance13probeGridImplEPK4RealRK6SplineRK6SplineRK6SplineRK4RealP4Real">[2]</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance33reciprocalSumDimensionHasChanged_E">helpme::PMEInstance::reciprocalSumDimensionHasChanged_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance8recVecs_E">helpme::PMEInstance::recVecs_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance25requestedNumberOfThreads_E">helpme::PMEInstance::requestedNumberOfThreads_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance7rPower_E">helpme::PMEInstance::rPower_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance17rPowerHasChanged_E">helpme::PMEInstance::rPowerHasChanged_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12sanityChecksEiRK7RealMatRK7RealMati">helpme::PMEInstance::sanityChecks (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14scaledRecVecs_E">helpme::PMEInstance::scaledRecVecs_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12scaleFactor_E">helpme::PMEInstance::scaleFactor_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance22scaleFactorHasChanged_E">helpme::PMEInstance::scaleFactorHasChanged_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance17setLatticeVectorsE4Real4Real4Real4Real4Real4Real11LatticeType">helpme::PMEInstance::setLatticeVectors (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance5setupEi4Realiiii4Reali">helpme::PMEInstance::setup (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance24setupCalculationMetadataEi4Realiiiiiii4RealiPv9NodeOrderiii">helpme::PMEInstance::setupCalculationMetadata (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15setupCompressedEi4Realiiiiiii4Reali">helpme::PMEInstance::setupCompressed (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance8slfEFxn_E">helpme::PMEInstance::slfEFxn_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4I_iEN6helpme11PMEInstance8slfEImplE4Reali4Real4Real">helpme::PMEInstance::slfEImpl (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12splineCache_E">helpme::PMEInstance::splineCache_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11splineModA_E">helpme::PMEInstance::splineModA_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11splineModB_E">helpme::PMEInstance::splineModB_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11splineModC_E">helpme::PMEInstance::splineModC_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12splineOrder_E">helpme::PMEInstance::splineOrder_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance22splineOrderHasChanged_E">helpme::PMEInstance::splineOrderHasChanged_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance17splinesPerThread_E">helpme::PMEInstance::splinesPerThread_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16spreadParametersEiRK7RealMat">helpme::PMEInstance::spreadParameters (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance20spreadParametersImplERKiP4RealRKiRK6SplineRK6SplineRK6SplineRK7RealMati">helpme::PMEInstance::spreadParametersImpl (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16subsetOfBAlongC_E">helpme::PMEInstance::subsetOfBAlongC_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16subsetOfCAlongA_E">helpme::PMEInstance::subsetOfCAlongA_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16subsetOfCAlongB_E">helpme::PMEInstance::subsetOfCAlongB_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance22threadedGridIteratorC_E">helpme::PMEInstance::threadedGridIteratorC_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance19unitCellHasChanged_E">helpme::PMEInstance::unitCellHasChanged_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance20updateAngMomIteratorEi">helpme::PMEInstance::updateAngMomIterator (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance23updateInfluenceFunctionEv">helpme::PMEInstance::updateInfluenceFunction (C++ function)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11workSpace1_E">helpme::PMEInstance::workSpace1_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11workSpace2_E">helpme::PMEInstance::workSpace2_ (C++ member)</a>
+</li>
+        <li><a href="_exhale/enum_helpme_8h_1a4fc4f8282a7e47f5d842c715ea72b059.html#_CPPv4N6helpme16PolarizationTypeE">helpme::PolarizationType (C++ enum)</a>
+</li>
+        <li><a href="_exhale/enum_helpme_8h_1a4fc4f8282a7e47f5d842c715ea72b059.html#_CPPv4N6helpme16PolarizationType6DirectE">helpme::PolarizationType::Direct (C++ enumerator)</a>
+</li>
+        <li><a href="_exhale/enum_helpme_8h_1a4fc4f8282a7e47f5d842c715ea72b059.html#_CPPv4N6helpme16PolarizationType6MutualE">helpme::PolarizationType::Mutual (C++ enumerator)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1raiseNormToIntegerPower.html#_CPPv4I0_iEN6helpme23raiseNormToIntegerPowerE">helpme::raiseNormToIntegerPower (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1raiseNormToIntegerPower.html#_CPPv4N6helpme23raiseNormToIntegerPower7computeE4Real">helpme::raiseNormToIntegerPower::compute (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1raiseToIntegerPower.html#_CPPv4I0_iEN6helpme19raiseToIntegerPowerE">helpme::raiseToIntegerPower (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1raiseToIntegerPower.html#_CPPv4N6helpme19raiseToIntegerPower3powE4Real">helpme::raiseToIntegerPower::pow (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1raiseToIntegerPower_3_01Real_00_010_01_4.html#_CPPv4I0EN6helpme19raiseToIntegerPowerI4RealXL0EEEE">helpme::raiseToIntegerPower&lt;Real, 0&gt; (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1raiseToIntegerPower_3_01Real_00_010_01_4.html#_CPPv4N6helpme19raiseToIntegerPowerI4RealXL0EEE3powE4Real">helpme::raiseToIntegerPower&lt;Real, 0&gt;::pow (C++ function)</a>
+</li>
+        <li><a href="_exhale/function_gamma_8h_1af69fa5014260f0318885ae090808ae9b.html#_CPPv4I0EN6helpme12screened_erfE4Real4Real">helpme::screened_erf (C++ function)</a>
+</li>
+        <li><a href="_exhale/function_gamma_8h_1a77f6384117afcfa71cbb3b27b579d21b.html#_CPPv4I0EN6helpme13screened_erfcE4Real4Real">helpme::screened_erfc (C++ function)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1SplineCacheEntry.html#_CPPv4I0EN6helpme16SplineCacheEntryE">helpme::SplineCacheEntry (C++ struct)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1SplineCacheEntry.html#_CPPv4N6helpme16SplineCacheEntry18absoluteAtomNumberE">helpme::SplineCacheEntry::absoluteAtomNumber (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1SplineCacheEntry.html#_CPPv4N6helpme16SplineCacheEntry7aSplineE">helpme::SplineCacheEntry::aSpline (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1SplineCacheEntry.html#_CPPv4N6helpme16SplineCacheEntry7bSplineE">helpme::SplineCacheEntry::bSpline (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1SplineCacheEntry.html#_CPPv4N6helpme16SplineCacheEntry7cSplineE">helpme::SplineCacheEntry::cSpline (C++ member)</a>
+</li>
+        <li><a href="_exhale/structhelpme_1_1SplineCacheEntry.html#_CPPv4N6helpme16SplineCacheEntry16SplineCacheEntryEii">helpme::SplineCacheEntry::SplineCacheEntry (C++ function)</a>
+</li>
+        <li><a href="_exhale/function_string__utils_8h_1a1ce7000d3e3817d45cb40bdf2be06d9d.html#_CPPv4I0EN6helpme9stringifyENSt6stringEP1T6size_t6size_tii">helpme::stringify (C++ function)</a>
+</li>
+        <li><a href="_exhale/function_matrix_8h_1af7e32876fd7852b062331d7b405a8198.html#_CPPv4I0EN6helpme22transposeMemoryInPlaceEv14RandomIterator14RandomIteratori">helpme::transposeMemoryInPlace (C++ function)</a>
+</li>
+        <li><a href="_exhale/typedef_memory_8h_1a406b75ea7a95d56e638065f2876a36ae.html#_CPPv4I0EN6helpme6vectorE">helpme::vector (C++ type)</a>
+</li>
+        <li><a href="_exhale/define_gamma_8h_1ac9bd36966441fb675ed2dcc2a4503569.html#c.HELPME_ERF_VAL">HELPME_ERF_VAL (C macro)</a>
+</li>
+        <li><a href="_exhale/define_gamma_8h_1a13deb336ed7209c93b54b8c8cd493c3e.html#c.HELPME_PI">HELPME_PI (C macro)</a>
+</li>
+        <li><a href="_exhale/define_gamma_8h_1a6ffe0d727158120ca49b38a1fed8c5d0.html#c.HELPME_SQRTPI">HELPME_SQRTPI (C macro)</a>
+</li>
+        <li><a href="_exhale/define_gamma_8h_1a5aada0be6b5613c6f01cb54962c77f7f.html#c.HELPME_SQRTTWO">HELPME_SQRTTWO (C macro)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="L" class="genindex-section">
+  <h2>L</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="_autosummary/helpme_py.LatticeType.html#helpme_py.LatticeType">LatticeType (class in helpme_py)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="M" class="genindex-section">
+  <h2>M</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="_autosummary/helpme_py.MatrixD.html#helpme_py.MatrixD">MatrixD (class in helpme_py)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="_autosummary/helpme_py.MatrixF.html#helpme_py.MatrixF">MatrixF (class in helpme_py)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="P" class="genindex-section">
+  <h2>P</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="_autosummary/helpme_py.PairList.html#helpme_py.PairList">PairList (class in helpme_py)</a>
+</li>
+        <li><a href="_exhale/typedef_helpme_8h_1aec129751426309d6ba3b31546c9d48f4.html#_CPPv412PMEInstanceD">PMEInstanceD (C++ type)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD">(class in helpme_py)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="_exhale/typedef_helpme_8h_1a6eef86d57d6da6e5bc38401a93c3ba85.html#_CPPv412PMEInstanceF">PMEInstanceF (C++ type)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF">(class in helpme_py)</a>
+</li>
+        </ul></li>
+        <li><a href="_exhale/define_mpi__wrapper_8h_1a48497a4ae8b25b3b7c0f0bdad766a564.html#c.PRINT">PRINT (C macro)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="S" class="genindex-section">
+  <h2>S</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.set_lattice_vectors">set_lattice_vectors() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.set_lattice_vectors">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.setup">setup() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.setup">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="_autosummary/helpme_py.PMEInstanceD.html#helpme_py.PMEInstanceD.setup_compressed">setup_compressed() (helpme_py.PMEInstanceD method)</a>
+
+        <ul>
+          <li><a href="_autosummary/helpme_py.PMEInstanceF.html#helpme_py.PMEInstanceF.setup_compressed">(helpme_py.PMEInstanceF method)</a>
+</li>
+        </ul></li>
+        <li><a href="_autosummary/helpme_py.LatticeType.html#helpme_py.LatticeType.ShapeMatrix">ShapeMatrix (helpme_py.LatticeType attribute)</a>
+</li>
+        <li><a href="_exhale/classsplineCacheEntry.html#_CPPv416splineCacheEntry">splineCacheEntry (C++ class)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="X" class="genindex-section">
+  <h2>X</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="_autosummary/helpme_py.LatticeType.html#helpme_py.LatticeType.XAligned">XAligned (helpme_py.LatticeType attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2017, Andrew C. Simmonett
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    </body>
+</html>

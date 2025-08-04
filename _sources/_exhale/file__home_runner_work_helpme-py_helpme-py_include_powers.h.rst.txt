@@ -1,0 +1,65 @@
+
+.. _file__home_runner_work_helpme-py_helpme-py_include_powers.h:
+
+File powers.h
+=============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_helpme-py_helpme-py_include>` (``/home/runner/work/helpme-py/helpme-py/include``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+
+Contains template functions to compute various quantities raised to an integer power. 
+
+
+Definition (``/home/runner/work/helpme-py/helpme-py/include/powers.h``)
+-----------------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``cmath``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_helpme.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_helpme`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structhelpme_1_1normIntegerPowerComputer`
+
+- :ref:`exhale_struct_structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01true_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01true_00_01false_01_4`
+
+- :ref:`exhale_struct_structhelpme_1_1raiseNormToIntegerPower`
+
+- :ref:`exhale_struct_structhelpme_1_1raiseToIntegerPower`
+
+- :ref:`exhale_struct_structhelpme_1_1raiseToIntegerPower_3_01Real_00_010_01_4`
+

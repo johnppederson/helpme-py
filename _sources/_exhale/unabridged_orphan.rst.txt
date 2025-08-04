@@ -1,0 +1,88 @@
+:orphan:
+
+
+Full API
+========
+
+Directories
+***********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   dir__home_runner_work_helpme-py_helpme-py_include.rst
+
+Files
+*****
+
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_helpme-py_helpme-py_include_cartesiantransform.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_helpme-py_helpme-py_include_fftw_wrapper.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_helpme-py_helpme-py_include_fletcher.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_helpme-py_helpme-py_include_gamma.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_helpme-py_helpme-py_include_gridsize.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_helpme-py_helpme-py_include_helpme.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_helpme-py_helpme-py_include_lapack_wrapper.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_helpme-py_helpme-py_include_matrix.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_helpme-py_helpme-py_include_memory.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_helpme-py_helpme-py_include_mpi_wrapper.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_helpme-py_helpme-py_include_powers.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_helpme-py_helpme-py_include_splines.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_helpme-py_helpme-py_include_string_utils.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file__home_runner_work_helpme-py_helpme-py_include_tensor_utils.h.rst

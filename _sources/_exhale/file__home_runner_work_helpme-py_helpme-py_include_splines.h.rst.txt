@@ -1,0 +1,53 @@
+
+.. _file__home_runner_work_helpme-py_helpme-py_include_splines.h:
+
+File splines.h
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_helpme-py_helpme-py_include>` (``/home/runner/work/helpme-py/helpme-py/include``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+
+Contains the C++ implementation of a cardinal B-Splines. 
+
+
+Definition (``/home/runner/work/helpme-py/helpme-py/include/splines.h``)
+------------------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``matrix.h`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_matrix.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_helpme.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_helpme`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classhelpme_1_1BSpline`
+

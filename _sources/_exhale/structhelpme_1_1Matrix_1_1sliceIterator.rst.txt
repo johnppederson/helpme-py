@@ -1,0 +1,23 @@
+.. _exhale_struct_structhelpme_1_1Matrix_1_1sliceIterator:
+
+Struct Matrix::sliceIterator
+============================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_matrix.h`
+
+
+Nested Relationships
+--------------------
+
+This struct is a nested type of :ref:`exhale_class_classhelpme_1_1Matrix`.
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: helpme::Matrix::sliceIterator
+   :project: HelPME
+   :members:
+   :protected-members:
+   :undoc-members:

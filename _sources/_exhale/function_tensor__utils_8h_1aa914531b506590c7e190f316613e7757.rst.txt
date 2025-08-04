@@ -1,0 +1,14 @@
+.. _exhale_function_tensor__utils_8h_1aa914531b506590c7e190f316613e7757:
+
+Template Function helpme::contractABxCWithDxC
+=============================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_tensor_utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: helpme::contractABxCWithDxC(Real const *__restrict__, Real const *__restrict__, int const, int const, int const, Real *__restrict__)
+   :project: HelPME

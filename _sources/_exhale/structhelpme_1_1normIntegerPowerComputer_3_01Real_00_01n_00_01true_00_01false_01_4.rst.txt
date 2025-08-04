@@ -1,0 +1,17 @@
+.. _exhale_struct_structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01true_00_01false_01_4:
+
+Template Struct normIntegerPowerComputer< Real, n, true, false >
+================================================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_powers.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: helpme::normIntegerPowerComputer< Real, n, true, false >
+   :project: HelPME
+   :members:
+   :protected-members:
+   :undoc-members:

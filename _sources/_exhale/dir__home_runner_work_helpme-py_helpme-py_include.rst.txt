@@ -1,0 +1,29 @@
+.. _dir__home_runner_work_helpme-py_helpme-py_include:
+
+
+Directory include
+=================
+
+
+*Directory path:* ``/home/runner/work/helpme-py/helpme-py/include``
+
+
+Files
+-----
+
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_cartesiantransform.h`
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_fftw_wrapper.h`
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_fletcher.h`
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_gamma.h`
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_gridsize.h`
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_helpme.h`
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_lapack_wrapper.h`
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_matrix.h`
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_memory.h`
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_mpi_wrapper.h`
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_powers.h`
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_splines.h`
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_string_utils.h`
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_tensor_utils.h`
+
+

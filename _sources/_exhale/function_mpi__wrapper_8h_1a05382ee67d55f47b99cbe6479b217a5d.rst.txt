@@ -1,0 +1,14 @@
+.. _exhale_function_mpi__wrapper_8h_1a05382ee67d55f47b99cbe6479b217a5d:
+
+Template Function helpme::operator<<(std::ostream&, const std::unique_ptr<MPIWrapper<Real>>&)
+=============================================================================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_mpi_wrapper.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: helpme::operator<<(std::ostream&, const std::unique_ptr<MPIWrapper<Real>>&)
+   :project: HelPME

@@ -1,0 +1,56 @@
+
+.. _file__home_runner_work_helpme-py_helpme-py_include_cartesiantransform.h:
+
+File cartesiantransform.h
+=========================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_helpme-py_helpme-py_include>` (``/home/runner/work/helpme-py/helpme-py/include``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+Definition (``/home/runner/work/helpme-py/helpme-py/include/cartesiantransform.h``)
+-----------------------------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``matrix.h`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_matrix.h`)
+
+- ``vector``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_helpme.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_helpme`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_cartesiantransform_8h_1a347e94f6ebf33fc9794b2dc3a4ad62a5`
+
+- :ref:`exhale_function_cartesiantransform_8h_1a256bfb8cf9356b69d856a27dccfd2e33`
+
+- :ref:`exhale_function_cartesiantransform_8h_1ac82d4a439d1917bf45f99c6b3e773f1c`
+
+- :ref:`exhale_function_cartesiantransform_8h_1a060e019d9442546d5e5168ee0a5c146f`
+

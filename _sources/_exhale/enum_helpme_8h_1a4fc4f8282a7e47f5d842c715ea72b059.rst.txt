@@ -1,0 +1,14 @@
+.. _exhale_enum_helpme_8h_1a4fc4f8282a7e47f5d842c715ea72b059:
+
+Enum PolarizationType
+=====================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_helpme.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: helpme::PolarizationType
+   :project: HelPME

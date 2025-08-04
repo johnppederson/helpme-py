@@ -1,0 +1,14 @@
+.. _exhale_define_gamma_8h_1a13deb336ed7209c93b54b8c8cd493c3e:
+
+Define HELPME_PI
+================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_gamma.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: HELPME_PI
+   :project: HelPME

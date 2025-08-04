@@ -1,0 +1,87 @@
+
+.. _file__home_runner_work_helpme-py_helpme-py_include_matrix.h:
+
+File matrix.h
+=============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_helpme-py_helpme-py_include>` (``/home/runner/work/helpme-py/helpme-py/include``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+Definition (``/home/runner/work/helpme-py/helpme-py/include/matrix.h``)
+-----------------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``algorithm``
+
+- ``complex``
+
+- ``fstream``
+
+- ``functional``
+
+- ``initializer_list``
+
+- ``iomanip``
+
+- ``iostream``
+
+- ``lapack_wrapper.h`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_lapack_wrapper.h`)
+
+- ``memory.h`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_memory.h`)
+
+- ``numeric``
+
+- ``stdexcept``
+
+- ``string_utils.h`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_string_utils.h`)
+
+- ``tuple``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_cartesiantransform.h`
+
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_helpme.h`
+
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_splines.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_helpme`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structhelpme_1_1Matrix_1_1sliceIterator`
+
+- :ref:`exhale_class_classhelpme_1_1Matrix`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_matrix_8h_1afc0baf32ac937a2d68f7f98ae66cabc4`
+
+- :ref:`exhale_function_matrix_8h_1af7e32876fd7852b062331d7b405a8198`
+

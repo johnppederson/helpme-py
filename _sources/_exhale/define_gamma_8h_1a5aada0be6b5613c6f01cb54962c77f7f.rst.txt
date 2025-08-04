@@ -1,0 +1,14 @@
+.. _exhale_define_gamma_8h_1a5aada0be6b5613c6f01cb54962c77f7f:
+
+Define HELPME_SQRTTWO
+=====================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_gamma.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: HELPME_SQRTTWO
+   :project: HelPME

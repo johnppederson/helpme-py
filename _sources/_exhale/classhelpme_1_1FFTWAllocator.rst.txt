@@ -1,0 +1,27 @@
+.. _exhale_class_classhelpme_1_1FFTWAllocator:
+
+Template Class FFTWAllocator
+============================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_memory.h`
+
+
+Nested Relationships
+--------------------
+
+
+Nested Types
+************
+
+- :ref:`exhale_struct_structhelpme_1_1FFTWAllocator_1_1rebind`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: helpme::FFTWAllocator
+   :project: HelPME
+   :members:
+   :protected-members:
+   :undoc-members:

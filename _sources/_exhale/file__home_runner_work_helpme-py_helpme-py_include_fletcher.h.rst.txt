@@ -1,0 +1,40 @@
+
+.. _file__home_runner_work_helpme-py_helpme-py_include_fletcher.h:
+
+File fletcher.h
+===============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_helpme-py_helpme-py_include>` (``/home/runner/work/helpme-py/helpme-py/include``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+Definition (``/home/runner/work/helpme-py/helpme-py/include/fletcher.h``)
+-------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_helpme`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_fletcher_8h_1a2bbabb174c1355716ad9df5df662433d`
+
+- :ref:`exhale_function_fletcher_8h_1a08b980c39ff76d028da19e0812423c9a`
+
+- :ref:`exhale_function_fletcher_8h_1a1331638675e33795086e972eac269939`
+

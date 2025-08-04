@@ -1,0 +1,17 @@
+.. _exhale_struct_structhelpme_1_1raiseNormToIntegerPower:
+
+Template Struct raiseNormToIntegerPower
+=======================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_powers.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: helpme::raiseNormToIntegerPower
+   :project: HelPME
+   :members:
+   :protected-members:
+   :undoc-members:

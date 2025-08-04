@@ -1,0 +1,14 @@
+.. _exhale_define_helpme_8h_1a3457e9c167e8c5fc5e78409291a671c8:
+
+Define ENABLE_KERNEL_WITH_INVERSE_R_EXPONENT_OF
+===============================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_helpme.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ENABLE_KERNEL_WITH_INVERSE_R_EXPONENT_OF
+   :project: HelPME

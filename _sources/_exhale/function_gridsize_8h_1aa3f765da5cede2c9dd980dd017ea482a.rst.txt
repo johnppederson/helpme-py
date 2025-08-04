@@ -1,0 +1,14 @@
+.. _exhale_function_gridsize_8h_1aa3f765da5cede2c9dd980dd017ea482a:
+
+Template Function helpme::allDivisors
+=====================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_gridsize.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: helpme::allDivisors(T, const std::initializer_list<T>&)
+   :project: HelPME

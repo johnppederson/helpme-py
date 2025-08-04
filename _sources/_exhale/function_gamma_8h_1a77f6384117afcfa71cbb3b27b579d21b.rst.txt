@@ -1,0 +1,14 @@
+.. _exhale_function_gamma_8h_1a77f6384117afcfa71cbb3b27b579d21b:
+
+Template Function helpme::screened_erfc
+=======================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_gamma.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: helpme::screened_erfc(Real)
+   :project: HelPME

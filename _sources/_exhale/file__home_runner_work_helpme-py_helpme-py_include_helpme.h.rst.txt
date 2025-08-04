@@ -1,0 +1,135 @@
+
+.. _file__home_runner_work_helpme-py_helpme-py_include_helpme.h:
+
+File helpme.h
+=============
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_helpme-py_helpme-py_include>` (``/home/runner/work/helpme-py/helpme-py/include``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+
+Contains the C++ implementation of a PME Instance, and related helper classes. 
+
+
+Definition (``/home/runner/work/helpme-py/helpme-py/include/helpme.h``)
+-----------------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``algorithm``
+
+- ``array``
+
+- ``cartesiantransform.h`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_cartesiantransform.h`)
+
+- ``cmath``
+
+- ``complex``
+
+- ``fftw_wrapper.h`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_fftw_wrapper.h`)
+
+- ``functional``
+
+- ``gamma.h`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_gamma.h`)
+
+- ``gridsize.h`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_gridsize.h`)
+
+- ``iostream``
+
+- ``list``
+
+- ``matrix.h`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_matrix.h`)
+
+- ``memory`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_memory.h`)
+
+- ``memory.h`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_memory.h`)
+
+- ``powers.h`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_powers.h`)
+
+- ``set``
+
+- ``splines.h`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_splines.h`)
+
+- ``stdexcept``
+
+- ``string`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_string_utils.h`)
+
+- ``string_utils.h`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_string_utils.h`)
+
+- ``tensor_utils.h`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_tensor_utils.h`)
+
+- ``tuple``
+
+- ``unistd.h``
+
+- ``vector``
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_helpme`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structhelpme_1_1SplineCacheEntry`
+
+- :ref:`exhale_class_classhelpme_1_1PMEInstance`
+
+- :ref:`exhale_class_classsplineCacheEntry`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_helpme_8h_1a51cde3faab477dd22811f194283ff534`
+
+- :ref:`exhale_enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584`
+
+- :ref:`exhale_enum_helpme_8h_1a2196fee10c55373e383cf857b14412c3`
+
+- :ref:`exhale_enum_helpme_8h_1a4fc4f8282a7e47f5d842c715ea72b059`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_helpme_8h_1aaa4a78096ea81a5bf563e895cdaf6269`
+
+- :ref:`exhale_function_helpme_8h_1a871c5c618f66191ab3a8d5d6a88257fd`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_helpme_8h_1a3457e9c167e8c5fc5e78409291a671c8`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_helpme_8h_1aec129751426309d6ba3b31546c9d48f4`
+
+- :ref:`exhale_typedef_helpme_8h_1a6eef86d57d6da6e5bc38401a93c3ba85`
+

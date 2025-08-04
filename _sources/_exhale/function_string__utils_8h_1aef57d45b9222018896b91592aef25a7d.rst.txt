@@ -1,0 +1,14 @@
+.. _exhale_function_string__utils_8h_1aef57d45b9222018896b91592aef25a7d:
+
+Template Function helpme::formatNumber
+======================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_string_utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: helpme::formatNumber(const T&, int, int)
+   :project: HelPME

@@ -1,0 +1,1182 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Template Class PMEInstance" href="classhelpme_1_1PMEInstance.html" /><link rel="prev" title="Template Class incompleteGammaVirialComputer" href="class_structhelpme_1_1incompleteGammaVirialComputer.html" />
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
+        <title>Template Class Matrix - helPME-py documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=25af2a20" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">helPME-py  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <span class="sidebar-brand-text">helPME-py  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../py_api.html">Python API Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Python API Documentation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.LatticeType.html">helpme_py.LatticeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.PairList.html">helpme_py.PairList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.MatrixD.html">helpme_py.MatrixD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.PMEInstanceD.html">helpme_py.PMEInstanceD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.MatrixF.html">helpme_py.MatrixF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.PMEInstanceF.html">helpme_py.PMEInstanceF</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="cpp_api.html">C++ API Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of C++ API Documentation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_helpme.html">Namespace helpme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1FFTWAllocator_1_1rebind.html">Template Struct FFTWAllocator::rebind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html">Template Struct FFTWTypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1FFTWTypes_1_1EmptyPlan.html">Struct FFTWTypes::EmptyPlan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion.html">Template Struct gammaRecursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_010_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 0, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 1, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01true_01_4.html">Template Struct gammaRecursion&lt; Real, 1, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 2, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01true_01_4.html">Template Struct gammaRecursion&lt; Real, 2, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, twoS, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion.html">Template Struct incompleteGammaRecursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_010_00_01false_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 0, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01false_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 1, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01true_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 1, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_012_00_01true_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 2, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, twoS, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteVirialGammaRecursion.html">Template Struct incompleteVirialGammaRecursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteVirialGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct incompleteVirialGammaRecursion&lt; Real, twoS, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html">Struct Matrix::sliceIterator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1MPITypes.html">Template Struct MPITypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html">Template Struct MPIWrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer.html">Template Struct normIntegerPowerComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01false_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, false, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01true_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, false, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01true_00_01false_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, true, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1raiseNormToIntegerPower.html">Template Struct raiseNormToIntegerPower</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1raiseToIntegerPower.html">Template Struct raiseToIntegerPower</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1raiseToIntegerPower_3_01Real_00_010_01_4.html">Template Struct raiseToIntegerPower&lt; Real, 0 &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1SplineCacheEntry.html">Template Struct SplineCacheEntry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1BSpline.html">Template Class BSpline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html">Template Class FFTWAllocator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html">Template Class FFTWWrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_structhelpme_1_1gammaComputer.html">Template Class gammaComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_structhelpme_1_1incompleteGammaComputer.html">Template Class incompleteGammaComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_structhelpme_1_1incompleteGammaVirialComputer.html">Template Class incompleteGammaVirialComputer</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Template Class Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1PMEInstance.html">Template Class PMEInstance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsplineCacheEntry.html">Class splineCacheEntry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_helpme_8h_1a51cde3faab477dd22811f194283ff534.html">Enum AlgorithmType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584.html">Enum LatticeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_helpme_8h_1a2196fee10c55373e383cf857b14412c3.html">Enum NodeOrder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_helpme_8h_1a4fc4f8282a7e47f5d842c715ea72b059.html">Enum PolarizationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_gridsize_8h_1aa3f765da5cede2c9dd980dd017ea482a.html">Template Function helpme::allDivisors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_helpme_8h_1aaa4a78096ea81a5bf563e895cdaf6269.html">Function helpme::cartAddress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_cartesiantransform_8h_1a347e94f6ebf33fc9794b2dc3a4ad62a5.html">Function helpme::cartesianAddress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_cartesiantransform_8h_1a256bfb8cf9356b69d856a27dccfd2e33.html">Template Function helpme::cartesianTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_fletcher_8h_1a2bbabb174c1355716ad9df5df662433d.html">Template Function helpme::compute_fletcher_checksum16</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_fletcher_8h_1a08b980c39ff76d028da19e0812423c9a.html">Template Function helpme::compute_fletcher_checksum32</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_fletcher_8h_1a1331638675e33795086e972eac269939.html">Template Function helpme::compute_fletcher_checksum64</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_tensor__utils_8h_1aa914531b506590c7e190f316613e7757.html">Template Function helpme::contractABxCWithDxC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_gridsize_8h_1a9c4101833a2cc86ce601f86b04e3a266.html">Template Function helpme::findGridSize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_string__utils_8h_1aef57d45b9222018896b91592aef25a7d.html">Template Function helpme::formatNumber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_lapack__wrapper_8h_1aef145a683586d54c5754b683096213c4.html">Template Function helpme::JacobiCyclicDiagonalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_cartesiantransform_8h_1ac82d4a439d1917bf45f99c6b3e773f1c.html">Template Function helpme::makeCartesianRotationMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_cartesiantransform_8h_1a060e019d9442546d5e5168ee0a5c146f.html">Template Function helpme::matrixVectorProduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_helpme_8h_1a871c5c618f66191ab3a8d5d6a88257fd.html">Function helpme::nCartesian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_gamma_8h_1ae3220144f11764cfb80fd0b52cdc8d1c.html">Template Function helpme::nonTemplateGammaComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_memory_8h_1a88c8090bcb1e9078a040f3f72ec70f16.html">Template Function helpme::operator!=</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_matrix_8h_1afc0baf32ac937a2d68f7f98ae66cabc4.html">Template Function helpme::operator&lt;&lt;(std::ostream&amp;, Matrix&lt;Real&gt; const&amp;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_mpi__wrapper_8h_1a05382ee67d55f47b99cbe6479b217a5d.html">Template Function helpme::operator&lt;&lt;(std::ostream&amp;, const std::unique_ptr&lt;MPIWrapper&lt;Real&gt;&gt;&amp;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_memory_8h_1a0b2f28447bc7134d62cdcc76455aa915.html">Template Function helpme::operator==</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_tensor__utils_8h_1af32cd01638ca35b3cffa9ca4a4b712d5.html">Template Function helpme::permuteABCtoACB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_tensor__utils_8h_1a51a39b3d3aac289b016c8afb39d9afd9.html">Template Function helpme::permuteABCtoCBA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_gamma_8h_1af69fa5014260f0318885ae090808ae9b.html">Template Function helpme::screened_erf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_gamma_8h_1a77f6384117afcfa71cbb3b27b579d21b.html">Template Function helpme::screened_erfc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_string__utils_8h_1a1ce7000d3e3817d45cb40bdf2be06d9d.html">Template Function helpme::stringify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_matrix_8h_1af7e32876fd7852b062331d7b405a8198.html">Template Function helpme::transposeMemoryInPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_helpme_8h_1a3457e9c167e8c5fc5e78409291a671c8.html">Define ENABLE_KERNEL_WITH_INVERSE_R_EXPONENT_OF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_gamma_8h_1ac9bd36966441fb675ed2dcc2a4503569.html">Define HELPME_ERF_VAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_gamma_8h_1a13deb336ed7209c93b54b8c8cd493c3e.html">Define HELPME_PI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_gamma_8h_1a6ffe0d727158120ca49b38a1fed8c5d0.html">Define HELPME_SQRTPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_gamma_8h_1a5aada0be6b5613c6f01cb54962c77f7f.html">Define HELPME_SQRTTWO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_mpi__wrapper_8h_1a48497a4ae8b25b3b7c0f0bdad766a564.html">Define PRINT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_memory_8h_1a406b75ea7a95d56e638065f2876a36ae.html">Typedef helpme::vector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_helpme_8h_1aec129751426309d6ba3b31546c9d48f4.html">Typedef PMEInstanceD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_helpme_8h_1a6eef86d57d6da6e5bc38401a93c3ba85.html">Typedef PMEInstanceF</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../_sources/_exhale/classhelpme_1_1Matrix.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="template-class-matrix">
+<span id="exhale-class-classhelpme-1-1matrix"></span><h1>Template Class Matrix<a class="headerlink" href="#template-class-matrix" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_runner_work_helpme-py_helpme-py_include_matrix.h.html#file-home-runner-work-helpme-py-helpme-py-include-matrix-h"><span class="std std-ref">File matrix.h</span></a></p></li>
+</ul>
+<section id="nested-relationships">
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Link to this heading">¶</a></h2>
+<section id="nested-types">
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#exhale-struct-structhelpme-1-1matrix-1-1sliceiterator"><span class="std std-ref">Struct Matrix::sliceIterator</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN6helpme6MatrixE">
+<span id="_CPPv3I0EN6helpme6MatrixE"></span><span id="_CPPv2I0EN6helpme6MatrixE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Real</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classhelpme_1_1Matrix"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Matrix</span></span></span><a class="headerlink" href="#_CPPv4I0EN6helpme6MatrixE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <a class="reference internal" href="#classhelpme_1_1Matrix"><span class="std std-ref">Matrix</span></a> class is designed to serve as a convenient wrapper to simplify 2D matrix operations. It assumes dense matrices with contiguious data and the fast running index being the right (column) index. The underlying memory may have already been allocated elsewhere by C, Fortran or Python, and is directly manipulated in place, saving an expensive copy operation. To provide read-only access to such memory address, use a const template type. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix9SortOrderE">
+<span id="_CPPv3N6helpme6Matrix9SortOrderE"></span><span id="_CPPv2N6helpme6Matrix9SortOrderE"></span><span class="target" id="classhelpme_1_1Matrix_1a5654ccbea2bc959816352e824f5de078"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SortOrder</span></span></span><a class="headerlink" href="#_CPPv4N6helpme6Matrix9SortOrderE" title="Link to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix9SortOrder9AscendingE">
+<span id="_CPPv3N6helpme6Matrix9SortOrder9AscendingE"></span><span id="_CPPv2N6helpme6Matrix9SortOrder9AscendingE"></span><span class="target" id="classhelpme_1_1Matrix_1a5654ccbea2bc959816352e824f5de078acf3fb1ff52ea1eed3347ac5401ee7f0c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Ascending</span></span></span><a class="headerlink" href="#_CPPv4N6helpme6Matrix9SortOrder9AscendingE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix9SortOrder10DescendingE">
+<span id="_CPPv3N6helpme6Matrix9SortOrder10DescendingE"></span><span id="_CPPv2N6helpme6Matrix9SortOrder10DescendingE"></span><span class="target" id="classhelpme_1_1Matrix_1a5654ccbea2bc959816352e824f5de078ae3cf5ac19407b1a62c6fccaff675a53b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Descending</span></span></span><a class="headerlink" href="#_CPPv4N6helpme6Matrix9SortOrder10DescendingE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6MatrixclEii">
+<span id="_CPPv3NK6helpme6MatrixclEii"></span><span id="_CPPv2NK6helpme6MatrixclEii"></span><span id="helpme::Matrix::call-operator__i.iC"></span><span class="target" id="classhelpme_1_1Matrix_1a22e01eed6753a6dfb0ef8cae04d90259"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">row</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">col</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6MatrixclEii" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6MatrixclERKNSt4pairIiiEE">
+<span id="_CPPv3NK6helpme6MatrixclERKNSt4pairIiiEE"></span><span id="_CPPv2NK6helpme6MatrixclERKNSt4pairIiiEE"></span><span id="helpme::Matrix::call-operator__std::pair:i.i:CRC"></span><span class="target" id="classhelpme_1_1Matrix_1a48f84ef73c4868040c0f93a13d1584fe"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">indices</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6MatrixclERKNSt4pairIiiEE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6MatrixclEii">
+<span id="_CPPv3N6helpme6MatrixclEii"></span><span id="_CPPv2N6helpme6MatrixclEii"></span><span id="helpme::Matrix::call-operator__i.i"></span><span class="target" id="classhelpme_1_1Matrix_1a03d92f0a1b461a256af319ad02b9ec88"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">row</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">col</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6MatrixclEii" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6MatrixclERKNSt4pairIiiEE">
+<span id="_CPPv3N6helpme6MatrixclERKNSt4pairIiiEE"></span><span id="_CPPv2N6helpme6MatrixclERKNSt4pairIiiEE"></span><span id="helpme::Matrix::call-operator__std::pair:i.i:CR"></span><span class="target" id="classhelpme_1_1Matrix_1a03b557615472ee0b02226efa1e8147ee"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">indices</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6MatrixclERKNSt4pairIiiEE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6MatrixixEi">
+<span id="_CPPv3NK6helpme6MatrixixEi"></span><span id="_CPPv2NK6helpme6MatrixixEi"></span><span id="helpme::Matrix::subscript-operator__iC"></span><span class="target" id="classhelpme_1_1Matrix_1ae81dd697abbe9351d4dbeea316d01a67"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">[]</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">row</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6MatrixixEi" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6MatrixixEi">
+<span id="_CPPv3N6helpme6MatrixixEi"></span><span id="_CPPv2N6helpme6MatrixixEi"></span><span id="helpme::Matrix::subscript-operator__i"></span><span class="target" id="classhelpme_1_1Matrix_1ac8eb8bc372f79680a2d93f8c28a4ea50"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">[]</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">row</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6MatrixixEi" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix5beginEv">
+<span id="_CPPv3NK6helpme6Matrix5beginEv"></span><span id="_CPPv2NK6helpme6Matrix5beginEv"></span><span id="helpme::Matrix::beginC"></span><span class="target" id="classhelpme_1_1Matrix_1a1142b73b70160708d48e35ad85dea9f2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">begin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix5beginEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix3endEv">
+<span id="_CPPv3NK6helpme6Matrix3endEv"></span><span id="_CPPv2NK6helpme6Matrix3endEv"></span><span id="helpme::Matrix::endC"></span><span class="target" id="classhelpme_1_1Matrix_1a8c9f0af57f4ff207aa93eebdcfc00081"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">end</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix3endEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix6cbeginEv">
+<span id="_CPPv3NK6helpme6Matrix6cbeginEv"></span><span id="_CPPv2NK6helpme6Matrix6cbeginEv"></span><span id="helpme::Matrix::cbeginC"></span><span class="target" id="classhelpme_1_1Matrix_1ad067b84c95c5d364beb7a6536b8f022c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">cbegin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix6cbeginEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix4cendEv">
+<span id="_CPPv3NK6helpme6Matrix4cendEv"></span><span id="_CPPv2NK6helpme6Matrix4cendEv"></span><span id="helpme::Matrix::cendC"></span><span class="target" id="classhelpme_1_1Matrix_1a1630b7686c4dc7bc347dd6dce2b133ad"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">cend</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix4cendEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix3rowE6size_t">
+<span id="_CPPv3NK6helpme6Matrix3rowE6size_t"></span><span id="_CPPv2NK6helpme6Matrix3rowE6size_t"></span><span id="helpme::Matrix::row__sC"></span><span class="target" id="classhelpme_1_1Matrix_1ac88a8bc65d3fab18efea416f6fcb4134"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">row</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">r</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix3rowE6size_t" title="Link to this definition">¶</a><br /></dt>
+<dd><p>row returns a read-only iterator over a given row. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>r</strong> – the row to return. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the slice in memory corresponding to the rth row. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix3colE6size_t">
+<span id="_CPPv3NK6helpme6Matrix3colE6size_t"></span><span id="_CPPv2NK6helpme6Matrix3colE6size_t"></span><span id="helpme::Matrix::col__sC"></span><span class="target" id="classhelpme_1_1Matrix_1a1216ed1cf2c52cdfb9100a35ca9fdce0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">col</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">c</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix3colE6size_t" title="Link to this definition">¶</a><br /></dt>
+<dd><p>col returns a read-only iterator over a given column. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>c</strong> – the column to return. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the slice in memory corresponding to the cth column. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix5nRowsEv">
+<span id="_CPPv3NK6helpme6Matrix5nRowsEv"></span><span id="_CPPv2NK6helpme6Matrix5nRowsEv"></span><span id="helpme::Matrix::nRowsC"></span><span class="target" id="classhelpme_1_1Matrix_1a9f5b63b20aab7dd3d4b7c0e00a0552e5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nRows</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix5nRowsEv" title="Link to this definition">¶</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the number of rows in this matrix. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix5nColsEv">
+<span id="_CPPv3NK6helpme6Matrix5nColsEv"></span><span id="_CPPv2NK6helpme6Matrix5nColsEv"></span><span id="helpme::Matrix::nColsC"></span><span class="target" id="classhelpme_1_1Matrix_1a9e56de2f7666d3663e673d095ce1ab72"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nCols</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix5nColsEv" title="Link to this definition">¶</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the number of columns in this matrix. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix6MatrixEv">
+<span id="_CPPv3N6helpme6Matrix6MatrixEv"></span><span id="_CPPv2N6helpme6Matrix6MatrixEv"></span><span id="helpme::Matrix::Matrix"></span><span class="target" id="classhelpme_1_1Matrix_1a1ec0d084fbfe3b8c2649f26ef8b2bcfa"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Matrix</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix6MatrixEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#classhelpme_1_1Matrix"><span class="std std-ref">Matrix</span></a> Constructs an empty matrix. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix6MatrixE6size_t6size_t">
+<span id="_CPPv3N6helpme6Matrix6MatrixE6size_t6size_t"></span><span id="_CPPv2N6helpme6Matrix6MatrixE6size_t6size_t"></span><span id="helpme::Matrix::Matrix__s.s"></span><span class="target" id="classhelpme_1_1Matrix_1a03bcc8a63c924e719422b64d6943fc9e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Matrix</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nRows</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nCols</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix6MatrixE6size_t6size_t" title="Link to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#classhelpme_1_1Matrix"><span class="std std-ref">Matrix</span></a> Constructs a new matrix, allocating memory. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nRows</strong> – the number of rows in the matrix. </p></li>
+<li><p><strong>nCols</strong> – the number of columns in the matrix. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix6MatrixERKNSt6stringE">
+<span id="_CPPv3N6helpme6Matrix6MatrixERKNSt6stringE"></span><span id="_CPPv2N6helpme6Matrix6MatrixERKNSt6stringE"></span><span id="helpme::Matrix::Matrix__ssCR"></span><span class="target" id="classhelpme_1_1Matrix_1a4d351fac3259338fc6bc2362e28ccce2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Matrix</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">filename</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix6MatrixERKNSt6stringE" title="Link to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#classhelpme_1_1Matrix"><span class="std std-ref">Matrix</span></a> Constructs a new matrix, allocating memory. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> – the ASCII file from which to read this matrix </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix6MatrixENSt16initializer_listINSt16initializer_listI4RealEEEE">
+<span id="_CPPv3N6helpme6Matrix6MatrixENSt16initializer_listINSt16initializer_listI4RealEEEE"></span><span id="_CPPv2N6helpme6Matrix6MatrixENSt16initializer_listINSt16initializer_listI4RealEEEE"></span><span id="helpme::Matrix::Matrix__std::initializer_list:std::initializer_list:Real::"></span><span class="target" id="classhelpme_1_1Matrix_1abf37dc729bd111d8ce95d342473be720"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Matrix</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">initializer_list</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">initializer_list</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix6MatrixENSt16initializer_listINSt16initializer_listI4RealEEEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#classhelpme_1_1Matrix"><span class="std std-ref">Matrix</span></a> Constructs a new matrix, allocating memory and initializing values using the braced initializer. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – a braced initializer list of braced initializer lists containing the values to be stored in the matrix. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix6MatrixENSt16initializer_listI4RealEE">
+<span id="_CPPv3N6helpme6Matrix6MatrixENSt16initializer_listI4RealEE"></span><span id="_CPPv2N6helpme6Matrix6MatrixENSt16initializer_listI4RealEE"></span><span id="helpme::Matrix::Matrix__std::initializer_list:Real:"></span><span class="target" id="classhelpme_1_1Matrix_1af371d829bc25fdf2f10c28fff1387664"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Matrix</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">initializer_list</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix6MatrixENSt16initializer_listI4RealEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#classhelpme_1_1Matrix"><span class="std std-ref">Matrix</span></a> Constructs a new column vector, allocating memory and initializing values using the braced initializer. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – a braced initializer list of braced initializer lists containing the values to be stored in the matrix. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix6MatrixEP4Real6size_t6size_t">
+<span id="_CPPv3N6helpme6Matrix6MatrixEP4Real6size_t6size_t"></span><span id="_CPPv2N6helpme6Matrix6MatrixEP4Real6size_t6size_t"></span><span id="helpme::Matrix::Matrix__RealP.s.s"></span><span class="target" id="classhelpme_1_1Matrix_1a7b821f158dd7935007a0ae6dfdd27ffe"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Matrix</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ptr</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nRows</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nCols</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix6MatrixEP4Real6size_t6size_t" title="Link to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#classhelpme_1_1Matrix"><span class="std std-ref">Matrix</span></a> Constructs a new matrix using already allocated memory. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ptr</strong> – the already-allocated memory underlying this matrix. </p></li>
+<li><p><strong>nRows</strong> – the number of rows in the matrix. </p></li>
+<li><p><strong>nCols</strong> – the number of columns in the matrix. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENK6helpme6Matrix4castE6MatrixI7NewRealEv">
+<span id="_CPPv3I0ENK6helpme6Matrix4castEv"></span><span id="_CPPv2I0ENK6helpme6Matrix4castEv"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NewReal</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classhelpme_1_1Matrix_1a29fde8ce745faeae35083ea1b32c6192"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0ENK6helpme6Matrix4castE6MatrixI7NewRealEv" title="helpme::Matrix::cast::NewReal"><span class="n"><span class="pre">NewReal</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cast</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4I0ENK6helpme6Matrix4castE6MatrixI7NewRealEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>cast make a copy of this matrix, with its elements cast as a different type. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>NewReal</strong> – the type to cast each element to. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the copy of the matrix with the new type. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix11setConstantE4Real">
+<span id="_CPPv3N6helpme6Matrix11setConstantE4Real"></span><span id="_CPPv2N6helpme6Matrix11setConstantE4Real"></span><span id="helpme::Matrix::setConstant__Real"></span><span class="target" id="classhelpme_1_1Matrix_1a2e6a5f12b71013e7d7f3193fa719f54e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setConstant</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix11setConstantE4Real" title="Link to this definition">¶</a><br /></dt>
+<dd><p>setConstant sets all elements of this matrix to a specified value. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – the value to set each element to. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix7setZeroEv">
+<span id="_CPPv3N6helpme6Matrix7setZeroEv"></span><span id="_CPPv2N6helpme6Matrix7setZeroEv"></span><span id="helpme::Matrix::setZero"></span><span class="target" id="classhelpme_1_1Matrix_1ae61b63c24ebe05ec54c4d69fe323771f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setZero</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix7setZeroEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>setZero sets each element of this matrix to zero. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix10isNearZeroE4Real">
+<span id="_CPPv3NK6helpme6Matrix10isNearZeroE4Real"></span><span id="_CPPv2NK6helpme6Matrix10isNearZeroE4Real"></span><span id="helpme::Matrix::isNearZero__RealC"></span><span class="target" id="classhelpme_1_1Matrix_1a0abe9ca8b30863e701838974ea973ede"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isNearZero</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">threshold</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1e-10f</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix10isNearZeroE4Real" title="Link to this definition">¶</a><br /></dt>
+<dd><p>isNearZero checks that each element in this matrix has an absolute value below some threshold. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>threshold</strong> – the value below which an element is considered zero. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>whether all values are near zero or not. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix7inverseEv">
+<span id="_CPPv3NK6helpme6Matrix7inverseEv"></span><span id="_CPPv2NK6helpme6Matrix7inverseEv"></span><span id="helpme::Matrix::inverseC"></span><span class="target" id="classhelpme_1_1Matrix_1ab196c08c1c16519ad5caf64a0fa5d737"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">inverse</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix7inverseEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>inverse inverts this matrix, leaving the original matrix untouched. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the inverse of this matrix. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix15assertSymmetricERK4Real">
+<span id="_CPPv3NK6helpme6Matrix15assertSymmetricERK4Real"></span><span id="_CPPv2NK6helpme6Matrix15assertSymmetricERK4Real"></span><span id="helpme::Matrix::assertSymmetric__RealCRC"></span><span class="target" id="classhelpme_1_1Matrix_1aaf26457b9d62523a5990fce8ef0f7837"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assertSymmetric</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">threshold</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1e-10f</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix15assertSymmetricERK4Real" title="Link to this definition">¶</a><br /></dt>
+<dd><p>assertSymmetric checks that this matrix is symmetric within some threshold. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>threshold</strong> – the value below which an pair’s difference is considered zero. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix27applyOperationToEachElementERKNSt8functionIFvR4RealEEE">
+<span id="_CPPv3N6helpme6Matrix27applyOperationToEachElementERKNSt8functionIFvR4RealEEE"></span><span id="_CPPv2N6helpme6Matrix27applyOperationToEachElementERKNSt8functionIFvR4RealEEE"></span><span class="target" id="classhelpme_1_1Matrix_1a13233af6266cdfe4f696a9d6fe2d295c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">applyOperationToEachElement</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fxn</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix27applyOperationToEachElementERKNSt8functionIFvR4RealEEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>applyOperationToEachElement modifies every element in the matrix by applying an operation. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>function</strong> – a unary operator describing the operation to perform. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix14applyOperationERKNSt8functionIFvR4RealEEE">
+<span id="_CPPv3NK6helpme6Matrix14applyOperationERKNSt8functionIFvR4RealEEE"></span><span id="_CPPv2NK6helpme6Matrix14applyOperationERKNSt8functionIFvR4RealEEE"></span><span class="target" id="classhelpme_1_1Matrix_1a8e1a6b3acf3bccf82287b33ea5b27837"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">applyOperation</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">function</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix14applyOperationERKNSt8functionIFvR4RealEEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>applyOperation applies an operation to this matrix using the spectral decomposition, leaving the original untouched. Only for symmetric matrices, as coded. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>function</strong> – a undary operator describing the operation to perform. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the matrix transformed by the operator. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix14assertSameSizeERK6Matrix">
+<span id="_CPPv3NK6helpme6Matrix14assertSameSizeERK6Matrix"></span><span id="_CPPv2NK6helpme6Matrix14assertSameSizeERK6Matrix"></span><span id="helpme::Matrix::assertSameSize__MatrixCRC"></span><span class="target" id="classhelpme_1_1Matrix_1affa2021dee446fd6ab1ea00d04f3dc81"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assertSameSize</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix14assertSameSizeERK6Matrix" title="Link to this definition">¶</a><br /></dt>
+<dd><p>assertSameSize make sure that this <a class="reference internal" href="#classhelpme_1_1Matrix"><span class="std std-ref">Matrix</span></a> has the same dimensions as another <a class="reference internal" href="#classhelpme_1_1Matrix"><span class="std std-ref">Matrix</span></a>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – the matrix to compare to. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix12assertSquareEv">
+<span id="_CPPv3NK6helpme6Matrix12assertSquareEv"></span><span id="_CPPv2NK6helpme6Matrix12assertSquareEv"></span><span id="helpme::Matrix::assertSquareC"></span><span class="target" id="classhelpme_1_1Matrix_1af107dd593273e319143e3e17f10675a0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assertSquare</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix12assertSquareEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>assertSquare make sure that this <a class="reference internal" href="#classhelpme_1_1Matrix"><span class="std std-ref">Matrix</span></a> is square. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix8multiplyERK6Matrix">
+<span id="_CPPv3NK6helpme6Matrix8multiplyERK6Matrix"></span><span id="_CPPv2NK6helpme6Matrix8multiplyERK6Matrix"></span><span id="helpme::Matrix::multiply__MatrixCRC"></span><span class="target" id="classhelpme_1_1Matrix_1a7ca62abddf67fdb13976e651a47eed9e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">multiply</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix8multiplyERK6Matrix" title="Link to this definition">¶</a><br /></dt>
+<dd><p>multiply this matrix with another, returning a new matrix containing the product. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – the right hand side of the matrix product. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the product of this matrix with the matrix other. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6MatrixmlERK6Matrix">
+<span id="_CPPv3NK6helpme6MatrixmlERK6Matrix"></span><span id="_CPPv2NK6helpme6MatrixmlERK6Matrix"></span><span id="helpme::Matrix::mul-operator__MatrixCRC"></span><span class="target" id="classhelpme_1_1Matrix_1ad4d47fd1774724d8423d290db3c07a73"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">*</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6MatrixmlERK6Matrix" title="Link to this definition">¶</a><br /></dt>
+<dd><p>operator * a convenient wrapper for the multiply function. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – the right hand side of the matrix product. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the product of this matrix with the matrix other. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6MatrixmlE4Real">
+<span id="_CPPv3NK6helpme6MatrixmlE4Real"></span><span id="_CPPv2NK6helpme6MatrixmlE4Real"></span><span id="helpme::Matrix::mul-operator__RealC"></span><span class="target" id="classhelpme_1_1Matrix_1a4129f7a179eb8f811c74943f14806637"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">*</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">scaleFac</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6MatrixmlE4Real" title="Link to this definition">¶</a><br /></dt>
+<dd><p>operator * scale a copy of this matrix by a constant, leaving the orignal untouched. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>scaleFac</strong> – the scale factor to apply. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the scaled version of this matrix. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix13incrementWithERK6Matrix">
+<span id="_CPPv3N6helpme6Matrix13incrementWithERK6Matrix"></span><span id="_CPPv2N6helpme6Matrix13incrementWithERK6Matrix"></span><span id="helpme::Matrix::incrementWith__MatrixCR"></span><span class="target" id="classhelpme_1_1Matrix_1a40f95402f87478e423cfbcdb11b01847"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">incrementWith</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix13incrementWithERK6Matrix" title="Link to this definition">¶</a><br /></dt>
+<dd><p>increment this matrix with another, returning a new matrix containing the sum. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – the right hand side of the matrix sum. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the sum of this matrix and the matrix other. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6MatrixpLERK6Matrix">
+<span id="_CPPv3N6helpme6MatrixpLERK6Matrix"></span><span id="_CPPv2N6helpme6MatrixpLERK6Matrix"></span><span id="helpme::Matrix::add-assign-operator__MatrixCR"></span><span class="target" id="classhelpme_1_1Matrix_1a4bf638629246a7daf4de1863b89ea3c5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">+=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6MatrixpLERK6Matrix" title="Link to this definition">¶</a><br /></dt>
+<dd><p>a wrapper around the <a class="reference internal" href="#classhelpme_1_1Matrix_1a40f95402f87478e423cfbcdb11b01847"><span class="std std-ref">incrementWith()</span></a> function. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – the right hand side of the matrix sum. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the sum of this matrix and the matrix other. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix13incrementWithERK4Real">
+<span id="_CPPv3N6helpme6Matrix13incrementWithERK4Real"></span><span id="_CPPv2N6helpme6Matrix13incrementWithERK4Real"></span><span id="helpme::Matrix::incrementWith__RealCR"></span><span class="target" id="classhelpme_1_1Matrix_1a46f4cf41aedb45d3412b9b32cefc6791"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">incrementWith</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">shift</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix13incrementWithERK4Real" title="Link to this definition">¶</a><br /></dt>
+<dd><p>increment every element of this matrix by a constant another, returning a new matrix containing the sum. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – the right hand side of the matrix sum. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the sum of this matrix and the matrix other. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6MatrixpLERK4Real">
+<span id="_CPPv3N6helpme6MatrixpLERK4Real"></span><span id="_CPPv2N6helpme6MatrixpLERK4Real"></span><span id="helpme::Matrix::add-assign-operator__RealCR"></span><span class="target" id="classhelpme_1_1Matrix_1a39d279d538c886a40c7d55741c8f0813"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">+=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">shift</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6MatrixpLERK4Real" title="Link to this definition">¶</a><br /></dt>
+<dd><p>a wrapper around the <a class="reference internal" href="#classhelpme_1_1Matrix_1a40f95402f87478e423cfbcdb11b01847"><span class="std std-ref">incrementWith()</span></a> function. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>shift</strong> – the scalar to increment each value by </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the sum of this matrix and the matrix other. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0_NSt9enable_ifINSt17is_floating_pointI1TE5valueEiE4typeEENK6helpme6Matrix12almostEqualsEbRK6Matrix4Real">
+<span id="_CPPv3I0_NSt9enable_ifINSt17is_floating_pointI1TE5valueEiE4typeEENK6helpme6Matrix12almostEqualsERK6Matrix4Real"></span><span id="_CPPv2I0_NSt9enable_ifINSt17is_floating_pointI1TE5valueEiE4typeEENK6helpme6Matrix12almostEqualsERK6Matrix4Real"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">enable_if</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">is_floating_point</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_NSt9enable_ifINSt17is_floating_pointI1TE5valueEiE4typeEENK6helpme6Matrix12almostEqualsEbRK6Matrix4Real" title="helpme::Matrix::almostEquals::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">type</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classhelpme_1_1Matrix_1a4ccb5be30451d35375f8605f9dce46ae"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">almostEquals</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span>, <a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">tolerance</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1e-6</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4I0_NSt9enable_ifINSt17is_floating_pointI1TE5valueEiE4typeEENK6helpme6Matrix12almostEqualsEbRK6Matrix4Real" title="Link to this definition">¶</a><br /></dt>
+<dd><p>almostEquals checks that two matrices have all elements the same, within some specificied tolerance. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>other</strong> – the matrix against which we’re comparing. </p></li>
+<li><p><strong>tol</strong> – the amount that each element is allowed to deviate by. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>whether the two matrices are almost equal. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0_NSt9enable_ifIXntNSt17is_floating_pointI1TE5valueEEiE4typeEENK6helpme6Matrix12almostEqualsEbRK6Matrix4Real">
+<span id="_CPPv3I0_NSt9enable_ifIXntNSt17is_floating_pointI1TE5valueEEiE4typeEENK6helpme6Matrix12almostEqualsERK6Matrix4Real"></span><span id="_CPPv2I0_NSt9enable_ifIX!std::is_floating_point<T>::valueEiE4typeEENK6helpme6Matrix12almostEqualsERK6Matrix4Real"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">enable_if</span></span><span class="p"><span class="pre">&lt;</span></span><span class="o"><span class="pre">!</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">is_floating_point</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_NSt9enable_ifIXntNSt17is_floating_pointI1TE5valueEEiE4typeEENK6helpme6Matrix12almostEqualsEbRK6Matrix4Real" title="helpme::Matrix::almostEquals::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">type</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classhelpme_1_1Matrix_1a4ccb5be30451d35375f8605f9dce46ae"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">almostEquals</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span>, <a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">tolerance</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1e-6</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4I0_NSt9enable_ifIXntNSt17is_floating_pointI1TE5valueEEiE4typeEENK6helpme6Matrix12almostEqualsEbRK6Matrix4Real" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix3dotERK6Matrix">
+<span id="_CPPv3NK6helpme6Matrix3dotERK6Matrix"></span><span id="_CPPv2NK6helpme6Matrix3dotERK6Matrix"></span><span id="helpme::Matrix::dot__MatrixCRC"></span><span class="target" id="classhelpme_1_1Matrix_1af67707f90beab4cca36d7a1058298502"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dot</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix3dotERK6Matrix" title="Link to this definition">¶</a><br /></dt>
+<dd><p>dot computes the inner product of this matrix with another. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – the other matrix in the inner product, which must have the same dimensions. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the inner product. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix11writeToFileERKNSt6stringEiib">
+<span id="_CPPv3NK6helpme6Matrix11writeToFileERKNSt6stringEiib"></span><span id="_CPPv2NK6helpme6Matrix11writeToFileERKNSt6stringEiib"></span><span id="helpme::Matrix::writeToFile__ssCR.i.i.bC"></span><span class="target" id="classhelpme_1_1Matrix_1a245217fcef5a1dfaa874d4570365def1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeToFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">filename</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">width</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">20</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">precision</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">14</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">printDimensions</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix11writeToFileERKNSt6stringEiib" title="Link to this definition">¶</a><br /></dt>
+<dd><p>writeToFile formats the matrix and writes to an ASCII file. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fileName</strong> – the name of the file to save to. </p></li>
+<li><p><strong>width</strong> – the width of each matrix element’s formatted representation. </p></li>
+<li><p><strong>precision</strong> – the precision of each matrix element’s formatted representation. </p></li>
+<li><p><strong>printDimensions</strong> – whether to print the dimensions at the top of the file. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix5writeERNSt7ostreamE">
+<span id="_CPPv3NK6helpme6Matrix5writeERNSt7ostreamE"></span><span id="_CPPv2NK6helpme6Matrix5writeERNSt7ostreamE"></span><span id="helpme::Matrix::write__osRC"></span><span class="target" id="classhelpme_1_1Matrix_1a1a3afcc6e817618c309c4b6e08b9675a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">os</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix5writeERNSt7ostreamE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>write formatted matrix to a stream object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>os</strong> – stream object to write to. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>modified stream object. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix16transposeInPlaceEv">
+<span id="_CPPv3N6helpme6Matrix16transposeInPlaceEv"></span><span id="_CPPv2N6helpme6Matrix16transposeInPlaceEv"></span><span id="helpme::Matrix::transposeInPlace"></span><span class="target" id="classhelpme_1_1Matrix_1a2e2f83da9205a43b1ea0e577317d3749"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">transposeInPlace</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix16transposeInPlaceEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>transposeInPlace transposes this matrix in place. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix5cloneEv">
+<span id="_CPPv3NK6helpme6Matrix5cloneEv"></span><span id="_CPPv2NK6helpme6Matrix5cloneEv"></span><span id="helpme::Matrix::cloneC"></span><span class="target" id="classhelpme_1_1Matrix_1a5ce7dafe09cf5957c4910be1637d90af"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clone</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix5cloneEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>clone make a new copy of this matrix by deep copying the data. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the copy of this matrix. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix9transposeEv">
+<span id="_CPPv3NK6helpme6Matrix9transposeEv"></span><span id="_CPPv2NK6helpme6Matrix9transposeEv"></span><span id="helpme::Matrix::transposeC"></span><span class="target" id="classhelpme_1_1Matrix_1a52e9ee02fc3209d1de28d8100a7487fc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">transpose</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix9transposeEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>transpose this matrix, leaving the original untouched. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a transposed deep copy of this matrix. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix11diagonalizeE9SortOrder">
+<span id="_CPPv3NK6helpme6Matrix11diagonalizeE9SortOrder"></span><span id="_CPPv2NK6helpme6Matrix11diagonalizeE9SortOrder"></span><span id="helpme::Matrix::diagonalize__SortOrderC"></span><span class="target" id="classhelpme_1_1Matrix_1afbefd9289bf3bf50aafd6b234972c31b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">diagonalize</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N6helpme6Matrix9SortOrderE" title="helpme::Matrix::SortOrder"><span class="n"><span class="pre">SortOrder</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">order</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix9SortOrderE" title="helpme::Matrix::SortOrder"><span class="n"><span class="pre">SortOrder</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N6helpme6Matrix9SortOrder9AscendingE" title="helpme::Matrix::SortOrder::Ascending"><span class="n"><span class="pre">Ascending</span></span></a><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix11diagonalizeE9SortOrder" title="Link to this definition">¶</a><br /></dt>
+<dd><p>diagonalize diagonalize this matrix, leaving the original untouched. Note that this assumes that this matrix is real and symmetric. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>order</strong> – how to order the (eigenvalue,eigenvector) pairs, where the sort key is the eigenvalue. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a pair of corresponding &lt;eigenvalue , eigenvectors&gt; sorted according to the order variable. The eigenvectors are stored by column. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix6nRows_E">
+<span id="_CPPv3N6helpme6Matrix6nRows_E"></span><span id="_CPPv2N6helpme6Matrix6nRows_E"></span><span id="helpme::Matrix::nRows___s"></span><span class="target" id="classhelpme_1_1Matrix_1abb9af2e7cbdd9ad7945832d92ac018f6"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nRows_</span></span></span><a class="headerlink" href="#_CPPv4N6helpme6Matrix6nRows_E" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The number of rows in the matrix. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix6nCols_E">
+<span id="_CPPv3N6helpme6Matrix6nCols_E"></span><span id="_CPPv2N6helpme6Matrix6nCols_E"></span><span id="helpme::Matrix::nCols___s"></span><span class="target" id="classhelpme_1_1Matrix_1af3c8c653d0c4459ec2e0c82520aae6f4"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nCols_</span></span></span><a class="headerlink" href="#_CPPv4N6helpme6Matrix6nCols_E" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The number of columns in the matrix. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix14allocatedData_E">
+<span id="_CPPv3N6helpme6Matrix14allocatedData_E"></span><span id="_CPPv2N6helpme6Matrix14allocatedData_E"></span><span id="helpme::Matrix::allocatedData___helpme::vector:Real:"></span><span class="target" id="classhelpme_1_1Matrix_1a5f08063301bf19715974b49d95e0fa38"></span><span class="n"><span class="pre">helpme</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="typedef_memory_8h_1a406b75ea7a95d56e638065f2876a36ae.html#_CPPv4I0EN6helpme6vectorE" title="helpme::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">allocatedData_</span></span></span><a class="headerlink" href="#_CPPv4N6helpme6Matrix14allocatedData_E" title="Link to this definition">¶</a><br /></dt>
+<dd><p>A vector to conveniently allocate data, if we really need to. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix5data_E">
+<span id="_CPPv3N6helpme6Matrix5data_E"></span><span id="_CPPv2N6helpme6Matrix5data_E"></span><span id="helpme::Matrix::data___RealP"></span><span class="target" id="classhelpme_1_1Matrix_1a835f71722376ad0024b047243dfc2112"></span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">data_</span></span></span><a class="headerlink" href="#_CPPv4N6helpme6Matrix5data_E" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Pointer to the raw data, whose allocation may not be controlled by us. </p>
+</dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix13sliceIteratorE">
+<span id="_CPPv3N6helpme6Matrix13sliceIteratorE"></span><span id="_CPPv2N6helpme6Matrix13sliceIteratorE"></span><span id="helpme::Matrix::sliceIterator"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sliceIterator</span></span></span><a class="headerlink" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The <a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#structhelpme_1_1Matrix_1_1sliceIterator"><span class="std std-ref">sliceIterator</span></a> struct provides a read-only view of a sub-block of a matrix, with arbitrary size. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix13sliceIterator13sliceIteratorEP4RealP4Real6size_t">
+<span id="_CPPv3N6helpme6Matrix13sliceIterator13sliceIteratorEP4RealP4Real6size_t"></span><span id="_CPPv2N6helpme6Matrix13sliceIterator13sliceIteratorEP4RealP4Real6size_t"></span><span id="helpme::Matrix::sliceIterator::sliceIterator__RealP.RealP.s"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1ae7f6e4f1f55ae0e5f10cd87a0587eeef"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sliceIterator</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">start</span></span>, <a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">end</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stride</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix13sliceIterator13sliceIteratorEP4RealP4Real6size_t" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix13sliceIterator5beginEv">
+<span id="_CPPv3NK6helpme6Matrix13sliceIterator5beginEv"></span><span id="_CPPv2NK6helpme6Matrix13sliceIterator5beginEv"></span><span id="helpme::Matrix::sliceIterator::beginC"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1a1e37ea801ca67ff86223189055fe4861"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">begin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix13sliceIterator5beginEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix13sliceIterator3endEv">
+<span id="_CPPv3NK6helpme6Matrix13sliceIterator3endEv"></span><span id="_CPPv2NK6helpme6Matrix13sliceIterator3endEv"></span><span id="helpme::Matrix::sliceIterator::endC"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1a7ee01c594dd46ee72fa0da9a2c1fed60"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">end</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix13sliceIterator3endEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix13sliceIterator6cbeginEv">
+<span id="_CPPv3NK6helpme6Matrix13sliceIterator6cbeginEv"></span><span id="_CPPv2NK6helpme6Matrix13sliceIterator6cbeginEv"></span><span id="helpme::Matrix::sliceIterator::cbeginC"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1a6bbd895822ec8433f6e9537c38e77377"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cbegin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix13sliceIterator6cbeginEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix13sliceIterator4cendEv">
+<span id="_CPPv3NK6helpme6Matrix13sliceIterator4cendEv"></span><span id="_CPPv2NK6helpme6Matrix13sliceIterator4cendEv"></span><span id="helpme::Matrix::sliceIterator::cendC"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1af17fc99329a28150636d989cd29d9396"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cend</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix13sliceIterator4cendEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix13sliceIteratorneERK13sliceIterator">
+<span id="_CPPv3N6helpme6Matrix13sliceIteratorneERK13sliceIterator"></span><span id="_CPPv2N6helpme6Matrix13sliceIteratorneERK13sliceIterator"></span><span id="helpme::Matrix::sliceIterator::neq-operator__sliceIteratorCR"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1aace988e742ea0e92afe795ec5164f07b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">!=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix13sliceIteratorneERK13sliceIterator" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix13sliceIteratormLE4Real">
+<span id="_CPPv3N6helpme6Matrix13sliceIteratormLE4Real"></span><span id="_CPPv2N6helpme6Matrix13sliceIteratormLE4Real"></span><span id="helpme::Matrix::sliceIterator::mul-assign-operator__Real"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1a70bafbf27dd63286781bc167f9c6df9f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">*=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix13sliceIteratormLE4Real" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix13sliceIteratordVE4Real">
+<span id="_CPPv3N6helpme6Matrix13sliceIteratordVE4Real"></span><span id="_CPPv2N6helpme6Matrix13sliceIteratordVE4Real"></span><span id="helpme::Matrix::sliceIterator::div-assign-operator__Real"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1a3957e4684635ca627c5ad9cdb06ac487"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">/=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix13sliceIteratordVE4Real" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix13sliceIteratormIE4Real">
+<span id="_CPPv3N6helpme6Matrix13sliceIteratormIE4Real"></span><span id="_CPPv2N6helpme6Matrix13sliceIteratormIE4Real"></span><span id="helpme::Matrix::sliceIterator::sub-assign-operator__Real"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1ae6ff384f256c712e96c0371ebc053640"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">-=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix13sliceIteratormIE4Real" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix13sliceIteratorpLE4Real">
+<span id="_CPPv3N6helpme6Matrix13sliceIteratorpLE4Real"></span><span id="_CPPv2N6helpme6Matrix13sliceIteratorpLE4Real"></span><span id="helpme::Matrix::sliceIterator::add-assign-operator__Real"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1aaa64bbb49660878c9d0eda88fcb86bbc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">+=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix13sliceIteratorpLE4Real" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix13sliceIteratorppEv">
+<span id="_CPPv3N6helpme6Matrix13sliceIteratorppEv"></span><span id="_CPPv2N6helpme6Matrix13sliceIteratorppEv"></span><span id="helpme::Matrix::sliceIterator::inc-operator"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1a8d7375decb5a1c778797d372164a613e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">++</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix13sliceIteratorppEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix13sliceIteratorixE6size_t">
+<span id="_CPPv3NK6helpme6Matrix13sliceIteratorixE6size_t"></span><span id="_CPPv2NK6helpme6Matrix13sliceIteratorixE6size_t"></span><span id="helpme::Matrix::sliceIterator::subscript-operator__sC"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1a22143ef80e43d96a82359dbb1ccc39cc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">[]</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix13sliceIteratorixE6size_t" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix13sliceIterator4sizeEv">
+<span id="_CPPv3NK6helpme6Matrix13sliceIterator4sizeEv"></span><span id="_CPPv2NK6helpme6Matrix13sliceIterator4sizeEv"></span><span id="helpme::Matrix::sliceIterator::sizeC"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1a4d239502d8249bc8f408266b467feb0a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">size</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix13sliceIterator4sizeEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix13sliceIterator14assertSameSizeERK13sliceIterator">
+<span id="_CPPv3NK6helpme6Matrix13sliceIterator14assertSameSizeERK13sliceIterator"></span><span id="_CPPv2NK6helpme6Matrix13sliceIterator14assertSameSizeERK13sliceIterator"></span><span id="helpme::Matrix::sliceIterator::assertSameSize__sliceIteratorCRC"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1a3b3ff4756f03593c6a00871c89033bef"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assertSameSize</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix13sliceIterator14assertSameSizeERK13sliceIterator" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix13sliceIterator16assertContiguousERK13sliceIterator">
+<span id="_CPPv3NK6helpme6Matrix13sliceIterator16assertContiguousERK13sliceIterator"></span><span id="_CPPv2NK6helpme6Matrix13sliceIterator16assertContiguousERK13sliceIterator"></span><span id="helpme::Matrix::sliceIterator::assertContiguous__sliceIteratorCRC"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1a309d4d95a61cc253df470d0250c5734c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assertContiguous</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">iter</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix13sliceIterator16assertContiguousERK13sliceIterator" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix13sliceIteratormiERK13sliceIterator">
+<span id="_CPPv3NK6helpme6Matrix13sliceIteratormiERK13sliceIterator"></span><span id="_CPPv2NK6helpme6Matrix13sliceIteratormiERK13sliceIterator"></span><span id="helpme::Matrix::sliceIterator::sub-operator__sliceIteratorCRC"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1a5ae79f12d7baa9bd00a7e1107393fc14"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">-</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix13sliceIteratormiERK13sliceIterator" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix13sliceIteratormIERK13sliceIterator">
+<span id="_CPPv3NK6helpme6Matrix13sliceIteratormIERK13sliceIterator"></span><span id="_CPPv2NK6helpme6Matrix13sliceIteratormIERK13sliceIterator"></span><span id="helpme::Matrix::sliceIterator::sub-assign-operator__sliceIteratorCRC"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1af2a697740cf3823eb42b32fc2e0b6684"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">-=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix13sliceIteratormIERK13sliceIterator" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme6Matrix13sliceIteratorpLERK13sliceIterator">
+<span id="_CPPv3NK6helpme6Matrix13sliceIteratorpLERK13sliceIterator"></span><span id="_CPPv2NK6helpme6Matrix13sliceIteratorpLERK13sliceIterator"></span><span id="helpme::Matrix::sliceIterator::add-assign-operator__sliceIteratorCRC"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1a0eebc575d563340276a292f6e232bf80"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">+=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE" title="helpme::Matrix::sliceIterator"><span class="n"><span class="pre">sliceIterator</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme6Matrix13sliceIteratorpLERK13sliceIterator" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix13sliceIteratormlEv">
+<span id="_CPPv3N6helpme6Matrix13sliceIteratormlEv"></span><span id="_CPPv2N6helpme6Matrix13sliceIteratormlEv"></span><span id="helpme::Matrix::sliceIterator::mul-operator"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1aaedc1910b8a722a8371bdf943d0f770e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">*</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme6Matrix13sliceIteratormlEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix13sliceIterator6begin_E">
+<span id="_CPPv3N6helpme6Matrix13sliceIterator6begin_E"></span><span id="_CPPv2N6helpme6Matrix13sliceIterator6begin_E"></span><span id="helpme::Matrix::sliceIterator::begin___RealP"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1a8c1072e34f70d56a4e5f9a8e234589ec"></span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">begin_</span></span></span><a class="headerlink" href="#_CPPv4N6helpme6Matrix13sliceIterator6begin_E" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix13sliceIterator4end_E">
+<span id="_CPPv3N6helpme6Matrix13sliceIterator4end_E"></span><span id="_CPPv2N6helpme6Matrix13sliceIterator4end_E"></span><span id="helpme::Matrix::sliceIterator::end___RealP"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1ad6539aa2a92d684420303bce5c67d1fb"></span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">end_</span></span></span><a class="headerlink" href="#_CPPv4N6helpme6Matrix13sliceIterator4end_E" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix13sliceIterator4ptr_E">
+<span id="_CPPv3N6helpme6Matrix13sliceIterator4ptr_E"></span><span id="_CPPv2N6helpme6Matrix13sliceIterator4ptr_E"></span><span id="helpme::Matrix::sliceIterator::ptr___RealP"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1ae2705f4a894be6dd16c1b0967e3785a2"></span><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE" title="helpme::Matrix::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">ptr_</span></span></span><a class="headerlink" href="#_CPPv4N6helpme6Matrix13sliceIterator4ptr_E" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme6Matrix13sliceIterator7stride_E">
+<span id="_CPPv3N6helpme6Matrix13sliceIterator7stride_E"></span><span id="_CPPv2N6helpme6Matrix13sliceIterator7stride_E"></span><span id="helpme::Matrix::sliceIterator::stride___s"></span><span class="target" id="structhelpme_1_1Matrix_1_1sliceIterator_1ab88f3f754c1cbae538ac066de806f18e"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stride_</span></span></span><a class="headerlink" href="#_CPPv4N6helpme6Matrix13sliceIterator7stride_E" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="classhelpme_1_1PMEInstance.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Template Class PMEInstance</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="class_structhelpme_1_1incompleteGammaVirialComputer.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Template Class incompleteGammaVirialComputer</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2017, Andrew C. Simmonett
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Template Class Matrix</a><ul>
+<li><a class="reference internal" href="#nested-relationships">Nested Relationships</a><ul>
+<li><a class="reference internal" href="#nested-types">Nested Types</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#class-documentation">Class Documentation</a><ul>
+<li><a class="reference internal" href="#_CPPv4I0EN6helpme6MatrixE"><code class="docutils literal notranslate"><span class="pre">helpme::Matrix</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix9SortOrderE"><code class="docutils literal notranslate"><span class="pre">SortOrder</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix9SortOrder9AscendingE"><code class="docutils literal notranslate"><span class="pre">Ascending</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix9SortOrder10DescendingE"><code class="docutils literal notranslate"><span class="pre">Descending</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6MatrixclEii"><code class="docutils literal notranslate"><span class="pre">operator()()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6MatrixclERKNSt4pairIiiEE"><code class="docutils literal notranslate"><span class="pre">operator()()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6MatrixclEii"><code class="docutils literal notranslate"><span class="pre">operator()()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6MatrixclERKNSt4pairIiiEE"><code class="docutils literal notranslate"><span class="pre">operator()()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6MatrixixEi"><code class="docutils literal notranslate"><span class="pre">operator[]()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6MatrixixEi"><code class="docutils literal notranslate"><span class="pre">operator[]()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix5beginEv"><code class="docutils literal notranslate"><span class="pre">begin()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix3endEv"><code class="docutils literal notranslate"><span class="pre">end()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix6cbeginEv"><code class="docutils literal notranslate"><span class="pre">cbegin()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix4cendEv"><code class="docutils literal notranslate"><span class="pre">cend()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix3rowE6size_t"><code class="docutils literal notranslate"><span class="pre">row()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix3colE6size_t"><code class="docutils literal notranslate"><span class="pre">col()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix5nRowsEv"><code class="docutils literal notranslate"><span class="pre">nRows()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix5nColsEv"><code class="docutils literal notranslate"><span class="pre">nCols()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix6MatrixEv"><code class="docutils literal notranslate"><span class="pre">Matrix()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix6MatrixE6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">Matrix()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix6MatrixERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">Matrix()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix6MatrixENSt16initializer_listINSt16initializer_listI4RealEEEE"><code class="docutils literal notranslate"><span class="pre">Matrix()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix6MatrixENSt16initializer_listI4RealEE"><code class="docutils literal notranslate"><span class="pre">Matrix()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix6MatrixEP4Real6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">Matrix()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I0ENK6helpme6Matrix4castE6MatrixI7NewRealEv"><code class="docutils literal notranslate"><span class="pre">cast()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix11setConstantE4Real"><code class="docutils literal notranslate"><span class="pre">setConstant()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix7setZeroEv"><code class="docutils literal notranslate"><span class="pre">setZero()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix10isNearZeroE4Real"><code class="docutils literal notranslate"><span class="pre">isNearZero()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix7inverseEv"><code class="docutils literal notranslate"><span class="pre">inverse()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix15assertSymmetricERK4Real"><code class="docutils literal notranslate"><span class="pre">assertSymmetric()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix27applyOperationToEachElementERKNSt8functionIFvR4RealEEE"><code class="docutils literal notranslate"><span class="pre">applyOperationToEachElement()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix14applyOperationERKNSt8functionIFvR4RealEEE"><code class="docutils literal notranslate"><span class="pre">applyOperation()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix14assertSameSizeERK6Matrix"><code class="docutils literal notranslate"><span class="pre">assertSameSize()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix12assertSquareEv"><code class="docutils literal notranslate"><span class="pre">assertSquare()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix8multiplyERK6Matrix"><code class="docutils literal notranslate"><span class="pre">multiply()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6MatrixmlERK6Matrix"><code class="docutils literal notranslate"><span class="pre">operator*()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6MatrixmlE4Real"><code class="docutils literal notranslate"><span class="pre">operator*()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix13incrementWithERK6Matrix"><code class="docutils literal notranslate"><span class="pre">incrementWith()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6MatrixpLERK6Matrix"><code class="docutils literal notranslate"><span class="pre">operator+=()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix13incrementWithERK4Real"><code class="docutils literal notranslate"><span class="pre">incrementWith()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6MatrixpLERK4Real"><code class="docutils literal notranslate"><span class="pre">operator+=()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I0_NSt9enable_ifINSt17is_floating_pointI1TE5valueEiE4typeEENK6helpme6Matrix12almostEqualsEbRK6Matrix4Real"><code class="docutils literal notranslate"><span class="pre">almostEquals()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I0_NSt9enable_ifIXntNSt17is_floating_pointI1TE5valueEEiE4typeEENK6helpme6Matrix12almostEqualsEbRK6Matrix4Real"><code class="docutils literal notranslate"><span class="pre">almostEquals()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix3dotERK6Matrix"><code class="docutils literal notranslate"><span class="pre">dot()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix11writeToFileERKNSt6stringEiib"><code class="docutils literal notranslate"><span class="pre">writeToFile()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix5writeERNSt7ostreamE"><code class="docutils literal notranslate"><span class="pre">write()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix16transposeInPlaceEv"><code class="docutils literal notranslate"><span class="pre">transposeInPlace()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix5cloneEv"><code class="docutils literal notranslate"><span class="pre">clone()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix9transposeEv"><code class="docutils literal notranslate"><span class="pre">transpose()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix11diagonalizeE9SortOrder"><code class="docutils literal notranslate"><span class="pre">diagonalize()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix6nRows_E"><code class="docutils literal notranslate"><span class="pre">nRows_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix6nCols_E"><code class="docutils literal notranslate"><span class="pre">nCols_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix14allocatedData_E"><code class="docutils literal notranslate"><span class="pre">allocatedData_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix5data_E"><code class="docutils literal notranslate"><span class="pre">data_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorE"><code class="docutils literal notranslate"><span class="pre">helpme::Matrix::sliceIterator</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIterator13sliceIteratorEP4RealP4Real6size_t"><code class="docutils literal notranslate"><span class="pre">sliceIterator()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix13sliceIterator5beginEv"><code class="docutils literal notranslate"><span class="pre">begin()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix13sliceIterator3endEv"><code class="docutils literal notranslate"><span class="pre">end()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix13sliceIterator6cbeginEv"><code class="docutils literal notranslate"><span class="pre">cbegin()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix13sliceIterator4cendEv"><code class="docutils literal notranslate"><span class="pre">cend()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorneERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">operator!=()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratormLE4Real"><code class="docutils literal notranslate"><span class="pre">operator*=()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratordVE4Real"><code class="docutils literal notranslate"><span class="pre">operator/=()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratormIE4Real"><code class="docutils literal notranslate"><span class="pre">operator-=()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorpLE4Real"><code class="docutils literal notranslate"><span class="pre">operator+=()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratorppEv"><code class="docutils literal notranslate"><span class="pre">operator++()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix13sliceIteratorixE6size_t"><code class="docutils literal notranslate"><span class="pre">operator[]()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix13sliceIterator4sizeEv"><code class="docutils literal notranslate"><span class="pre">size()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix13sliceIterator14assertSameSizeERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">assertSameSize()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix13sliceIterator16assertContiguousERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">assertContiguous()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix13sliceIteratormiERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">operator-()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix13sliceIteratormIERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">operator-=()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme6Matrix13sliceIteratorpLERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">operator+=()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIteratormlEv"><code class="docutils literal notranslate"><span class="pre">operator*()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIterator6begin_E"><code class="docutils literal notranslate"><span class="pre">begin_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIterator4end_E"><code class="docutils literal notranslate"><span class="pre">end_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIterator4ptr_E"><code class="docutils literal notranslate"><span class="pre">ptr_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme6Matrix13sliceIterator7stride_E"><code class="docutils literal notranslate"><span class="pre">stride_</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    </body>
+</html>

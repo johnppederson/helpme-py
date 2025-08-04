@@ -1,0 +1,919 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Getting Started" href="gettingstarted.html" /><link rel="prev" title="Welcome to helPME-py’s documentation!" href="index.html" />
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
+        <title>Introduction - helPME-py documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=25af2a20" />
+    <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">helPME-py  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  <span class="sidebar-brand-text">helPME-py  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="py_api.html">Python API Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Python API Documentation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/helpme_py.LatticeType.html">helpme_py.LatticeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/helpme_py.PairList.html">helpme_py.PairList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/helpme_py.MatrixD.html">helpme_py.MatrixD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/helpme_py.PMEInstanceD.html">helpme_py.PMEInstanceD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/helpme_py.MatrixF.html">helpme_py.MatrixF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/helpme_py.PMEInstanceF.html">helpme_py.PMEInstanceF</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="_exhale/cpp_api.html">C++ API Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of C++ API Documentation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/namespace_helpme.html">Namespace helpme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1FFTWAllocator_1_1rebind.html">Template Struct FFTWAllocator::rebind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1FFTWTypes.html">Template Struct FFTWTypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1FFTWTypes_1_1EmptyPlan.html">Struct FFTWTypes::EmptyPlan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1gammaRecursion.html">Template Struct gammaRecursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_010_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 0, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 1, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01true_01_4.html">Template Struct gammaRecursion&lt; Real, 1, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 2, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01true_01_4.html">Template Struct gammaRecursion&lt; Real, 2, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1gammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, twoS, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1incompleteGammaRecursion.html">Template Struct incompleteGammaRecursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_010_00_01false_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 0, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01false_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 1, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01true_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 1, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_012_00_01true_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 2, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, twoS, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1incompleteVirialGammaRecursion.html">Template Struct incompleteVirialGammaRecursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1incompleteVirialGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct incompleteVirialGammaRecursion&lt; Real, twoS, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1Matrix_1_1sliceIterator.html">Struct Matrix::sliceIterator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1MPITypes.html">Template Struct MPITypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1MPIWrapper.html">Template Struct MPIWrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1normIntegerPowerComputer.html">Template Struct normIntegerPowerComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01false_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, false, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01true_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, false, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01true_00_01false_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, true, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1raiseNormToIntegerPower.html">Template Struct raiseNormToIntegerPower</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1raiseToIntegerPower.html">Template Struct raiseToIntegerPower</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1raiseToIntegerPower_3_01Real_00_010_01_4.html">Template Struct raiseToIntegerPower&lt; Real, 0 &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/structhelpme_1_1SplineCacheEntry.html">Template Struct SplineCacheEntry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/classhelpme_1_1BSpline.html">Template Class BSpline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/classhelpme_1_1FFTWAllocator.html">Template Class FFTWAllocator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/classhelpme_1_1FFTWWrapper.html">Template Class FFTWWrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/class_structhelpme_1_1gammaComputer.html">Template Class gammaComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/class_structhelpme_1_1incompleteGammaComputer.html">Template Class incompleteGammaComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/class_structhelpme_1_1incompleteGammaVirialComputer.html">Template Class incompleteGammaVirialComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/classhelpme_1_1Matrix.html">Template Class Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/classhelpme_1_1PMEInstance.html">Template Class PMEInstance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/classsplineCacheEntry.html">Class splineCacheEntry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/enum_helpme_8h_1a51cde3faab477dd22811f194283ff534.html">Enum AlgorithmType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584.html">Enum LatticeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/enum_helpme_8h_1a2196fee10c55373e383cf857b14412c3.html">Enum NodeOrder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/enum_helpme_8h_1a4fc4f8282a7e47f5d842c715ea72b059.html">Enum PolarizationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_gridsize_8h_1aa3f765da5cede2c9dd980dd017ea482a.html">Template Function helpme::allDivisors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_helpme_8h_1aaa4a78096ea81a5bf563e895cdaf6269.html">Function helpme::cartAddress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_cartesiantransform_8h_1a347e94f6ebf33fc9794b2dc3a4ad62a5.html">Function helpme::cartesianAddress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_cartesiantransform_8h_1a256bfb8cf9356b69d856a27dccfd2e33.html">Template Function helpme::cartesianTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_fletcher_8h_1a2bbabb174c1355716ad9df5df662433d.html">Template Function helpme::compute_fletcher_checksum16</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_fletcher_8h_1a08b980c39ff76d028da19e0812423c9a.html">Template Function helpme::compute_fletcher_checksum32</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_fletcher_8h_1a1331638675e33795086e972eac269939.html">Template Function helpme::compute_fletcher_checksum64</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_tensor__utils_8h_1aa914531b506590c7e190f316613e7757.html">Template Function helpme::contractABxCWithDxC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_gridsize_8h_1a9c4101833a2cc86ce601f86b04e3a266.html">Template Function helpme::findGridSize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_string__utils_8h_1aef57d45b9222018896b91592aef25a7d.html">Template Function helpme::formatNumber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_lapack__wrapper_8h_1aef145a683586d54c5754b683096213c4.html">Template Function helpme::JacobiCyclicDiagonalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_cartesiantransform_8h_1ac82d4a439d1917bf45f99c6b3e773f1c.html">Template Function helpme::makeCartesianRotationMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_cartesiantransform_8h_1a060e019d9442546d5e5168ee0a5c146f.html">Template Function helpme::matrixVectorProduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_helpme_8h_1a871c5c618f66191ab3a8d5d6a88257fd.html">Function helpme::nCartesian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_gamma_8h_1ae3220144f11764cfb80fd0b52cdc8d1c.html">Template Function helpme::nonTemplateGammaComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_memory_8h_1a88c8090bcb1e9078a040f3f72ec70f16.html">Template Function helpme::operator!=</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_matrix_8h_1afc0baf32ac937a2d68f7f98ae66cabc4.html">Template Function helpme::operator&lt;&lt;(std::ostream&amp;, Matrix&lt;Real&gt; const&amp;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_mpi__wrapper_8h_1a05382ee67d55f47b99cbe6479b217a5d.html">Template Function helpme::operator&lt;&lt;(std::ostream&amp;, const std::unique_ptr&lt;MPIWrapper&lt;Real&gt;&gt;&amp;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_memory_8h_1a0b2f28447bc7134d62cdcc76455aa915.html">Template Function helpme::operator==</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_tensor__utils_8h_1af32cd01638ca35b3cffa9ca4a4b712d5.html">Template Function helpme::permuteABCtoACB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_tensor__utils_8h_1a51a39b3d3aac289b016c8afb39d9afd9.html">Template Function helpme::permuteABCtoCBA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_gamma_8h_1af69fa5014260f0318885ae090808ae9b.html">Template Function helpme::screened_erf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_gamma_8h_1a77f6384117afcfa71cbb3b27b579d21b.html">Template Function helpme::screened_erfc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_string__utils_8h_1a1ce7000d3e3817d45cb40bdf2be06d9d.html">Template Function helpme::stringify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/function_matrix_8h_1af7e32876fd7852b062331d7b405a8198.html">Template Function helpme::transposeMemoryInPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/define_helpme_8h_1a3457e9c167e8c5fc5e78409291a671c8.html">Define ENABLE_KERNEL_WITH_INVERSE_R_EXPONENT_OF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/define_gamma_8h_1ac9bd36966441fb675ed2dcc2a4503569.html">Define HELPME_ERF_VAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/define_gamma_8h_1a13deb336ed7209c93b54b8c8cd493c3e.html">Define HELPME_PI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/define_gamma_8h_1a6ffe0d727158120ca49b38a1fed8c5d0.html">Define HELPME_SQRTPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/define_gamma_8h_1a5aada0be6b5613c6f01cb54962c77f7f.html">Define HELPME_SQRTTWO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/define_mpi__wrapper_8h_1a48497a4ae8b25b3b7c0f0bdad766a564.html">Define PRINT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/typedef_memory_8h_1a406b75ea7a95d56e638065f2876a36ae.html">Typedef helpme::vector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/typedef_helpme_8h_1aec129751426309d6ba3b31546c9d48f4.html">Typedef PMEInstanceD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_exhale/typedef_helpme_8h_1a6eef86d57d6da6e5bc38401a93c3ba85.html">Typedef PMEInstanceF</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/introduction.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="introduction">
+<span id="sec-introduction"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h1>
+<section id="theory">
+<h2>Theory<a class="headerlink" href="#theory" title="Link to this heading">¶</a></h2>
+<section id="notation">
+<h3>Notation<a class="headerlink" href="#notation" title="Link to this heading">¶</a></h3>
+<p>The notation throughout this document is mostly consistent with papers from the
+Darden group.  Because complex numbers are used, we choose <span class="math notranslate nohighlight">\(A,B\)</span> to label
+atoms.  The coefficients, <em>e.g</em> atomic charges for electrostatics or
+<span class="math notranslate nohighlight">\(C_6\)</span> coefficients for dispersion, are denoted <span class="math notranslate nohighlight">\(C\)</span>.  Similarly to
+Darden, we use <span class="math notranslate nohighlight">\(1,2,3\)</span> to label the three axes of the lattice vector.</p>
+</section>
+<section id="basic-overview">
+<h3>Basic overview<a class="headerlink" href="#basic-overview" title="Link to this heading">¶</a></h3>
+<p>We are interested in systems whose energy is defined by a pairwise summation
+for a given configuration, <span class="math notranslate nohighlight">\(\mathbf{r}\)</span>:</p>
+<div class="math-wrapper docutils container" id="equation-basic-energy">
+<div class="math notranslate nohighlight" id="equation-basic-energy">
+<span class="eqno">(1)<a class="headerlink" href="#equation-basic-energy" title="Link to this equation">¶</a></span>\[U(\mathbf{r}) = \frac{s}{2} \sum_{A \ne B} \frac{C_A C_B}
+                      {\left|\mathbf{r}_A - \mathbf{r}_B\right|^p},
+                                       \quad p&gt;0,\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(s\)</span> is a scale factor to convert the result to the correct units,
+<em>e.g.</em> the Coulomb constant <span class="math notranslate nohighlight">\(\frac{1}{4 \pi \epsilon_0}\)</span> commonly
+encountered in electrostatic calculations.  We can extend eq.
+<a class="reference internal" href="#equation-basic-energy">(1)</a> to a periodic system by introducing the three lattice
+vectors <span class="math notranslate nohighlight">\(\{\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_3\}\)</span> and summing over
+image cells <span class="math notranslate nohighlight">\(\mathbf{n} = n_1 \mathbf{a}_1 + n_2 \mathbf{a}_2 + n_3
+\mathbf{a}_3\)</span> indexed by the integers <span class="math notranslate nohighlight">\(\{n_1, n_2, n_3\}\)</span>:</p>
+<div class="math-wrapper docutils container" id="equation-lattice-energy">
+<div class="math notranslate nohighlight" id="equation-lattice-energy">
+<span class="eqno">(2)<a class="headerlink" href="#equation-lattice-energy" title="Link to this equation">¶</a></span>\[U(\mathbf{r}) = \frac{s}{2}  \sum_{\mathbf{n}^*} \sum_{A,B} \frac{C_A C_B}
+                 {\left|\mathbf{r}_A - \mathbf{r}_B + \mathbf{n}\right|^p},
+                                        \quad p&gt;0,\]</div>
+</div>
+<p>The asterisk over the summation in <a class="reference internal" href="#equation-lattice-energy">(2)</a> is to emphasize that
+the <span class="math notranslate nohighlight">\(A=B\)</span> term is omited for the home box (<span class="math notranslate nohighlight">\(\mathbf{n}=\mathbf{0}\)</span>)
+to avoid self interaction.  This brute for summation is slowly convergent for
+low powers of <span class="math notranslate nohighlight">\(p\)</span>, and in three dimensional space is conditionally
+convergent (<em>i.e.</em>, the result depends on the order of summation and thus the
+macroscopic shape of the crystal) for <span class="math notranslate nohighlight">\(p&lt;4\)</span>.  Even the dispersion term of
+the Lennard-Jones potential, which has <span class="math notranslate nohighlight">\(R^{-6}\)</span> decay, suffers truncation
+artifacts due to the fact that all terms are attractive, reducing the scope for
+error cancellation.</p>
+<p>The Ewald method overcomes these difficulties by taking a single slowly, and
+perhaps conditionally, convergent summation and turning it into two rapidly and
+absolutely convergent series.  A complete derivation of Ewald summation is
+beyond the scope of this document, but we will highlight some salient features
+of the method.</p>
+<p>In one dimension, the density due to particles we are interested in can be
+represented as a delta function.  At each point we can subtract a Gaussian
+function with exponent <span class="math notranslate nohighlight">\(\kappa\)</span>, effectively shielding the delta
+function, making it shorter ranged and thus reducing the number of interactions
+it will be involved in; this is shown in <a class="reference internal" href="#densities"><span class="std std-numref">Figure 1.</span></a>.  The Gaussians
+are then added back in with the opposite sign as a separate term; this
+constitutes a smooth, periodic function that is amenable to modeling with
+trigonometric functions.  Using a tight Gaussian for screening will result in
+effective cancellation of the delta function, requiring very few summations for
+the first term, however many trigonometric functions will be needed to model
+the second term properly, due to its spiky features.  Conversely, a diffuse
+Gaussian will be ineffective at shielding the delta functions, requiring more
+terms in the first summation, but the smooth nature of the Gaussians will
+require few trigonometric funtions to describe the second term.  In this
+document, we refer to the Gaussian’s diffuseness <span class="math notranslate nohighlight">\(\kappa\)</span> as the
+attenuation parameter.</p>
+<figure class="align-default" id="id9">
+<span id="densities"></span><img alt="_images/densities.png" src="_images/densities.png" />
+<figcaption>
+<p><span class="caption-number">Figure 1. </span><span class="caption-text">Depiction of the one dimensional density along a line for a system
+comprising two particles – one with a negative coefficient and the other
+positive.  The primary unit cell in the center is flanked by image cells.
+The red lines show the original density as delta functions, with the
+Gaussian screening density subtracted off, to form the total short range
+density.  The blue lines show the Gaussian screening density that is added
+back in, defining the long range density.</span><a class="headerlink" href="#id9" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>We can translate these arguments about the density, <span class="math notranslate nohighlight">\(\rho(R)\)</span>, into
+methods for evaluating the potential, <span class="math notranslate nohighlight">\(\phi(R)\)</span>, using Poisson’s
+equation:</p>
+<div class="math-wrapper docutils container" id="equation-poisson-equation">
+<div class="math notranslate nohighlight" id="equation-poisson-equation">
+<span class="eqno">(3)<a class="headerlink" href="#equation-poisson-equation" title="Link to this equation">¶</a></span>\[\nabla^2 \phi(R) = -\frac{\rho(R)}{\epsilon_0}.\]</div>
+</div>
+<p>This yields an identity for the kernel used to generate the potential:</p>
+<div class="math-wrapper docutils container" id="equation-ewald-partitioning">
+<div class="math notranslate nohighlight" id="equation-ewald-partitioning">
+<span class="eqno">(4)<a class="headerlink" href="#equation-ewald-partitioning" title="Link to this equation">¶</a></span>\[\frac{1}{R^p} = \frac{f_p(R)}{R^p} + \frac{1 - f_p(R)}{R^p}.\]</div>
+</div>
+<p>where we introduced the shorthand <span class="math notranslate nohighlight">\(R = \left|\mathbf{R}\right| =
+\left|\mathbf{r}_A - \mathbf{r}_B + \mathbf{n}\right|\)</span>.  This is the starting
+point for the detailed derivation of Ewald summations provided by
+<a class="reference internal" href="bibliography.html#wells-2015-3684" id="id1"><span>[Wells:2015:3684]</span></a>, to which we refer the interested reader.  The convergence
+function used in <a class="reference internal" href="#equation-ewald-partitioning">(4)</a> is</p>
+<div class="math-wrapper docutils container" id="equation-convergence-function">
+<div class="math notranslate nohighlight" id="equation-convergence-function">
+<span class="eqno">(5)<a class="headerlink" href="#equation-convergence-function" title="Link to this equation">¶</a></span>\[f_p(R) = \frac{\Gamma\left(\frac{p}{2}, \kappa^2 R^2 \right)}{\Gamma\left(\frac{p}{2}\right)}.\]</div>
+</div>
+<p>with the numerator defined by the upper incomplete gamma function</p>
+<div class="math-wrapper docutils container" id="equation-incomplete-gamma-function">
+<div class="math notranslate nohighlight" id="equation-incomplete-gamma-function">
+<span class="eqno">(6)<a class="headerlink" href="#equation-incomplete-gamma-function" title="Link to this equation">¶</a></span>\[\Gamma\left(n, x \right) = \int_x^\infty t^{n-1}e^{-t} \mathrm{d}t =
+2\int_{\sqrt{x}}^\infty u^{2n-1}e^{-u^2} \mathrm{d}u,\]</div>
+</div>
+<p>while the denominator involves the gamma function</p>
+<div class="math-wrapper docutils container" id="equation-gamma-function">
+<div class="math notranslate nohighlight" id="equation-gamma-function">
+<span class="eqno">(7)<a class="headerlink" href="#equation-gamma-function" title="Link to this equation">¶</a></span>\[\Gamma\left(n\right) = \int_0^\infty x^{n-1} e^{-x}\mathrm{d}x.\]</div>
+</div>
+<p>For the Coulomb case, whose kernel is <span class="math notranslate nohighlight">\(\frac{1}{R}\)</span>, the function
+<span class="math notranslate nohighlight">\(f_p(R)\)</span> is the complementary error function, and the resulting
+decomposition is plotted in <a class="reference internal" href="#coulomb-potential"><span class="std std-numref">Figure 2.</span></a>.</p>
+<figure class="align-default" id="id10">
+<span id="coulomb-potential"></span><img alt="_images/erfc.png" src="_images/erfc.png" />
+<figcaption>
+<p><span class="caption-number">Figure 2. </span><span class="caption-text">Decomposition of the Coulomb potential (black dashed line) into short range
+(red line) and long range (blue line) terms.  The dashed gray line shows
+that the sum of the two terms is gives a numerator of one, proving that
+this decomposition is exact.</span><a class="headerlink" href="#id10" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The short ranged term (red line) decays rapidly and is thus well suited to
+evalution with pairwise summation using a short cutoff.  The long ranged term
+(blue line) is free from singularities, but still has the long tail that causes
+the convergence issues so another approach is needed.  We’ve already noted that
+trigonometric functions are likely to be well suited to describing the density
+associated with this term.  Moreover, given that</p>
+<div class="math-wrapper docutils container" id="equation-derivative-of-exponential">
+<div class="math notranslate nohighlight" id="equation-derivative-of-exponential">
+<span class="eqno">(8)<a class="headerlink" href="#equation-derivative-of-exponential" title="Link to this equation">¶</a></span>\[\frac{\partial}{\partial x} e^{i\mkern1mu x} =  i\mkern1mu e^{i\mkern1mu x}.\]</div>
+</div>
+<p>introducing exponentials will turn the problematic <span class="math notranslate nohighlight">\(\nabla^2\)</span> term in
+<a class="reference internal" href="#equation-poisson-equation">(3)</a> into a constant, making the equation trivial to solve.
+In light of Euler’s formula</p>
+<div class="math-wrapper docutils container" id="equation-eulers-formula">
+<div class="math notranslate nohighlight" id="equation-eulers-formula">
+<span class="eqno">(9)<a class="headerlink" href="#equation-eulers-formula" title="Link to this equation">¶</a></span>\[e^{i\mkern1mu x} = \cos(x) + i\mkern1mu \sin(x)\]</div>
+</div>
+<p>we can introduce the aforementioned trigonometric basis and the exponentials
+using the Fourier transform:</p>
+<div class="math-wrapper docutils container" id="equation-fourier-transform">
+<div class="math notranslate nohighlight" id="equation-fourier-transform">
+<span class="eqno">(10)<a class="headerlink" href="#equation-fourier-transform" title="Link to this equation">¶</a></span>\[F(t) = \int_{-\infty}^{\infty} f(x) e^{-2 \pi i\mkern1mu x t} \mathrm{d}x.\]</div>
+</div>
+<p>A full derivation can be found in <a class="reference internal" href="bibliography.html#wells-2015-3684" id="id2"><span>[Wells:2015:3684]</span></a> so we will provide only
+the results here.  Evaluation of the long-range term requires the introduction
+of reciprocal lattice vectors, <span class="math notranslate nohighlight">\(\{\mathbf{a}_1^*, \mathbf{a}_2^*,
+\mathbf{a}_3^*\}\)</span>, defined in terms of the unit cell’s lattice
+vectors <span class="math notranslate nohighlight">\(\{\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_3\}\)</span> as</p>
+<div class="math-wrapper docutils container" id="equation-reciprocal-lattice-vectors">
+<div class="math notranslate nohighlight" id="equation-reciprocal-lattice-vectors">
+<span class="eqno">(11)<a class="headerlink" href="#equation-reciprocal-lattice-vectors" title="Link to this equation">¶</a></span>\[\mathbf{a}_\alpha^* \cdot \mathbf{a}_\beta = \delta_{\alpha\beta},
+       \quad \alpha,\beta \in \{1,2,3\}\]</div>
+</div>
+<p>to obtain the correct integration range in the Fourier transforms.  This
+‘reciprocal space’ treatment uses notation for summation over reciprocal
+lattice vectors, <span class="math notranslate nohighlight">\(\mathbf{m}\)</span>, analogous to that used for summation over
+real space lattice vectors: <span class="math notranslate nohighlight">\(\mathbf{m} = m_1 \mathbf{a}_1^* + m_2
+\mathbf{a}_2^* + m_3 \mathbf{a}_3^*\)</span>, with integers <span class="math notranslate nohighlight">\(\{m_1, m_2, m_3\}\)</span>.
+With these definitions in hand, we can define the structure factors needed
+throughout the reciprocal space treatment, which come from the discrete Fourier
+transform of the density:</p>
+<div class="math-wrapper docutils container" id="equation-structure-factor">
+<div class="math notranslate nohighlight" id="equation-structure-factor">
+<span class="eqno">(12)<a class="headerlink" href="#equation-structure-factor" title="Link to this equation">¶</a></span>\[S(\mathbf{m}) = \sum_A C_A e^{2 \pi i\mkern1mu \mathbf{m} \cdot \mathbf{r}_A}\]</div>
+</div>
+<p>It is in the evaluation of the structure factor where traditional Ewald and
+particle mesh Ewald approaches differ.  In traditional Ewald summation,
+<a class="reference internal" href="#equation-structure-factor">(12)</a> is evaluated as written; this requires
+<span class="math notranslate nohighlight">\(\mathcal{O}(N) \mathbf{m}\)</span> vectors and <span class="math notranslate nohighlight">\(\mathcal{O}(N)\)</span> terms in
+the summation, resulting in <span class="math notranslate nohighlight">\(\mathcal{O}(N^2)\)</span> overall cost.  It is worth
+noting that this can be reduced to <span class="math notranslate nohighlight">\(\mathcal{O}(N^{\frac{3}{2}})\)</span> with
+judicious choice of attenuation parameter <a class="reference internal" href="bibliography.html#perram-1988-875" id="id3"><span>[Perram:1988:875]</span></a>.</p>
+<p>In 1993, Darden and co-workers <a class="reference internal" href="bibliography.html#darden-1993-10089" id="id4"><span>[Darden:1993:10089]</span></a> realized that the discrete
+Fourier transform of the density, could be performed using the
+<span class="math notranslate nohighlight">\(\mathcal{O}(N\log(N))\)</span> fast Fourier transform (FFT) algorithm if the
+atoms were arranged in a perfectly uniform mesh.  To make the method general,
+they used spline interpolation to evaluate the density on a mesh, which allows
+the potential to be evaluated on that mesh using FFTs.  The potential at each
+atomic center can then be extracted from the mesh using the exact same
+interpolation scheme.  The smooth PME method <a class="reference internal" href="bibliography.html#essmann-1995-8577" id="id5"><span>[Essmann:1995:8577]</span></a> introduced
+cardinal B-Splines for the interpolation; these can be analytically
+differentiated using a trivial recursion scheme, allowing derivatives of the
+potential, and therefore forces, to be trivially computed.</p>
+</section>
+</section>
+<section id="working-equations">
+<h2>Working equations<a class="headerlink" href="#working-equations" title="Link to this heading">¶</a></h2>
+<p>The partitioning introduced above results in a short-range direct space energy
+<span class="math notranslate nohighlight">\(U_\mathrm{dir}\)</span> that is evaluated using standard pairwise loops, and the reciprocal
+space energy <span class="math notranslate nohighlight">\(U_\mathrm{rec}\)</span> that is evaluated via FFTs.  The <span class="math notranslate nohighlight">\(U_\mathrm{rec}\)</span> term inextricably
+interacts each atom with all atoms, including itself.  In light of the
+restriction in the summation of <a class="reference internal" href="#equation-lattice-energy">(2)</a>, this is not physical and
+this self interaction is removed by adding the <span class="math notranslate nohighlight">\(U_\mathrm{slf}\)</span> term.  Certain terms have
+specific classes of interactions neglected, <em>e.g.</em> 1-2 interactions in
+electrostatics, to decouple electostatic and bond stretching terms; a masking
+list <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> comprises these excluded pairs.  The reciprocal space
+contribution present for such interactions is removed by addition of the <span class="math notranslate nohighlight">\(U_\mathrm{adj}\)</span>
+term.</p>
+<p>A few conventions exist in normalizing the Fourier transform; to be consistent
+with the works of Darden and co-workers <a class="reference internal" href="bibliography.html#essmann-1995-8577" id="id6"><span>[Essmann:1995:8577]</span></a>, we use the
+definition in <a class="reference internal" href="#equation-fourier-transform">(10)</a>, which differs from that used in
+<a class="reference internal" href="bibliography.html#wells-2015-3684" id="id7"><span>[Wells:2015:3684]</span></a> by a factor of <span class="math notranslate nohighlight">\(2\pi\)</span> in the plane waves.
+Consequently, our derivation and implementation uses the identity</p>
+<div class="math-wrapper docutils container" id="equation-darden-identity">
+<div class="math notranslate nohighlight" id="equation-darden-identity">
+<span class="eqno">(13)<a class="headerlink" href="#equation-darden-identity" title="Link to this equation">¶</a></span>\[e^{-a^2 x^2}
+     = \frac{\sqrt{\pi}}{\kappa} \int_0^\infty e^{-\frac{\pi^2 m^2}{\kappa^2}}
+                                               e^{-2 \pi i\mkern1mu m x} \mathrm{d}m,\]</div>
+</div>
+<p>in contrast to Wells <em>et al.</em>’s use of</p>
+<div class="math-wrapper docutils container" id="equation-wells-identity">
+<div class="math notranslate nohighlight" id="equation-wells-identity">
+<span class="eqno">(14)<a class="headerlink" href="#equation-wells-identity" title="Link to this equation">¶</a></span>\[e^{-a^2 x^2}
+     = \frac{1}{2\kappa\sqrt\pi} \int_0^\infty e^{-\frac{m^2}{4 \kappa^2}}
+                                               e^{-i\mkern1mu m x} \mathrm{d}m\]</div>
+</div>
+<p>to expand three dimensional Gaussians.  The result is that every reciprocal
+space term involving incomplete gamma functions should be multiplied by
+<span class="math notranslate nohighlight">\((2\pi)^{p-3}\)</span> and we define the quantity <span class="math notranslate nohighlight">\(b\)</span> as <span class="math notranslate nohighlight">\(\frac{\pi
+m}{\kappa}\)</span> instead of <span class="math notranslate nohighlight">\(\frac{m}{2 \kappa}\)</span>.</p>
+<p>With these preliminaries out of the way, we can show the energy expressions,
+and derivatives thereof.</p>
+<section id="potential-expressions">
+<h3>Potential Expressions<a class="headerlink" href="#potential-expressions" title="Link to this heading">¶</a></h3>
+<div class="math-wrapper docutils container" id="equation-phidir">
+<div class="math notranslate nohighlight" id="equation-phidir">
+<span class="eqno">(15)<a class="headerlink" href="#equation-phidir" title="Link to this equation">¶</a></span>\[\phi_\mathrm{dir}\left(\mathbf{r}_A\right) =
+                   \frac{s}{\Gamma\left(\frac{p}{2}\right)}
+                   \sum_{\mathbf{n}^*} \sum_{B \notin \mathcal{M}}
+                   \frac{\Gamma\left(\frac{p}{2},\kappa^2 R^2 \right) C_B}
+                                      {R^p_{\vphantom{P}}}\]</div>
+</div>
+<div class="math-wrapper docutils container" id="equation-phiadj">
+<div class="math notranslate nohighlight" id="equation-phiadj">
+<span class="eqno">(16)<a class="headerlink" href="#equation-phiadj" title="Link to this equation">¶</a></span>\[\phi_\mathrm{adj}\left(\mathbf{r}_A\right)  =
+                   \frac{s}{\Gamma\left(\frac{p}{2}\right)}
+                   \sum_{B \in \mathcal{M}}
+                   \frac{\left[\Gamma\left(\frac{p}{2},\kappa^2 R^2 \right) - 1 \right] C_B}
+                                                       {R^p_{\vphantom{P}}}\]</div>
+</div>
+<div class="math-wrapper docutils container" id="equation-phirec">
+<div class="math notranslate nohighlight" id="equation-phirec">
+<span class="eqno">(17)<a class="headerlink" href="#equation-phirec" title="Link to this equation">¶</a></span>\[\phi_\mathrm{rec}\left(\mathbf{r}_A\right) =
+                   \frac{\pi^{p-\frac{3}{2}}_{\vphantom{P}} s}
+                        {\Gamma \left(\frac{p}{2}\right) V}
+                   \sum_{\mathbf{m} \ne \mathbf{0}}
+                   \frac{\Gamma \left(\frac{3-p}{2},\frac{m^2 \pi ^2}{\kappa ^2}\right)}
+                                           {m^{3-p}_{\vphantom{P}}}
+                   S(\mathbf{m}) e^{-2 \pi i\mkern1mu \mathbf{m}\cdot\mathbf{r}_A}\]</div>
+</div>
+<div class="math-wrapper docutils container" id="equation-phislf">
+<div class="math notranslate nohighlight" id="equation-phislf">
+<span class="eqno">(18)<a class="headerlink" href="#equation-phislf" title="Link to this equation">¶</a></span>\[\phi_\mathrm{slf}\left(\mathbf{r}_A\right) =
+                  -\frac{\kappa^{\ p}_{\vphantom{P}} s}
+                 {p \Gamma\left(\frac{p}{2}\right)}C_A\]</div>
+</div>
+<p>The notation <span class="math notranslate nohighlight">\(B \notin \mathcal{M}\)</span> in <a class="reference internal" href="#equation-phidir">(15)</a> denotes that all pairs
+are included except those where <span class="math notranslate nohighlight">\(\mathbf{m}=\mathbf{0}\)</span> and either
+<span class="math notranslate nohighlight">\(A=B\)</span> or the pair <span class="math notranslate nohighlight">\(A,B\)</span> is on the masking list.  Similarly, the
+<span class="math notranslate nohighlight">\(B \in \mathcal{M}\)</span> in <a class="reference internal" href="#equation-phiadj">(16)</a> means that only those pairs on the
+masked list are included, and only the <span class="math notranslate nohighlight">\(\mathbf{m}=\mathbf{0}\)</span> term is
+considered.  In <a class="reference internal" href="#equation-phirec">(17)</a> we use the volume <span class="math notranslate nohighlight">\(V =
+\mathbf{a}_1\cdot\mathbf{a}_2\times\mathbf{a}_3\)</span>
+and the scalar <span class="math notranslate nohighlight">\(m = |\mathbf{m}|\)</span>.</p>
+</section>
+<section id="energy-expressions">
+<h3>Energy Expressions<a class="headerlink" href="#energy-expressions" title="Link to this heading">¶</a></h3>
+<div class="math-wrapper docutils container" id="equation-udir">
+<div class="math notranslate nohighlight" id="equation-udir">
+<span class="eqno">(19)<a class="headerlink" href="#equation-udir" title="Link to this equation">¶</a></span>\[U_\mathrm{dir} =
+                  \frac{s}{2 \Gamma\left(\frac{p}{2}\right)}
+                  \sum_{\mathbf{n}^*} \sum_{A,B \notin \mathcal{M}}
+                  \frac{\Gamma\left(\frac{p}{2},\kappa^2 R^2 \right) C_A C_B}
+                                           {R^p_{\vphantom{P}}}\]</div>
+</div>
+<div class="math-wrapper docutils container" id="equation-uadj">
+<div class="math notranslate nohighlight" id="equation-uadj">
+<span class="eqno">(20)<a class="headerlink" href="#equation-uadj" title="Link to this equation">¶</a></span>\[U_\mathrm{adj} =
+                  \frac{s}{2 \Gamma\left(\frac{p}{2}\right)}
+                  \sum_{\mathbf{n}^*} \sum_{A,B \notin \mathcal{M}}
+                  \frac{\left[\Gamma\left(\frac{p}{2},\kappa^2 R^2 \right) - 1\right] C_A C_B}
+                                              {R^p_{\vphantom{P}}}\]</div>
+</div>
+<div class="math-wrapper docutils container" id="equation-urec">
+<div class="math notranslate nohighlight" id="equation-urec">
+<span class="eqno">(21)<a class="headerlink" href="#equation-urec" title="Link to this equation">¶</a></span>\[U_\mathrm{rec} =
+                 \frac{\pi^{p-\frac{3}{2}}_{\vphantom{P}} s }
+                      {2 \Gamma \left(\frac{p}{2}\right) V}
+                 \sum_{\mathbf{m} \ne \mathbf{0}}
+                 \frac{\Gamma \left(\frac{3-p}{2},\frac{m^2 \pi ^2}{\kappa ^2}\right)}
+                                         {m^{3-p}_{\vphantom{P}}}
+                 S(\mathbf{m}) S(-\mathbf{m})\]</div>
+</div>
+<div class="math-wrapper docutils container" id="equation-uslf">
+<div class="math notranslate nohighlight" id="equation-uslf">
+<span class="eqno">(22)<a class="headerlink" href="#equation-uslf" title="Link to this equation">¶</a></span>\[U_\mathrm{slf} =
+                       -\frac{\kappa^{\ p}_{\vphantom{P}} s}
+            {p \Gamma\left(\frac{p}{2}\right)}\left(\sum_A C_A^2\right)\]</div>
+</div>
+<p>For absolutely convergenct cases, with <span class="math notranslate nohighlight">\(p &gt; 3\)</span>, <span class="math notranslate nohighlight">\(U_\mathrm{rec}\)</span> has an additional
+term to account for the fact that the <span class="math notranslate nohighlight">\(\mathbf{m}=\mathbf{0}\)</span> term was
+erroneously excluded:</p>
+<div class="math-wrapper docutils container" id="equation-uzer">
+<div class="math notranslate nohighlight" id="equation-uzer">
+<span class="eqno">(23)<a class="headerlink" href="#equation-uzer" title="Link to this equation">¶</a></span>\[U_\mathrm{zer} =
+           \frac{\pi^{\frac{3}{2}}_{\vphantom{P}} \kappa^{\ p-3}_{\vphantom{P}} s}
+                {\left(p-3\right) \Gamma\left(\frac{p}{2}\right) V}
+          \left(\sum_{A,B} C_AC_B\right)\]</div>
+</div>
+</section>
+<section id="force-expressions">
+<h3>Force Expressions<a class="headerlink" href="#force-expressions" title="Link to this heading">¶</a></h3>
+<div class="math-wrapper docutils container" id="equation-fdir">
+<div class="math notranslate nohighlight" id="equation-fdir">
+<span class="eqno">(24)<a class="headerlink" href="#equation-fdir" title="Link to this equation">¶</a></span>\[\mathbf{F}_\mathrm{dir}\left(\mathbf{r}_A\right) =
+               -\sum_B \frac{s C_B}{R^2 \Gamma\left(\frac{p}{2}\right)}
+                                       \left( \frac{p \Gamma\left(\frac{p}{2},\kappa^2 R^2 \right)}
+                                                           {R^{p}_{\vphantom{P}}}
+                                            + 2 e^{-\kappa^2 R^2} \kappa^p
+                                                           \right)\]</div>
+</div>
+<div class="math-wrapper docutils container" id="equation-fadj">
+<div class="math notranslate nohighlight" id="equation-fadj">
+<span class="eqno">(25)<a class="headerlink" href="#equation-fadj" title="Link to this equation">¶</a></span>\[\mathbf{F}_\mathrm{adj}\left(\mathbf{r}_A\right) =
+                -\sum_B \frac{s C_B}{R^2 \Gamma\left(\frac{p}{2}\right)}
+              \left( \frac{p \left[\Gamma\left(\frac{p}{2},\kappa^2 R^2 \right) - 1\right]}
+                                         {R^{p}_{\vphantom{P}}}
+                           + 2 e^{-\kappa^2 R^2} \kappa^p
+                                               \right)\]</div>
+</div>
+<div class="math-wrapper docutils container" id="equation-frecfrac">
+<div class="math notranslate nohighlight" id="equation-frecfrac">
+<span class="eqno">(26)<a class="headerlink" href="#equation-frecfrac" title="Link to this equation">¶</a></span>\[\mathbf{F}'_\mathrm{rec}\left(\mathbf{r}_A\right)  =
+             \frac{2 \pi^{p-\frac{1}{2}}_{\vphantom{P}} i\mkern1mu s C_A}
+                        {\Gamma \left(\frac{p}{2}\right) V}
+             \sum_{\mathbf{m} \ne \mathbf{0}}
+             \frac{\Gamma \left(\frac{3-p}{2},\frac{m^2 \pi ^2}{\kappa ^2}\right)\mathbf{m} }
+                                       {m^{3-p}_{\vphantom{P}}}
+             S(\mathbf{m}) e^{-2 \pi i\mkern1mu \mathbf{m}\cdot\mathbf{r}_A}\]</div>
+</div>
+<p>Comparing <a class="reference internal" href="#equation-phirec">(17)</a> and <a class="reference internal" href="#equation-frecfrac">(26)</a>, and remembering that <span class="math notranslate nohighlight">\(\nabla_A
+e^{-2 \pi i\mkern1mu \mathbf{m}\cdot\mathbf{r}_A} = - 2 \pi i\mkern1mu
+\mathbf{m} e^{-2 \pi i\mkern1mu \mathbf{m}\cdot\mathbf{r}_A}\)</span>, we can see the
+relationship <span class="math notranslate nohighlight">\(\mathbf{F}_\mathrm{rec}\left(\mathbf{r}_A\right) =
+-C_A\nabla_A\phi\left(\mathbf{r}_A\right)\)</span> is obeyed, as expected.  The
+quantity <span class="math notranslate nohighlight">\(- 2 \pi i\mkern1mu \mathbf{m}\)</span> is consequently the Fourier
+space representation of the derivative operator, and this fact leads to a
+trivial expresion for the forces; instead of using the regular B-Spline to
+interpolate the potential as we do for <a class="reference internal" href="#equation-phirec">(17)</a>, we simply replace it with
+the derivative B-Spline and multiply by the coefficient posessed by the center
+of interest.  We have to remember that this yields the forces in fractional coordinates,
+<span class="math notranslate nohighlight">\(\mathbf{F}'_\mathrm{rec}\left(\mathbf{r}_A\right)\)</span>, which can be
+expanded to Cartesian forces using the relationship</p>
+<div class="math-wrapper docutils container" id="equation-frec">
+<div class="math notranslate nohighlight" id="equation-frec">
+<span class="eqno">(27)<a class="headerlink" href="#equation-frec" title="Link to this equation">¶</a></span>\[F_\mathrm{rec}\left(\mathbf{r}_A\right)_\alpha =
+                K_\alpha
+                \mathbf{a}_\alpha^* \cdot \mathbf{F}'_\mathrm{rec}\left(\mathbf{r}_A\right)
+                \alpha \in \{1,2,3\}\]</div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(K_\alpha\)</span> is the number of grid points in the <span class="math notranslate nohighlight">\(\alpha\)</span>
+dimension.  Note that, because the positions do not appear in <a class="reference internal" href="#equation-uslf">(22)</a>, there
+is no self contribution to the forces.</p>
+</section>
+<section id="virial-expressions">
+<h3>Virial Expressions<a class="headerlink" href="#virial-expressions" title="Link to this heading">¶</a></h3>
+<div class="math-wrapper docutils container" id="equation-vdir">
+<div class="math notranslate nohighlight" id="equation-vdir">
+<span class="eqno">(28)<a class="headerlink" href="#equation-vdir" title="Link to this equation">¶</a></span>\[\mathbf{V}_\mathrm{dir} =
+                  \frac{s}{2}
+                  \sum_{\mathbf{n}^*} \sum_{A \notin \mathcal{M}}
+                  \mathbf{F}_\mathrm{dir}\left(\mathbf{r}_A\right) \otimes \mathbf{R}\]</div>
+</div>
+<div class="math-wrapper docutils container" id="equation-vadj">
+<div class="math notranslate nohighlight" id="equation-vadj">
+<span class="eqno">(29)<a class="headerlink" href="#equation-vadj" title="Link to this equation">¶</a></span>\[\mathbf{V}_\mathrm{adj} =
+                  \frac{s}{2}
+                  \sum_{\mathbf{n}^*} \sum_{A \in \mathcal{M}}
+                  \mathbf{F}_\mathrm{dir}\left(\mathbf{r}_A\right) \otimes \mathbf{R}\]</div>
+</div>
+<div class="math-wrapper docutils container" id="equation-vrec">
+<div class="math notranslate nohighlight" id="equation-vrec">
+<span class="eqno">(30)<a class="headerlink" href="#equation-vrec" title="Link to this equation">¶</a></span>\[V_\mathrm{rec} =
+                 \frac{\pi^{\frac{3}{2}}_{\vphantom{P}} s }
+                      {2 \Gamma \left(\frac{p}{2}\right) V}
+                 \sum_{\mathbf{m} \ne \mathbf{0}}
+                 \left(
+                 \frac{\Gamma \left(\frac{3-p}{2},\frac{m^2 \pi ^2}{\kappa ^2}\right)}
+                                     {m^{3-p}_{\vphantom{P}}} \mathbf{I}
+                  - \frac{\Gamma \left(\frac{5-p}{2},\frac{m^2 \pi ^2}{\kappa ^2}\right)}
+                              {m^{5-p}_{\vphantom{P}}} \mathbf{m} \otimes \mathbf{m}
+                 \right)
+                 S(\mathbf{m}) S(-\mathbf{m})\]</div>
+</div>
+<p>Note that references to <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> allude to the fact that the force
+expressions <a class="reference internal" href="#equation-fdir">(24)</a> and <a class="reference internal" href="#equation-fadj">(25)</a> contain summations over atom B.  As for
+the energy, we have to correct <a class="reference internal" href="#equation-vrec">(30)</a> for the absence of the
+<span class="math notranslate nohighlight">\(\mathbf{m}=\mathbf{0}\)</span> term in cases where <span class="math notranslate nohighlight">\(p &gt; 3\)</span>:</p>
+<div class="math-wrapper docutils container" id="equation-vzer">
+<div class="math notranslate nohighlight" id="equation-vzer">
+<span class="eqno">(31)<a class="headerlink" href="#equation-vzer" title="Link to this equation">¶</a></span>\[V_\mathrm{zer} =
+          \frac{\pi^{p-\frac{3}{2}}_{\vphantom{P}} \kappa^{\ p-3}_{\vphantom{P}} s}
+                {\left(p-3\right) \Gamma\left(\frac{p}{2}\right) V}
+          \left(\sum_{A,B} C_AC_B\right) \mathbf{I}\]</div>
+</div>
+</section>
+</section>
+<section id="why-this-works">
+<h2>Why this works<a class="headerlink" href="#why-this-works" title="Link to this heading">¶</a></h2>
+<p>The simplicity of <a class="reference internal" href="#equation-lattice-energy">(2)</a>, juxtaposed with the apparent complexity
+of <a class="reference internal" href="#equation-udir">(19)</a> - <a class="reference internal" href="#equation-uslf">(22)</a>, makes the Ewald summation seem like an unnecessary
+complication.  However, as noted earlier, <a class="reference internal" href="#equation-lattice-energy">(2)</a> coverges very
+slowly and, for <span class="math notranslate nohighlight">\(p &lt; 4\)</span>, conditionally.  The Ewald method splits this
+into rapidly, and absolutely, convergent summations.</p>
+<figure class="align-default" id="id11">
+<span id="gamma-real"></span><img alt="_images/gamma_real.png" src="_images/gamma_real.png" />
+<figcaption>
+<p><span class="caption-number">Figure 3. </span><span class="caption-text">The incomplete gamma function involved in <span class="math notranslate nohighlight">\(U_\mathrm{dir}\)</span> calculations for Coulomb
+electrostatics (orange line) and dispersion calculations (purple line).</span><a class="headerlink" href="#id11" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The functions involved in the real- and reciprocal-space summations are graphed
+in <a class="reference internal" href="#gamma-real"><span class="std std-numref">Figure 3.</span></a> and <a class="reference internal" href="#gamma-reciprocal"><span class="std std-numref">Figure 4.</span></a>, respectively.  In both
+cases the functions used to evaluate Coulomb and dispersion terms decay
+rapidly, which is the origin of the improved efficiency.</p>
+<figure class="align-default" id="id12">
+<span id="gamma-reciprocal"></span><img alt="_images/gamma_reciprocal.png" src="_images/gamma_reciprocal.png" />
+<figcaption>
+<p><span class="caption-number">Figure 4. </span><span class="caption-text">The incomplete gamma function involved in <span class="math notranslate nohighlight">\(U_\mathrm{rec}\)</span> calculations for Coulomb
+electrostatics (orange line) and dispersion calculations (purple line).</span><a class="headerlink" href="#id12" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="design-philosophy">
+<h2>Design Philosophy<a class="headerlink" href="#design-philosophy" title="Link to this heading">¶</a></h2>
+<p>The hel<span style="font-variant: small-caps">pme</span> library is designed to be an extensible solution for implementing
+long range interactions using the <span class="math notranslate nohighlight">\(\mathcal{O}(N \log(N))\)</span> particle mesh
+Ewald (PME) method.</p>
+<section id="boundary-conditions">
+<h3>Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Link to this heading">¶</a></h3>
+<p>For kernels with <span class="math notranslate nohighlight">\(1 \leq n \leq 3\)</span>, which includes Coulombic systems, the
+summation is conditionally convergent.  In these cases the leading term in the
+reciprocal space summation is neglected, which corresponds to introducing a
+neutralizing plasma in charged Coulombic systems.  Corrections that reintroduce
+the conditional convergence, and thus the macroscopic crystal shape
+dependence, to the PME energy have been developed by a number of different
+groups.  However, for Coulombic systems, these corrections usually depend on
+the dipole moment of the crystal, which can be discontinuous in systems where a
+large charge leaves one face of the cell and enters another due to periodic
+boundary conditions.  For this reason, hel<span style="font-variant: small-caps">pme</span> neglects such corrections,
+which is equivalent to assuming that the crystal resides in a perfectly
+conducting medium and thus the surface dipole term is zero; this is known as
+‘tin-foil’ boundary conditions.</p>
+</section>
+<section id="parallelism">
+<h3>Parallelism<a class="headerlink" href="#parallelism" title="Link to this heading">¶</a></h3>
+<p>hel<span style="font-variant: small-caps">pme</span> can use MPI to parallelize using 1D-all-to-all variant of the 3D
+decomposition developed recently in <a class="reference internal" href="bibliography.html#jung-2016-57" id="id8"><span>[Jung:2016:57]</span></a>.  The current version of
+the code assumes that each domain also has coordinate and parameter information
+for atoms that contribute from neighboring domains; atoms close to domain
+boundaries contribute to multiple domains.  Any atoms present in the list that
+do not contribute to a given domain are simply filtered out.  The full
+energies, forces and virial can be recovered by a reduction operation involving
+all domains (MPI tasks).  The decomposition imposes the following requirements
+on the grid dimensions in each direction <span class="math notranslate nohighlight">\(\{n_1, n_2, n_3\}\)</span> and the
+number of MPI instances in each dimension <span class="math notranslate nohighlight">\(\{P_1, P_2, P_3\}\)</span>:
+<span class="math notranslate nohighlight">\(n_1\)</span> must be divisible by <span class="math notranslate nohighlight">\(P_1\)</span>; <span class="math notranslate nohighlight">\(n_2\)</span> must be divisible by
+<span class="math notranslate nohighlight">\(P_2 \times P_3\)</span>; <span class="math notranslate nohighlight">\(P_3\)</span> must be divisible by <span class="math notranslate nohighlight">\(P_1 \times P_3\)</span>
+and by <span class="math notranslate nohighlight">\(P_2 \times P_3\)</span>.  The underlying FFT machinery imposes further
+prime factor constraints for optimal efficiency.  Both sets of requirements are
+automatically satisfied by adjusting the input grid dimension automatically;
+the actual grid size used is guaranteed to be at least as large as that
+provided by the caller.</p>
+<p>The transforms within a domain are parellelized using OpenMP threading, which
+is still a work in progress.</p>
+</section>
+<section id="memory">
+<h3>Memory<a class="headerlink" href="#memory" title="Link to this heading">¶</a></h3>
+<p>To keep memory usage low, hel<span style="font-variant: small-caps">pme</span> uses a very simple matrix class that allows
+existing memory to be utilized for forces and coordinates, thus avoiding a
+copy.  All grid-like representations are handled by internally allocating a
+pool of <span class="math notranslate nohighlight">\(n_1 \times n_2 \times n_3 / P\)</span> complex numbers, split across two
+bufferes, where <span class="math notranslate nohighlight">\(n_1,n_2,n_3\)</span> are the grid dimensions in each lattice
+dimension and <span class="math notranslate nohighlight">\(P\)</span> is the total number of MPI nodes.  Therefore, per-node
+memory usage declines as the number of nodes increases.</p>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="gettingstarted.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Getting Started</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Home</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2017, Andrew C. Simmonett
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Introduction</a><ul>
+<li><a class="reference internal" href="#theory">Theory</a><ul>
+<li><a class="reference internal" href="#notation">Notation</a></li>
+<li><a class="reference internal" href="#basic-overview">Basic overview</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#working-equations">Working equations</a><ul>
+<li><a class="reference internal" href="#potential-expressions">Potential Expressions</a></li>
+<li><a class="reference internal" href="#energy-expressions">Energy Expressions</a></li>
+<li><a class="reference internal" href="#force-expressions">Force Expressions</a></li>
+<li><a class="reference internal" href="#virial-expressions">Virial Expressions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#why-this-works">Why this works</a></li>
+<li><a class="reference internal" href="#design-philosophy">Design Philosophy</a><ul>
+<li><a class="reference internal" href="#boundary-conditions">Boundary Conditions</a></li>
+<li><a class="reference internal" href="#parallelism">Parallelism</a></li>
+<li><a class="reference internal" href="#memory">Memory</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </body>
+</html>

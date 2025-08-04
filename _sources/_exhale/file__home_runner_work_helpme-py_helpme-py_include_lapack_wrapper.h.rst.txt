@@ -1,0 +1,50 @@
+
+.. _file__home_runner_work_helpme-py_helpme-py_include_lapack_wrapper.h:
+
+File lapack_wrapper.h
+=====================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_helpme-py_helpme-py_include>` (``/home/runner/work/helpme-py/helpme-py/include``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+Definition (``/home/runner/work/helpme-py/helpme-py/include/lapack_wrapper.h``)
+-------------------------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``cmath``
+
+- ``limits``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_matrix.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_helpme`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_lapack__wrapper_8h_1aef145a683586d54c5754b683096213c4`
+

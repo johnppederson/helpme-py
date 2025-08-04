@@ -1,0 +1,14 @@
+.. _exhale_function_helpme_8h_1aaa4a78096ea81a5bf563e895cdaf6269:
+
+Function helpme::cartAddress
+============================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_helpme.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: helpme::cartAddress(int, int, int)
+   :project: HelPME

@@ -1,0 +1,440 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Template Struct incompleteGammaRecursion&lt; Real, 1, false &gt;" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01false_01_4.html" /><link rel="prev" title="Template Struct incompleteGammaRecursion" href="structhelpme_1_1incompleteGammaRecursion.html" />
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
+        <title>Template Struct incompleteGammaRecursion&lt; Real, 0, false &gt; - helPME-py documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=25af2a20" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">helPME-py  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <span class="sidebar-brand-text">helPME-py  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../py_api.html">Python API Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Python API Documentation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.LatticeType.html">helpme_py.LatticeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.PairList.html">helpme_py.PairList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.MatrixD.html">helpme_py.MatrixD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.PMEInstanceD.html">helpme_py.PMEInstanceD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.MatrixF.html">helpme_py.MatrixF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.PMEInstanceF.html">helpme_py.PMEInstanceF</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="cpp_api.html">C++ API Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of C++ API Documentation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_helpme.html">Namespace helpme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1FFTWAllocator_1_1rebind.html">Template Struct FFTWAllocator::rebind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html">Template Struct FFTWTypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1FFTWTypes_1_1EmptyPlan.html">Struct FFTWTypes::EmptyPlan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion.html">Template Struct gammaRecursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_010_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 0, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 1, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01true_01_4.html">Template Struct gammaRecursion&lt; Real, 1, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 2, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01true_01_4.html">Template Struct gammaRecursion&lt; Real, 2, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, twoS, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion.html">Template Struct incompleteGammaRecursion</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Template Struct incompleteGammaRecursion&lt; Real, 0, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01false_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 1, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01true_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 1, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_012_00_01true_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 2, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, twoS, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteVirialGammaRecursion.html">Template Struct incompleteVirialGammaRecursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteVirialGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct incompleteVirialGammaRecursion&lt; Real, twoS, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html">Struct Matrix::sliceIterator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1MPITypes.html">Template Struct MPITypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html">Template Struct MPIWrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer.html">Template Struct normIntegerPowerComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01false_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, false, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01true_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, false, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01true_00_01false_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, true, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1raiseNormToIntegerPower.html">Template Struct raiseNormToIntegerPower</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1raiseToIntegerPower.html">Template Struct raiseToIntegerPower</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1raiseToIntegerPower_3_01Real_00_010_01_4.html">Template Struct raiseToIntegerPower&lt; Real, 0 &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1SplineCacheEntry.html">Template Struct SplineCacheEntry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1BSpline.html">Template Class BSpline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html">Template Class FFTWAllocator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html">Template Class FFTWWrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_structhelpme_1_1gammaComputer.html">Template Class gammaComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_structhelpme_1_1incompleteGammaComputer.html">Template Class incompleteGammaComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_structhelpme_1_1incompleteGammaVirialComputer.html">Template Class incompleteGammaVirialComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1Matrix.html">Template Class Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1PMEInstance.html">Template Class PMEInstance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsplineCacheEntry.html">Class splineCacheEntry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_helpme_8h_1a51cde3faab477dd22811f194283ff534.html">Enum AlgorithmType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584.html">Enum LatticeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_helpme_8h_1a2196fee10c55373e383cf857b14412c3.html">Enum NodeOrder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_helpme_8h_1a4fc4f8282a7e47f5d842c715ea72b059.html">Enum PolarizationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_gridsize_8h_1aa3f765da5cede2c9dd980dd017ea482a.html">Template Function helpme::allDivisors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_helpme_8h_1aaa4a78096ea81a5bf563e895cdaf6269.html">Function helpme::cartAddress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_cartesiantransform_8h_1a347e94f6ebf33fc9794b2dc3a4ad62a5.html">Function helpme::cartesianAddress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_cartesiantransform_8h_1a256bfb8cf9356b69d856a27dccfd2e33.html">Template Function helpme::cartesianTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_fletcher_8h_1a2bbabb174c1355716ad9df5df662433d.html">Template Function helpme::compute_fletcher_checksum16</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_fletcher_8h_1a08b980c39ff76d028da19e0812423c9a.html">Template Function helpme::compute_fletcher_checksum32</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_fletcher_8h_1a1331638675e33795086e972eac269939.html">Template Function helpme::compute_fletcher_checksum64</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_tensor__utils_8h_1aa914531b506590c7e190f316613e7757.html">Template Function helpme::contractABxCWithDxC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_gridsize_8h_1a9c4101833a2cc86ce601f86b04e3a266.html">Template Function helpme::findGridSize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_string__utils_8h_1aef57d45b9222018896b91592aef25a7d.html">Template Function helpme::formatNumber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_lapack__wrapper_8h_1aef145a683586d54c5754b683096213c4.html">Template Function helpme::JacobiCyclicDiagonalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_cartesiantransform_8h_1ac82d4a439d1917bf45f99c6b3e773f1c.html">Template Function helpme::makeCartesianRotationMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_cartesiantransform_8h_1a060e019d9442546d5e5168ee0a5c146f.html">Template Function helpme::matrixVectorProduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_helpme_8h_1a871c5c618f66191ab3a8d5d6a88257fd.html">Function helpme::nCartesian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_gamma_8h_1ae3220144f11764cfb80fd0b52cdc8d1c.html">Template Function helpme::nonTemplateGammaComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_memory_8h_1a88c8090bcb1e9078a040f3f72ec70f16.html">Template Function helpme::operator!=</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_matrix_8h_1afc0baf32ac937a2d68f7f98ae66cabc4.html">Template Function helpme::operator&lt;&lt;(std::ostream&amp;, Matrix&lt;Real&gt; const&amp;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_mpi__wrapper_8h_1a05382ee67d55f47b99cbe6479b217a5d.html">Template Function helpme::operator&lt;&lt;(std::ostream&amp;, const std::unique_ptr&lt;MPIWrapper&lt;Real&gt;&gt;&amp;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_memory_8h_1a0b2f28447bc7134d62cdcc76455aa915.html">Template Function helpme::operator==</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_tensor__utils_8h_1af32cd01638ca35b3cffa9ca4a4b712d5.html">Template Function helpme::permuteABCtoACB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_tensor__utils_8h_1a51a39b3d3aac289b016c8afb39d9afd9.html">Template Function helpme::permuteABCtoCBA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_gamma_8h_1af69fa5014260f0318885ae090808ae9b.html">Template Function helpme::screened_erf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_gamma_8h_1a77f6384117afcfa71cbb3b27b579d21b.html">Template Function helpme::screened_erfc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_string__utils_8h_1a1ce7000d3e3817d45cb40bdf2be06d9d.html">Template Function helpme::stringify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_matrix_8h_1af7e32876fd7852b062331d7b405a8198.html">Template Function helpme::transposeMemoryInPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_helpme_8h_1a3457e9c167e8c5fc5e78409291a671c8.html">Define ENABLE_KERNEL_WITH_INVERSE_R_EXPONENT_OF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_gamma_8h_1ac9bd36966441fb675ed2dcc2a4503569.html">Define HELPME_ERF_VAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_gamma_8h_1a13deb336ed7209c93b54b8c8cd493c3e.html">Define HELPME_PI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_gamma_8h_1a6ffe0d727158120ca49b38a1fed8c5d0.html">Define HELPME_SQRTPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_gamma_8h_1a5aada0be6b5613c6f01cb54962c77f7f.html">Define HELPME_SQRTTWO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_mpi__wrapper_8h_1a48497a4ae8b25b3b7c0f0bdad766a564.html">Define PRINT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_memory_8h_1a406b75ea7a95d56e638065f2876a36ae.html">Typedef helpme::vector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_helpme_8h_1aec129751426309d6ba3b31546c9d48f4.html">Typedef PMEInstanceD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_helpme_8h_1a6eef86d57d6da6e5bc38401a93c3ba85.html">Typedef PMEInstanceF</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../_sources/_exhale/structhelpme_1_1incompleteGammaRecursion_3_01Real_00_010_00_01false_01_4.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="template-struct-incompletegammarecursion-real-0-false">
+<span id="exhale-struct-structhelpme-1-1incompletegammarecursion-3-01real-00-010-00-01false-01-4"></span><h1>Template Struct incompleteGammaRecursion&lt; Real, 0, false &gt;<a class="headerlink" href="#template-struct-incompletegammarecursion-real-0-false" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_runner_work_helpme-py_helpme-py_include_gamma.h.html#file-home-runner-work-helpme-py-helpme-py-include-gamma-h"><span class="std std-ref">File gamma.h</span></a></p></li>
+</ul>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Link to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN6helpme24incompleteGammaRecursionI4RealXL0EEXL0EEEE">
+<span id="_CPPv3I0EN6helpme24incompleteGammaRecursionI4RealXL0EEXL0EEEE"></span><span id="_CPPv2I0EN6helpme24incompleteGammaRecursionI4RealX0EXfalseEEE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Real</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_010_00_01false_01_4"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">incompleteGammaRecursion</span></span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN6helpme24incompleteGammaRecursionI4RealXL0EEXL0EEEE" title="helpme::incompleteGammaRecursion&lt;Real, 0, false&gt;::Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN6helpme24incompleteGammaRecursionI4RealXL0EEXL0EEEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Specific value of incomplete gamma function. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme24incompleteGammaRecursionI4RealXL0EEXL0EEE7computeE4Real">
+<span id="_CPPv3N6helpme24incompleteGammaRecursionI4RealXL0EEXL0EEE7computeE4Real"></span><span id="_CPPv2N6helpme24incompleteGammaRecursionI4RealX0EXfalseEE7computeE4Real"></span><span id="helpme::incompleteGammaRecursion:Real.0.false:::compute__Real"></span><span class="target" id="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_010_00_01false_01_4_1a1ed4634adcea76854db3ff4c3c13ecef"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN6helpme24incompleteGammaRecursionI4RealXL0EEXL0EEEE" title="helpme::incompleteGammaRecursion&lt;Real, 0, false&gt;::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN6helpme24incompleteGammaRecursionI4RealXL0EEXL0EEEE" title="helpme::incompleteGammaRecursion&lt;Real, 0, false&gt;::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme24incompleteGammaRecursionI4RealXL0EEXL0EEE7computeE4Real" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01false_01_4.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Template Struct incompleteGammaRecursion&lt; Real, 1, false &gt;</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="structhelpme_1_1incompleteGammaRecursion.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Template Struct incompleteGammaRecursion</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2017, Andrew C. Simmonett
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Template Struct incompleteGammaRecursion&lt; Real, 0, false &gt;</a><ul>
+<li><a class="reference internal" href="#struct-documentation">Struct Documentation</a><ul>
+<li><a class="reference internal" href="#_CPPv4I0EN6helpme24incompleteGammaRecursionI4RealXL0EEXL0EEEE"><code class="docutils literal notranslate"><span class="pre">helpme::incompleteGammaRecursion&lt;</span> <span class="pre">Real,</span> <span class="pre">0,</span> <span class="pre">false</span> <span class="pre">&gt;</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N6helpme24incompleteGammaRecursionI4RealXL0EEXL0EEE7computeE4Real"><code class="docutils literal notranslate"><span class="pre">compute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    </body>
+</html>

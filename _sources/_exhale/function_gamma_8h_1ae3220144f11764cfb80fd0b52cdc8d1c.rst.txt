@@ -1,0 +1,14 @@
+.. _exhale_function_gamma_8h_1ae3220144f11764cfb80fd0b52cdc8d1c:
+
+Template Function helpme::nonTemplateGammaComputer
+==================================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_gamma.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: helpme::nonTemplateGammaComputer(int)
+   :project: HelPME

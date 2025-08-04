@@ -1,0 +1,127 @@
+﻿helpme\_py.PMEInstanceF
+=======================
+
+.. currentmodule:: helpme_py
+
+.. autoclass:: PMEInstanceF
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PMEInstanceF.__init__
+      ~PMEInstanceF.compute_EFV_adj
+      ~PMEInstanceF.compute_EFV_all
+      ~PMEInstanceF.compute_EFV_dir
+      ~PMEInstanceF.compute_EFV_rec
+      ~PMEInstanceF.compute_EF_adj
+      ~PMEInstanceF.compute_EF_all
+      ~PMEInstanceF.compute_EF_dir
+      ~PMEInstanceF.compute_EF_rec
+      ~PMEInstanceF.compute_E_adj
+      ~PMEInstanceF.compute_E_all
+      ~PMEInstanceF.compute_E_dir
+      ~PMEInstanceF.compute_E_rec
+      ~PMEInstanceF.compute_E_self
+      ~PMEInstanceF.compute_PDP_adj
+      ~PMEInstanceF.compute_P_adj
+      ~PMEInstanceF.compute_P_rec
+      ~PMEInstanceF.set_lattice_vectors
+      ~PMEInstanceF.setup
+      ~PMEInstanceF.setup_compressed
+   
+   
+
+
+   
+   
+   
+
+
+   
+   
+   
+    
+   
+   
+   .. automethod:: PMEInstanceF.compute_EFV_adj
+    
+   
+   
+   .. automethod:: PMEInstanceF.compute_EFV_all
+    
+   
+   
+   .. automethod:: PMEInstanceF.compute_EFV_dir
+    
+   
+   
+   .. automethod:: PMEInstanceF.compute_EFV_rec
+    
+   
+   
+   .. automethod:: PMEInstanceF.compute_EF_adj
+    
+   
+   
+   .. automethod:: PMEInstanceF.compute_EF_all
+    
+   
+   
+   .. automethod:: PMEInstanceF.compute_EF_dir
+    
+   
+   
+   .. automethod:: PMEInstanceF.compute_EF_rec
+    
+   
+   
+   .. automethod:: PMEInstanceF.compute_E_adj
+    
+   
+   
+   .. automethod:: PMEInstanceF.compute_E_all
+    
+   
+   
+   .. automethod:: PMEInstanceF.compute_E_dir
+    
+   
+   
+   .. automethod:: PMEInstanceF.compute_E_rec
+    
+   
+   
+   .. automethod:: PMEInstanceF.compute_E_self
+    
+   
+   
+   .. automethod:: PMEInstanceF.compute_PDP_adj
+    
+   
+   
+   .. automethod:: PMEInstanceF.compute_P_adj
+    
+   
+   
+   .. automethod:: PMEInstanceF.compute_P_rec
+    
+   
+   
+   .. automethod:: PMEInstanceF.set_lattice_vectors
+    
+   
+   
+   .. automethod:: PMEInstanceF.setup
+    
+   
+   
+   .. automethod:: PMEInstanceF.setup_compressed
+    
+   
+    
+   

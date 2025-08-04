@@ -1,0 +1,14 @@
+.. _exhale_function_lapack__wrapper_8h_1aef145a683586d54c5754b683096213c4:
+
+Template Function helpme::JacobiCyclicDiagonalization
+=====================================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_lapack_wrapper.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: helpme::JacobiCyclicDiagonalization(Real *, Real *, const Real *, int)
+   :project: HelPME

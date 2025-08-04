@@ -1,0 +1,64 @@
+
+.. _file__home_runner_work_helpme-py_helpme-py_include_fftw_wrapper.h:
+
+File fftw_wrapper.h
+===================
+
+|exhale_lsh| :ref:`Parent directory <dir__home_runner_work_helpme-py_helpme-py_include>` (``/home/runner/work/helpme-py/helpme-py/include``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+Definition (``/home/runner/work/helpme-py/helpme-py/include/fftw_wrapper.h``)
+-----------------------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``complex``
+
+- ``fftw3.h``
+
+- ``iostream``
+
+- ``limits``
+
+- ``memory.h`` (:ref:`file__home_runner_work_helpme-py_helpme-py_include_memory.h`)
+
+- ``stdexcept``
+
+- ``type_traits``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file__home_runner_work_helpme-py_helpme-py_include_helpme.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_helpme`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structhelpme_1_1FFTWTypes`
+
+- :ref:`exhale_struct_structhelpme_1_1FFTWTypes_1_1EmptyPlan`
+
+- :ref:`exhale_class_classhelpme_1_1FFTWWrapper`
+

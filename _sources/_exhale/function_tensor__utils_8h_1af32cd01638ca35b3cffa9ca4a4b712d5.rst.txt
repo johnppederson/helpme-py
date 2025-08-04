@@ -1,0 +1,14 @@
+.. _exhale_function_tensor__utils_8h_1af32cd01638ca35b3cffa9ca4a4b712d5:
+
+Template Function helpme::permuteABCtoACB
+=========================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_tensor_utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: helpme::permuteABCtoACB(Real const *__restrict__, int const, int const, int const, Real *__restrict__, size_t)
+   :project: HelPME

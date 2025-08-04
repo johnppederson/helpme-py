@@ -1,0 +1,27 @@
+.. _exhale_class_classhelpme_1_1Matrix:
+
+Template Class Matrix
+=====================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_matrix.h`
+
+
+Nested Relationships
+--------------------
+
+
+Nested Types
+************
+
+- :ref:`exhale_struct_structhelpme_1_1Matrix_1_1sliceIterator`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: helpme::Matrix
+   :project: HelPME
+   :members:
+   :protected-members:
+   :undoc-members:

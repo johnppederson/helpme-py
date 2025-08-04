@@ -1,0 +1,27 @@
+.. _exhale_struct_structhelpme_1_1FFTWTypes:
+
+Template Struct FFTWTypes
+=========================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_fftw_wrapper.h`
+
+
+Nested Relationships
+--------------------
+
+
+Nested Types
+************
+
+- :ref:`exhale_struct_structhelpme_1_1FFTWTypes_1_1EmptyPlan`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: helpme::FFTWTypes
+   :project: HelPME
+   :members:
+   :protected-members:
+   :undoc-members:

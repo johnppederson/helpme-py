@@ -1,0 +1,14 @@
+.. _exhale_typedef_memory_8h_1a406b75ea7a95d56e638065f2876a36ae:
+
+Typedef helpme::vector
+======================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_memory.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: helpme::vector
+   :project: HelPME

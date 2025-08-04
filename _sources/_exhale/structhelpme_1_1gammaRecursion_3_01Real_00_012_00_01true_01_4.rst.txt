@@ -1,0 +1,17 @@
+.. _exhale_struct_structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01true_01_4:
+
+Template Struct gammaRecursion< Real, 2, true >
+===============================================
+
+- Defined in :ref:`file__home_runner_work_helpme-py_helpme-py_include_gamma.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: helpme::gammaRecursion< Real, 2, true >
+   :project: HelPME
+   :members:
+   :protected-members:
+   :undoc-members:

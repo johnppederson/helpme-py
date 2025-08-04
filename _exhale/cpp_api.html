@@ -1,0 +1,1797 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Namespace helpme" href="namespace_helpme.html" /><link rel="prev" title="helpme_py.PMEInstanceF" href="../_autosummary/helpme_py.PMEInstanceF.html" />
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
+        <title>C++ API Documentation - helPME-py documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=25af2a20" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">helPME-py  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <span class="sidebar-brand-text">helPME-py  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../py_api.html">Python API Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Python API Documentation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.LatticeType.html">helpme_py.LatticeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.PairList.html">helpme_py.PairList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.MatrixD.html">helpme_py.MatrixD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.PMEInstanceD.html">helpme_py.PMEInstanceD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.MatrixF.html">helpme_py.MatrixF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_autosummary/helpme_py.PMEInstanceF.html">helpme_py.PMEInstanceF</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">C++ API Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of C++ API Documentation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_helpme.html">Namespace helpme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1FFTWAllocator_1_1rebind.html">Template Struct FFTWAllocator::rebind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html">Template Struct FFTWTypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1FFTWTypes_1_1EmptyPlan.html">Struct FFTWTypes::EmptyPlan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion.html">Template Struct gammaRecursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_010_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 0, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 1, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01true_01_4.html">Template Struct gammaRecursion&lt; Real, 1, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 2, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01true_01_4.html">Template Struct gammaRecursion&lt; Real, 2, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, twoS, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion.html">Template Struct incompleteGammaRecursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_010_00_01false_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 0, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01false_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 1, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01true_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 1, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_012_00_01true_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 2, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, twoS, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteVirialGammaRecursion.html">Template Struct incompleteVirialGammaRecursion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteVirialGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct incompleteVirialGammaRecursion&lt; Real, twoS, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html">Struct Matrix::sliceIterator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1MPITypes.html">Template Struct MPITypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html">Template Struct MPIWrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer.html">Template Struct normIntegerPowerComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01false_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, false, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01true_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, false, true &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01true_00_01false_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, true, false &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1raiseNormToIntegerPower.html">Template Struct raiseNormToIntegerPower</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1raiseToIntegerPower.html">Template Struct raiseToIntegerPower</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1raiseToIntegerPower_3_01Real_00_010_01_4.html">Template Struct raiseToIntegerPower&lt; Real, 0 &gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1SplineCacheEntry.html">Template Struct SplineCacheEntry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1BSpline.html">Template Class BSpline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html">Template Class FFTWAllocator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html">Template Class FFTWWrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_structhelpme_1_1gammaComputer.html">Template Class gammaComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_structhelpme_1_1incompleteGammaComputer.html">Template Class incompleteGammaComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_structhelpme_1_1incompleteGammaVirialComputer.html">Template Class incompleteGammaVirialComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1Matrix.html">Template Class Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1PMEInstance.html">Template Class PMEInstance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classsplineCacheEntry.html">Class splineCacheEntry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_helpme_8h_1a51cde3faab477dd22811f194283ff534.html">Enum AlgorithmType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584.html">Enum LatticeType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_helpme_8h_1a2196fee10c55373e383cf857b14412c3.html">Enum NodeOrder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_helpme_8h_1a4fc4f8282a7e47f5d842c715ea72b059.html">Enum PolarizationType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_gridsize_8h_1aa3f765da5cede2c9dd980dd017ea482a.html">Template Function helpme::allDivisors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_helpme_8h_1aaa4a78096ea81a5bf563e895cdaf6269.html">Function helpme::cartAddress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_cartesiantransform_8h_1a347e94f6ebf33fc9794b2dc3a4ad62a5.html">Function helpme::cartesianAddress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_cartesiantransform_8h_1a256bfb8cf9356b69d856a27dccfd2e33.html">Template Function helpme::cartesianTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_fletcher_8h_1a2bbabb174c1355716ad9df5df662433d.html">Template Function helpme::compute_fletcher_checksum16</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_fletcher_8h_1a08b980c39ff76d028da19e0812423c9a.html">Template Function helpme::compute_fletcher_checksum32</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_fletcher_8h_1a1331638675e33795086e972eac269939.html">Template Function helpme::compute_fletcher_checksum64</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_tensor__utils_8h_1aa914531b506590c7e190f316613e7757.html">Template Function helpme::contractABxCWithDxC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_gridsize_8h_1a9c4101833a2cc86ce601f86b04e3a266.html">Template Function helpme::findGridSize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_string__utils_8h_1aef57d45b9222018896b91592aef25a7d.html">Template Function helpme::formatNumber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_lapack__wrapper_8h_1aef145a683586d54c5754b683096213c4.html">Template Function helpme::JacobiCyclicDiagonalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_cartesiantransform_8h_1ac82d4a439d1917bf45f99c6b3e773f1c.html">Template Function helpme::makeCartesianRotationMatrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_cartesiantransform_8h_1a060e019d9442546d5e5168ee0a5c146f.html">Template Function helpme::matrixVectorProduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_helpme_8h_1a871c5c618f66191ab3a8d5d6a88257fd.html">Function helpme::nCartesian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_gamma_8h_1ae3220144f11764cfb80fd0b52cdc8d1c.html">Template Function helpme::nonTemplateGammaComputer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_memory_8h_1a88c8090bcb1e9078a040f3f72ec70f16.html">Template Function helpme::operator!=</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_matrix_8h_1afc0baf32ac937a2d68f7f98ae66cabc4.html">Template Function helpme::operator&lt;&lt;(std::ostream&amp;, Matrix&lt;Real&gt; const&amp;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_mpi__wrapper_8h_1a05382ee67d55f47b99cbe6479b217a5d.html">Template Function helpme::operator&lt;&lt;(std::ostream&amp;, const std::unique_ptr&lt;MPIWrapper&lt;Real&gt;&gt;&amp;)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_memory_8h_1a0b2f28447bc7134d62cdcc76455aa915.html">Template Function helpme::operator==</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_tensor__utils_8h_1af32cd01638ca35b3cffa9ca4a4b712d5.html">Template Function helpme::permuteABCtoACB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_tensor__utils_8h_1a51a39b3d3aac289b016c8afb39d9afd9.html">Template Function helpme::permuteABCtoCBA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_gamma_8h_1af69fa5014260f0318885ae090808ae9b.html">Template Function helpme::screened_erf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_gamma_8h_1a77f6384117afcfa71cbb3b27b579d21b.html">Template Function helpme::screened_erfc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_string__utils_8h_1a1ce7000d3e3817d45cb40bdf2be06d9d.html">Template Function helpme::stringify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_matrix_8h_1af7e32876fd7852b062331d7b405a8198.html">Template Function helpme::transposeMemoryInPlace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_helpme_8h_1a3457e9c167e8c5fc5e78409291a671c8.html">Define ENABLE_KERNEL_WITH_INVERSE_R_EXPONENT_OF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_gamma_8h_1ac9bd36966441fb675ed2dcc2a4503569.html">Define HELPME_ERF_VAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_gamma_8h_1a13deb336ed7209c93b54b8c8cd493c3e.html">Define HELPME_PI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_gamma_8h_1a6ffe0d727158120ca49b38a1fed8c5d0.html">Define HELPME_SQRTPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_gamma_8h_1a5aada0be6b5613c6f01cb54962c77f7f.html">Define HELPME_SQRTTWO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define_mpi__wrapper_8h_1a48497a4ae8b25b3b7c0f0bdad766a564.html">Define PRINT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_memory_8h_1a406b75ea7a95d56e638065f2876a36ae.html">Typedef helpme::vector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_helpme_8h_1aec129751426309d6ba3b31546c9d48f4.html">Typedef PMEInstanceD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typedef_helpme_8h_1a6eef86d57d6da6e5bc38401a93c3ba85.html">Typedef PMEInstanceF</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../_sources/_exhale/cpp_api.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="c-api-documentation">
+<h1>C++ API Documentation<a class="headerlink" href="#c-api-documentation" title="Link to this heading">¶</a></h1>
+<section id="class-hierarchy">
+<h2>Class Hierarchy<a class="headerlink" href="#class-hierarchy" title="Link to this heading">¶</a></h2>
+<ul class="treeView" id="class-treeView">
+  <li>
+    <ul class="collapsibleList">
+      <li>Namespace <a href="namespace_helpme.html#namespace-helpme">helpme</a><ul><li>Enum <a href="enum_helpme_8h_1a4fc4f8282a7e47f5d842c715ea72b059.html#exhale-enum-helpme-8h-1a4fc4f8282a7e47f5d842c715ea72b059">PolarizationType</a></li><li>Template Struct <a href="structhelpme_1_1gammaRecursion.html#exhale-struct-structhelpme-1-1gammaRecursion">gammaRecursion</a></li><li>Template Struct <a href="structhelpme_1_1gammaRecursion_3_01Real_00_010_00_01false_01_4.html#exhale-struct-structhelpme-1-1gammaRecursion-3-01Real-00-010-00-01false-01-4">gammaRecursion&lt; Real, 0, false &gt;</a></li><li>Template Struct <a href="structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01false_01_4.html#exhale-struct-structhelpme-1-1gammaRecursion-3-01Real-00-011-00-01false-01-4">gammaRecursion&lt; Real, 1, false &gt;</a></li><li>Template Struct <a href="structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01true_01_4.html#exhale-struct-structhelpme-1-1gammaRecursion-3-01Real-00-011-00-01true-01-4">gammaRecursion&lt; Real, 1, true &gt;</a></li><li>Template Struct <a href="structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01false_01_4.html#exhale-struct-structhelpme-1-1gammaRecursion-3-01Real-00-012-00-01false-01-4">gammaRecursion&lt; Real, 2, false &gt;</a></li><li>Template Struct <a href="structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01true_01_4.html#exhale-struct-structhelpme-1-1gammaRecursion-3-01Real-00-012-00-01true-01-4">gammaRecursion&lt; Real, 2, true &gt;</a></li><li>Template Struct <a href="structhelpme_1_1gammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#exhale-struct-structhelpme-1-1gammaRecursion-3-01Real-00-01twoS-00-01false-01-4">gammaRecursion&lt; Real, twoS, false &gt;</a></li><li>Template Struct <a href="structhelpme_1_1incompleteGammaRecursion.html#exhale-struct-structhelpme-1-1incompleteGammaRecursion">incompleteGammaRecursion</a></li><li>Template Struct <a href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_010_00_01false_01_4.html#exhale-struct-structhelpme-1-1incompleteGammaRecursion-3-01Real-00-010-00-01false-01-4">incompleteGammaRecursion&lt; Real, 0, false &gt;</a></li><li>Template Struct <a href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01false_01_4.html#exhale-struct-structhelpme-1-1incompleteGammaRecursion-3-01Real-00-011-00-01false-01-4">incompleteGammaRecursion&lt; Real, 1, false &gt;</a></li><li>Template Struct <a href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01true_01_4.html#exhale-struct-structhelpme-1-1incompleteGammaRecursion-3-01Real-00-011-00-01true-01-4">incompleteGammaRecursion&lt; Real, 1, true &gt;</a></li><li>Template Struct <a href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_012_00_01true_01_4.html#exhale-struct-structhelpme-1-1incompleteGammaRecursion-3-01Real-00-012-00-01true-01-4">incompleteGammaRecursion&lt; Real, 2, true &gt;</a></li><li>Template Struct <a href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#exhale-struct-structhelpme-1-1incompleteGammaRecursion-3-01Real-00-01twoS-00-01false-01-4">incompleteGammaRecursion&lt; Real, twoS, false &gt;</a></li><li>Template Struct <a href="structhelpme_1_1incompleteVirialGammaRecursion.html#exhale-struct-structhelpme-1-1incompleteVirialGammaRecursion">incompleteVirialGammaRecursion</a></li><li>Template Struct <a href="structhelpme_1_1incompleteVirialGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#exhale-struct-structhelpme-1-1incompleteVirialGammaRecursion-3-01Real-00-01twoS-00-01false-01-4">incompleteVirialGammaRecursion&lt; Real, twoS, false &gt;</a></li><li>Template Struct <a href="structhelpme_1_1MPITypes.html#exhale-struct-structhelpme-1-1MPITypes">MPITypes</a></li><li>Template Struct <a href="structhelpme_1_1MPIWrapper.html#exhale-struct-structhelpme-1-1MPIWrapper">MPIWrapper</a></li><li>Template Struct <a href="structhelpme_1_1normIntegerPowerComputer.html#exhale-struct-structhelpme-1-1normIntegerPowerComputer">normIntegerPowerComputer</a></li><li>Template Struct <a href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01false_01_4.html#exhale-struct-structhelpme-1-1normIntegerPowerComputer-3-01Real-00-01n-00-01false-00-01false-01-4">normIntegerPowerComputer&lt; Real, n, false, false &gt;</a></li><li>Template Struct <a href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01true_01_4.html#exhale-struct-structhelpme-1-1normIntegerPowerComputer-3-01Real-00-01n-00-01false-00-01true-01-4">normIntegerPowerComputer&lt; Real, n, false, true &gt;</a></li><li>Template Struct <a href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01true_00_01false_01_4.html#exhale-struct-structhelpme-1-1normIntegerPowerComputer-3-01Real-00-01n-00-01true-00-01false-01-4">normIntegerPowerComputer&lt; Real, n, true, false &gt;</a></li><li>Template Struct <a href="structhelpme_1_1raiseNormToIntegerPower.html#exhale-struct-structhelpme-1-1raiseNormToIntegerPower">raiseNormToIntegerPower</a></li><li>Template Struct <a href="structhelpme_1_1raiseToIntegerPower.html#exhale-struct-structhelpme-1-1raiseToIntegerPower">raiseToIntegerPower</a></li><li>Template Struct <a href="structhelpme_1_1raiseToIntegerPower_3_01Real_00_010_01_4.html#exhale-struct-structhelpme-1-1raiseToIntegerPower-3-01Real-00-010-01-4">raiseToIntegerPower&lt; Real, 0 &gt;</a></li><li>Template Struct <a href="structhelpme_1_1SplineCacheEntry.html#exhale-struct-structhelpme-1-1SplineCacheEntry">SplineCacheEntry</a></li><li>Template Class <a href="classhelpme_1_1BSpline.html#exhale-class-classhelpme-1-1BSpline">BSpline</a></li><li>Template Class <a href="classhelpme_1_1FFTWAllocator.html#exhale-class-classhelpme-1-1FFTWAllocator">FFTWAllocator</a><ul><li class="lastChild">Template Struct <a href="structhelpme_1_1FFTWAllocator_1_1rebind.html#exhale-struct-structhelpme-1-1FFTWAllocator-1-1rebind">FFTWAllocator::rebind</a></li></ul></li><li>Template Class <a href="classhelpme_1_1FFTWWrapper.html#exhale-class-classhelpme-1-1FFTWWrapper">FFTWWrapper</a></li><li>Template Class <a href="class_structhelpme_1_1gammaComputer.html#exhale-class-structhelpme-1-1gammaComputer">gammaComputer</a></li><li>Template Class <a href="class_structhelpme_1_1incompleteGammaComputer.html#exhale-class-structhelpme-1-1incompleteGammaComputer">incompleteGammaComputer</a></li><li>Template Class <a href="class_structhelpme_1_1incompleteGammaVirialComputer.html#exhale-class-structhelpme-1-1incompleteGammaVirialComputer">incompleteGammaVirialComputer</a></li><li>Template Class <a href="classhelpme_1_1Matrix.html#exhale-class-classhelpme-1-1Matrix">Matrix</a><ul><li class="lastChild">Struct <a href="structhelpme_1_1Matrix_1_1sliceIterator.html#exhale-struct-structhelpme-1-1Matrix-1-1sliceIterator">Matrix::sliceIterator</a></li></ul></li><li>Template Class <a href="classhelpme_1_1PMEInstance.html#exhale-class-classhelpme-1-1PMEInstance">PMEInstance</a></li><li>Enum <a href="enum_helpme_8h_1a51cde3faab477dd22811f194283ff534.html#exhale-enum-helpme-8h-1a51cde3faab477dd22811f194283ff534">AlgorithmType</a></li><li>Enum <a href="enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584.html#exhale-enum-helpme-8h-1ada505b6207eea52aca1b36217ab38584">LatticeType</a></li><li>Enum <a href="enum_helpme_8h_1a2196fee10c55373e383cf857b14412c3.html#exhale-enum-helpme-8h-1a2196fee10c55373e383cf857b14412c3">NodeOrder</a></li><li class="lastChild">Template Struct <a href="structhelpme_1_1FFTWTypes.html#exhale-struct-structhelpme-1-1FFTWTypes">FFTWTypes</a><ul><li class="lastChild">Struct <a href="structhelpme_1_1FFTWTypes_1_1EmptyPlan.html#exhale-struct-structhelpme-1-1FFTWTypes-1-1EmptyPlan">FFTWTypes::EmptyPlan</a></li></ul></li></ul></li><li class="lastChild">Class <a href="classsplineCacheEntry.html#exhale-class-classsplineCacheEntry">splineCacheEntry</a></li>
+    </ul>
+  </li><!-- only tree view element -->
+</ul><!-- /treeView class-treeView --></section>
+<section id="file-hierarchy">
+<h2>File Hierarchy<a class="headerlink" href="#file-hierarchy" title="Link to this heading">¶</a></h2>
+<ul class="treeView" id="file-treeView">
+  <li>
+    <ul class="collapsibleList">
+      <li class="lastChild">Directory <a href="dir__home_runner_work_helpme-py_helpme-py_include.html#dir-home-runner-work-helpme-py-helpme-py-include">include</a><ul><li>File <a href="file__home_runner_work_helpme-py_helpme-py_include_cartesiantransform.h.html#file-home-runner-work-helpme-py-helpme-py-include-cartesiantransform.h">cartesiantransform.h</a></li><li>File <a href="file__home_runner_work_helpme-py_helpme-py_include_fftw_wrapper.h.html#file-home-runner-work-helpme-py-helpme-py-include-fftw-wrapper.h">fftw_wrapper.h</a></li><li>File <a href="file__home_runner_work_helpme-py_helpme-py_include_fletcher.h.html#file-home-runner-work-helpme-py-helpme-py-include-fletcher.h">fletcher.h</a></li><li>File <a href="file__home_runner_work_helpme-py_helpme-py_include_gamma.h.html#file-home-runner-work-helpme-py-helpme-py-include-gamma.h">gamma.h</a></li><li>File <a href="file__home_runner_work_helpme-py_helpme-py_include_gridsize.h.html#file-home-runner-work-helpme-py-helpme-py-include-gridsize.h">gridsize.h</a></li><li>File <a href="file__home_runner_work_helpme-py_helpme-py_include_helpme.h.html#file-home-runner-work-helpme-py-helpme-py-include-helpme.h">helpme.h</a></li><li>File <a href="file__home_runner_work_helpme-py_helpme-py_include_lapack_wrapper.h.html#file-home-runner-work-helpme-py-helpme-py-include-lapack-wrapper.h">lapack_wrapper.h</a></li><li>File <a href="file__home_runner_work_helpme-py_helpme-py_include_matrix.h.html#file-home-runner-work-helpme-py-helpme-py-include-matrix.h">matrix.h</a></li><li>File <a href="file__home_runner_work_helpme-py_helpme-py_include_memory.h.html#file-home-runner-work-helpme-py-helpme-py-include-memory.h">memory.h</a></li><li>File <a href="file__home_runner_work_helpme-py_helpme-py_include_mpi_wrapper.h.html#file-home-runner-work-helpme-py-helpme-py-include-mpi-wrapper.h">mpi_wrapper.h</a></li><li>File <a href="file__home_runner_work_helpme-py_helpme-py_include_powers.h.html#file-home-runner-work-helpme-py-helpme-py-include-powers.h">powers.h</a></li><li>File <a href="file__home_runner_work_helpme-py_helpme-py_include_splines.h.html#file-home-runner-work-helpme-py-helpme-py-include-splines.h">splines.h</a></li><li>File <a href="file__home_runner_work_helpme-py_helpme-py_include_string_utils.h.html#file-home-runner-work-helpme-py-helpme-py-include-string-utils.h">string_utils.h</a></li><li class="lastChild">File <a href="file__home_runner_work_helpme-py_helpme-py_include_tensor_utils.h.html#file-home-runner-work-helpme-py-helpme-py-include-tensor-utils.h">tensor_utils.h</a></li></ul></li>
+    </ul>
+  </li><!-- only tree view element -->
+</ul><!-- /treeView file-treeView --></section>
+<section id="full-api">
+<h2>Full API<a class="headerlink" href="#full-api" title="Link to this heading">¶</a></h2>
+<section id="namespaces">
+<h3>Namespaces<a class="headerlink" href="#namespaces" title="Link to this heading">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="namespace_helpme.html">Namespace helpme</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_helpme.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_helpme.html#enums">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_helpme.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_helpme.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="classes-and-structs">
+<h3>Classes and Structs<a class="headerlink" href="#classes-and-structs" title="Link to this heading">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1FFTWAllocator_1_1rebind.html">Template Struct FFTWAllocator::rebind</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1FFTWAllocator_1_1rebind.html#nested-relationships">Nested Relationships</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1FFTWAllocator_1_1rebind.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1FFTWAllocator_1_1rebind.html#_CPPv4I0EN6helpme13FFTWAllocator6rebindE"><code class="docutils literal notranslate"><span class="pre">helpme::FFTWAllocator::rebind</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWAllocator_1_1rebind.html#_CPPv4N6helpme13FFTWAllocator6rebind5otherE"><code class="docutils literal notranslate"><span class="pre">other</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html">Template Struct FFTWTypes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#nested-relationships">Nested Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#nested-types">Nested Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4I0EN6helpme9FFTWTypesE"><code class="docutils literal notranslate"><span class="pre">helpme::FFTWTypes</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes4PlanE"><code class="docutils literal notranslate"><span class="pre">Plan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes7ComplexE"><code class="docutils literal notranslate"><span class="pre">Complex</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes9makePlan4E6size_tPvPvi"><code class="docutils literal notranslate"><span class="pre">makePlan4()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes9makePlan5E6size_tPvPvii"><code class="docutils literal notranslate"><span class="pre">makePlan5()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes9cleanFFTWEv"><code class="docutils literal notranslate"><span class="pre">cleanFFTW()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes9execPlan1E4Plan"><code class="docutils literal notranslate"><span class="pre">execPlan1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes9execPlan3E4PlanPvPv"><code class="docutils literal notranslate"><span class="pre">execPlan3()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes13isImplementedE"><code class="docutils literal notranslate"><span class="pre">isImplemented</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes21MakeRealToComplexPlanE"><code class="docutils literal notranslate"><span class="pre">MakeRealToComplexPlan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes21MakeComplexToRealPlanE"><code class="docutils literal notranslate"><span class="pre">MakeComplexToRealPlan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes24MakeComplexToComplexPlanE"><code class="docutils literal notranslate"><span class="pre">MakeComplexToComplexPlan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes24ExecuteRealToComplexPlanE"><code class="docutils literal notranslate"><span class="pre">ExecuteRealToComplexPlan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes24ExecuteComplexToRealPlanE"><code class="docutils literal notranslate"><span class="pre">ExecuteComplexToRealPlan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes27ExecuteComplexToComplexPlanE"><code class="docutils literal notranslate"><span class="pre">ExecuteComplexToComplexPlan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes11DestroyPlanE"><code class="docutils literal notranslate"><span class="pre">DestroyPlan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes11CleanupFFTWE"><code class="docutils literal notranslate"><span class="pre">CleanupFFTW</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes9EmptyPlanE"><code class="docutils literal notranslate"><span class="pre">helpme::FFTWTypes::EmptyPlan</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="structhelpme_1_1FFTWTypes.html#_CPPv4N6helpme9FFTWTypes9EmptyPlan6unusedE"><code class="docutils literal notranslate"><span class="pre">unused</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1FFTWTypes_1_1EmptyPlan.html">Struct FFTWTypes::EmptyPlan</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1FFTWTypes_1_1EmptyPlan.html#nested-relationships">Nested Relationships</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1FFTWTypes_1_1EmptyPlan.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1FFTWTypes_1_1EmptyPlan.html#_CPPv4N6helpme9FFTWTypes9EmptyPlanE"><code class="docutils literal notranslate"><span class="pre">helpme::FFTWTypes::EmptyPlan</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1FFTWTypes_1_1EmptyPlan.html#_CPPv4N6helpme9FFTWTypes9EmptyPlan6unusedE"><code class="docutils literal notranslate"><span class="pre">unused</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1gammaRecursion.html">Template Struct gammaRecursion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1gammaRecursion.html#_CPPv4I0_i_bEN6helpme14gammaRecursionE"><code class="docutils literal notranslate"><span class="pre">helpme::gammaRecursion</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1gammaRecursion.html#_CPPv4N6helpme14gammaRecursion5valueE"><code class="docutils literal notranslate"><span class="pre">value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_010_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 0, false &gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_010_00_01false_01_4.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_010_00_01false_01_4.html#_CPPv4I0EN6helpme14gammaRecursionI4RealXL0EEXL0EEEE"><code class="docutils literal notranslate"><span class="pre">helpme::gammaRecursion&lt;</span> <span class="pre">Real,</span> <span class="pre">0,</span> <span class="pre">false</span> <span class="pre">&gt;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_010_00_01false_01_4.html#_CPPv4N6helpme14gammaRecursionI4RealXL0EEXL0EEE5valueE"><code class="docutils literal notranslate"><span class="pre">value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 1, false &gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01false_01_4.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01false_01_4.html#_CPPv4I0EN6helpme14gammaRecursionI4RealXL1EEXL0EEEE"><code class="docutils literal notranslate"><span class="pre">helpme::gammaRecursion&lt;</span> <span class="pre">Real,</span> <span class="pre">1,</span> <span class="pre">false</span> <span class="pre">&gt;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01false_01_4.html#_CPPv4N6helpme14gammaRecursionI4RealXL1EEXL0EEE5valueE"><code class="docutils literal notranslate"><span class="pre">value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01true_01_4.html">Template Struct gammaRecursion&lt; Real, 1, true &gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01true_01_4.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01true_01_4.html#_CPPv4I0EN6helpme14gammaRecursionI4RealXL1EEXL1EEEE"><code class="docutils literal notranslate"><span class="pre">helpme::gammaRecursion&lt;</span> <span class="pre">Real,</span> <span class="pre">1,</span> <span class="pre">true</span> <span class="pre">&gt;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_011_00_01true_01_4.html#_CPPv4N6helpme14gammaRecursionI4RealXL1EEXL1EEE5valueE"><code class="docutils literal notranslate"><span class="pre">value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, 2, false &gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01false_01_4.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01false_01_4.html#_CPPv4I0EN6helpme14gammaRecursionI4RealXL2EEXL0EEEE"><code class="docutils literal notranslate"><span class="pre">helpme::gammaRecursion&lt;</span> <span class="pre">Real,</span> <span class="pre">2,</span> <span class="pre">false</span> <span class="pre">&gt;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01false_01_4.html#_CPPv4N6helpme14gammaRecursionI4RealXL2EEXL0EEE5valueE"><code class="docutils literal notranslate"><span class="pre">value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01true_01_4.html">Template Struct gammaRecursion&lt; Real, 2, true &gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01true_01_4.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01true_01_4.html#_CPPv4I0EN6helpme14gammaRecursionI4RealXL2EEXL1EEEE"><code class="docutils literal notranslate"><span class="pre">helpme::gammaRecursion&lt;</span> <span class="pre">Real,</span> <span class="pre">2,</span> <span class="pre">true</span> <span class="pre">&gt;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_012_00_01true_01_4.html#_CPPv4N6helpme14gammaRecursionI4RealXL2EEXL1EEE5valueE"><code class="docutils literal notranslate"><span class="pre">value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct gammaRecursion&lt; Real, twoS, false &gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#_CPPv4I0_iEN6helpme14gammaRecursionI4Real4twoSXL0EEEE"><code class="docutils literal notranslate"><span class="pre">helpme::gammaRecursion&lt;</span> <span class="pre">Real,</span> <span class="pre">twoS,</span> <span class="pre">false</span> <span class="pre">&gt;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1gammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#_CPPv4N6helpme14gammaRecursionI4Real4twoSXL0EEE5valueE"><code class="docutils literal notranslate"><span class="pre">value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion.html">Template Struct incompleteGammaRecursion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion.html#_CPPv4I0_i_bEN6helpme24incompleteGammaRecursionE"><code class="docutils literal notranslate"><span class="pre">helpme::incompleteGammaRecursion</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion.html#_CPPv4N6helpme24incompleteGammaRecursion7computeE4Real"><code class="docutils literal notranslate"><span class="pre">compute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_010_00_01false_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 0, false &gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_010_00_01false_01_4.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_010_00_01false_01_4.html#_CPPv4I0EN6helpme24incompleteGammaRecursionI4RealXL0EEXL0EEEE"><code class="docutils literal notranslate"><span class="pre">helpme::incompleteGammaRecursion&lt;</span> <span class="pre">Real,</span> <span class="pre">0,</span> <span class="pre">false</span> <span class="pre">&gt;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_010_00_01false_01_4.html#_CPPv4N6helpme24incompleteGammaRecursionI4RealXL0EEXL0EEE7computeE4Real"><code class="docutils literal notranslate"><span class="pre">compute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01false_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 1, false &gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01false_01_4.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01false_01_4.html#_CPPv4I0EN6helpme24incompleteGammaRecursionI4RealXL1EEXL0EEEE"><code class="docutils literal notranslate"><span class="pre">helpme::incompleteGammaRecursion&lt;</span> <span class="pre">Real,</span> <span class="pre">1,</span> <span class="pre">false</span> <span class="pre">&gt;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01false_01_4.html#_CPPv4N6helpme24incompleteGammaRecursionI4RealXL1EEXL0EEE7computeE4Real"><code class="docutils literal notranslate"><span class="pre">compute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01true_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 1, true &gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01true_01_4.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01true_01_4.html#_CPPv4I0EN6helpme24incompleteGammaRecursionI4RealXL1EEXL1EEEE"><code class="docutils literal notranslate"><span class="pre">helpme::incompleteGammaRecursion&lt;</span> <span class="pre">Real,</span> <span class="pre">1,</span> <span class="pre">true</span> <span class="pre">&gt;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_011_00_01true_01_4.html#_CPPv4N6helpme24incompleteGammaRecursionI4RealXL1EEXL1EEE7computeE4Real"><code class="docutils literal notranslate"><span class="pre">compute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_012_00_01true_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, 2, true &gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_012_00_01true_01_4.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_012_00_01true_01_4.html#_CPPv4I0EN6helpme24incompleteGammaRecursionI4RealXL2EEXL1EEEE"><code class="docutils literal notranslate"><span class="pre">helpme::incompleteGammaRecursion&lt;</span> <span class="pre">Real,</span> <span class="pre">2,</span> <span class="pre">true</span> <span class="pre">&gt;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_012_00_01true_01_4.html#_CPPv4N6helpme24incompleteGammaRecursionI4RealXL2EEXL1EEE7computeE4Real"><code class="docutils literal notranslate"><span class="pre">compute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct incompleteGammaRecursion&lt; Real, twoS, false &gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#_CPPv4I0_iEN6helpme24incompleteGammaRecursionI4Real4twoSXL0EEEE"><code class="docutils literal notranslate"><span class="pre">helpme::incompleteGammaRecursion&lt;</span> <span class="pre">Real,</span> <span class="pre">twoS,</span> <span class="pre">false</span> <span class="pre">&gt;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1incompleteGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#_CPPv4N6helpme24incompleteGammaRecursionI4Real4twoSXL0EEE7computeE4Real"><code class="docutils literal notranslate"><span class="pre">compute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1incompleteVirialGammaRecursion.html">Template Struct incompleteVirialGammaRecursion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteVirialGammaRecursion.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1incompleteVirialGammaRecursion.html#_CPPv4I0_i_bEN6helpme30incompleteVirialGammaRecursionE"><code class="docutils literal notranslate"><span class="pre">helpme::incompleteVirialGammaRecursion</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1incompleteVirialGammaRecursion.html#_CPPv4N6helpme30incompleteVirialGammaRecursion7computeE4Real"><code class="docutils literal notranslate"><span class="pre">compute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1incompleteVirialGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html">Template Struct incompleteVirialGammaRecursion&lt; Real, twoS, false &gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1incompleteVirialGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1incompleteVirialGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#_CPPv4I0_iEN6helpme30incompleteVirialGammaRecursionI4Real4twoSXL0EEEE"><code class="docutils literal notranslate"><span class="pre">helpme::incompleteVirialGammaRecursion&lt;</span> <span class="pre">Real,</span> <span class="pre">twoS,</span> <span class="pre">false</span> <span class="pre">&gt;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1incompleteVirialGammaRecursion_3_01Real_00_01twoS_00_01false_01_4.html#_CPPv4N6helpme30incompleteVirialGammaRecursionI4Real4twoSXL0EEE7computeE4Real"><code class="docutils literal notranslate"><span class="pre">compute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html">Struct Matrix::sliceIterator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#nested-relationships">Nested Relationships</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIteratorE"><code class="docutils literal notranslate"><span class="pre">helpme::Matrix::sliceIterator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIterator13sliceIteratorEP4RealP4Real6size_t"><code class="docutils literal notranslate"><span class="pre">sliceIterator()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIterator5beginEv"><code class="docutils literal notranslate"><span class="pre">begin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIterator3endEv"><code class="docutils literal notranslate"><span class="pre">end()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIterator6cbeginEv"><code class="docutils literal notranslate"><span class="pre">cbegin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIterator4cendEv"><code class="docutils literal notranslate"><span class="pre">cend()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIteratorneERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">operator!=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIteratormLE4Real"><code class="docutils literal notranslate"><span class="pre">operator*=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIteratordVE4Real"><code class="docutils literal notranslate"><span class="pre">operator/=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIteratormIE4Real"><code class="docutils literal notranslate"><span class="pre">operator-=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIteratorpLE4Real"><code class="docutils literal notranslate"><span class="pre">operator+=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIteratorppEv"><code class="docutils literal notranslate"><span class="pre">operator++()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIteratorixE6size_t"><code class="docutils literal notranslate"><span class="pre">operator[]()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIterator4sizeEv"><code class="docutils literal notranslate"><span class="pre">size()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIterator14assertSameSizeERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">assertSameSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIterator16assertContiguousERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">assertContiguous()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIteratormiERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">operator-()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIteratormIERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">operator-=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4NK6helpme6Matrix13sliceIteratorpLERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">operator+=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIteratormlEv"><code class="docutils literal notranslate"><span class="pre">operator*()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIterator6begin_E"><code class="docutils literal notranslate"><span class="pre">begin_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIterator4end_E"><code class="docutils literal notranslate"><span class="pre">end_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIterator4ptr_E"><code class="docutils literal notranslate"><span class="pre">ptr_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1Matrix_1_1sliceIterator.html#_CPPv4N6helpme6Matrix13sliceIterator7stride_E"><code class="docutils literal notranslate"><span class="pre">stride_</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1MPITypes.html">Template Struct MPITypes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1MPITypes.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1MPITypes.html#_CPPv4I0EN6helpme8MPITypesE"><code class="docutils literal notranslate"><span class="pre">helpme::MPITypes</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPITypes.html#_CPPv4N6helpme8MPITypes8MPITypesEv"><code class="docutils literal notranslate"><span class="pre">MPITypes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPITypes.html#_CPPv4N6helpme8MPITypes9realType_E"><code class="docutils literal notranslate"><span class="pre">realType_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPITypes.html#_CPPv4N6helpme8MPITypes12complexType_E"><code class="docutils literal notranslate"><span class="pre">complexType_</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html">Template Struct MPIWrapper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4I0EN6helpme10MPIWrapperE"><code class="docutils literal notranslate"><span class="pre">helpme::MPIWrapper</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4NK6helpme10MPIWrapper27assertNodePartitioningValidEiiii"><code class="docutils literal notranslate"><span class="pre">assertNodePartitioningValid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper10MPIWrapperEv"><code class="docutils literal notranslate"><span class="pre">MPIWrapper()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper10MPIWrapperERK8MPI_Commiii"><code class="docutils literal notranslate"><span class="pre">MPIWrapper()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapperD0Ev"><code class="docutils literal notranslate"><span class="pre">~MPIWrapper()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper7barrierEv"><code class="docutils literal notranslate"><span class="pre">barrier()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper5splitEii"><code class="docutils literal notranslate"><span class="pre">split()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper8allToAllEPNSt7complexI4RealEEPNSt7complexI4RealEEi"><code class="docutils literal notranslate"><span class="pre">allToAll()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper8allToAllEP4RealP4Reali"><code class="docutils literal notranslate"><span class="pre">allToAll()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper6reduceEP4RealP4Realii"><code class="docutils literal notranslate"><span class="pre">reduce()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper18reduceScatterBlockEP4RealP4Reali"><code class="docutils literal notranslate"><span class="pre">reduceScatterBlock()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper9allGatherEP4RealP4Reali"><code class="docutils literal notranslate"><span class="pre">allGather()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper6types_E"><code class="docutils literal notranslate"><span class="pre">types_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper16mpiCommunicator_E"><code class="docutils literal notranslate"><span class="pre">mpiCommunicator_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper9numNodes_E"><code class="docutils literal notranslate"><span class="pre">numNodes_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper7myRank_E"><code class="docutils literal notranslate"><span class="pre">myRank_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper10numNodesX_E"><code class="docutils literal notranslate"><span class="pre">numNodesX_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper10numNodesY_E"><code class="docutils literal notranslate"><span class="pre">numNodesY_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapper10numNodesZ_E"><code class="docutils literal notranslate"><span class="pre">numNodesZ_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1MPIWrapper.html#_CPPv4N6helpme10MPIWrapperlsERNSt7ostreamERK10MPIWrapper"><code class="docutils literal notranslate"><span class="pre">operator&lt;&lt;</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer.html">Template Struct normIntegerPowerComputer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer.html#_CPPv4I0_i_b_bEN6helpme24normIntegerPowerComputerE"><code class="docutils literal notranslate"><span class="pre">helpme::normIntegerPowerComputer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer.html#_CPPv4N6helpme24normIntegerPowerComputer7computeE4Real"><code class="docutils literal notranslate"><span class="pre">compute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01false_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, false, false &gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01false_01_4.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01false_01_4.html#_CPPv4I0_iEN6helpme24normIntegerPowerComputerI4Real1nXL0EEXL0EEEE"><code class="docutils literal notranslate"><span class="pre">helpme::normIntegerPowerComputer&lt;</span> <span class="pre">Real,</span> <span class="pre">n,</span> <span class="pre">false,</span> <span class="pre">false</span> <span class="pre">&gt;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01false_01_4.html#_CPPv4N6helpme24normIntegerPowerComputerI4Real1nXL0EEXL0EEE7computeE4Real"><code class="docutils literal notranslate"><span class="pre">compute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01true_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, false, true &gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01true_01_4.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01true_01_4.html#_CPPv4I0_iEN6helpme24normIntegerPowerComputerI4Real1nXL0EEXL1EEEE"><code class="docutils literal notranslate"><span class="pre">helpme::normIntegerPowerComputer&lt;</span> <span class="pre">Real,</span> <span class="pre">n,</span> <span class="pre">false,</span> <span class="pre">true</span> <span class="pre">&gt;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01false_00_01true_01_4.html#_CPPv4N6helpme24normIntegerPowerComputerI4Real1nXL0EEXL1EEE7computeE4Real"><code class="docutils literal notranslate"><span class="pre">compute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01true_00_01false_01_4.html">Template Struct normIntegerPowerComputer&lt; Real, n, true, false &gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01true_00_01false_01_4.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01true_00_01false_01_4.html#_CPPv4I0_iEN6helpme24normIntegerPowerComputerI4Real1nXL1EEXL0EEEE"><code class="docutils literal notranslate"><span class="pre">helpme::normIntegerPowerComputer&lt;</span> <span class="pre">Real,</span> <span class="pre">n,</span> <span class="pre">true,</span> <span class="pre">false</span> <span class="pre">&gt;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1normIntegerPowerComputer_3_01Real_00_01n_00_01true_00_01false_01_4.html#_CPPv4N6helpme24normIntegerPowerComputerI4Real1nXL1EEXL0EEE7computeE4Real"><code class="docutils literal notranslate"><span class="pre">compute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1raiseNormToIntegerPower.html">Template Struct raiseNormToIntegerPower</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1raiseNormToIntegerPower.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1raiseNormToIntegerPower.html#_CPPv4I0_iEN6helpme23raiseNormToIntegerPowerE"><code class="docutils literal notranslate"><span class="pre">helpme::raiseNormToIntegerPower</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1raiseNormToIntegerPower.html#_CPPv4N6helpme23raiseNormToIntegerPower7computeE4Real"><code class="docutils literal notranslate"><span class="pre">compute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1raiseToIntegerPower.html">Template Struct raiseToIntegerPower</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1raiseToIntegerPower.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1raiseToIntegerPower.html#_CPPv4I0_iEN6helpme19raiseToIntegerPowerE"><code class="docutils literal notranslate"><span class="pre">helpme::raiseToIntegerPower</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1raiseToIntegerPower.html#_CPPv4N6helpme19raiseToIntegerPower3powE4Real"><code class="docutils literal notranslate"><span class="pre">pow()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1raiseToIntegerPower_3_01Real_00_010_01_4.html">Template Struct raiseToIntegerPower&lt; Real, 0 &gt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1raiseToIntegerPower_3_01Real_00_010_01_4.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1raiseToIntegerPower_3_01Real_00_010_01_4.html#_CPPv4I0EN6helpme19raiseToIntegerPowerI4RealXL0EEEE"><code class="docutils literal notranslate"><span class="pre">helpme::raiseToIntegerPower&lt;</span> <span class="pre">Real,</span> <span class="pre">0</span> <span class="pre">&gt;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1raiseToIntegerPower_3_01Real_00_010_01_4.html#_CPPv4N6helpme19raiseToIntegerPowerI4RealXL0EEE3powE4Real"><code class="docutils literal notranslate"><span class="pre">pow()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structhelpme_1_1SplineCacheEntry.html">Template Struct SplineCacheEntry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structhelpme_1_1SplineCacheEntry.html#struct-documentation">Struct Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structhelpme_1_1SplineCacheEntry.html#_CPPv4I0EN6helpme16SplineCacheEntryE"><code class="docutils literal notranslate"><span class="pre">helpme::SplineCacheEntry</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1SplineCacheEntry.html#_CPPv4N6helpme16SplineCacheEntry16SplineCacheEntryEii"><code class="docutils literal notranslate"><span class="pre">SplineCacheEntry()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1SplineCacheEntry.html#_CPPv4N6helpme16SplineCacheEntry7aSplineE"><code class="docutils literal notranslate"><span class="pre">aSpline</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1SplineCacheEntry.html#_CPPv4N6helpme16SplineCacheEntry7bSplineE"><code class="docutils literal notranslate"><span class="pre">bSpline</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1SplineCacheEntry.html#_CPPv4N6helpme16SplineCacheEntry7cSplineE"><code class="docutils literal notranslate"><span class="pre">cSpline</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="structhelpme_1_1SplineCacheEntry.html#_CPPv4N6helpme16SplineCacheEntry18absoluteAtomNumberE"><code class="docutils literal notranslate"><span class="pre">absoluteAtomNumber</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classhelpme_1_1BSpline.html">Template Class BSpline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1BSpline.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classhelpme_1_1BSpline.html#_CPPv4I0EN6helpme7BSplineE"><code class="docutils literal notranslate"><span class="pre">helpme::BSpline</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1BSpline.html#_CPPv4N6helpme7BSpline7BSplineEs4Realss"><code class="docutils literal notranslate"><span class="pre">BSpline()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1BSpline.html#_CPPv4N6helpme7BSpline6updateEs4Realss"><code class="docutils literal notranslate"><span class="pre">update()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1BSpline.html#_CPPv4N6helpme7BSpline7BSplineEv"><code class="docutils literal notranslate"><span class="pre">BSpline()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1BSpline.html#_CPPv4N6helpme7BSpline15invSplineModuliEsNSt6vectorIiEE"><code class="docutils literal notranslate"><span class="pre">invSplineModuli()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1BSpline.html#_CPPv4NK6helpme7BSpline17startingGridPointEv"><code class="docutils literal notranslate"><span class="pre">startingGridPoint()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1BSpline.html#_CPPv4NK6helpme7BSplineixERKi"><code class="docutils literal notranslate"><span class="pre">operator[]()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1BSpline.html#_CPPv4NK6helpme7BSpline10splineDataEv"><code class="docutils literal notranslate"><span class="pre">splineData()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1BSpline.html#_CPPv4NK6helpme7BSpline17makeSplineInPlaceEP4RealRK4RealRKs"><code class="docutils literal notranslate"><span class="pre">makeSplineInPlace()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1BSpline.html#_CPPv4NK6helpme7BSpline19differentiateSplineEPK4RealP4RealRKs"><code class="docutils literal notranslate"><span class="pre">differentiateSpline()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1BSpline.html#_CPPv4NK6helpme7BSpline24assertSplineIsSufficientEii"><code class="docutils literal notranslate"><span class="pre">assertSplineIsSufficient()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1BSpline.html#_CPPv4N6helpme7BSpline6order_E"><code class="docutils literal notranslate"><span class="pre">order_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1BSpline.html#_CPPv4N6helpme7BSpline16derivativeLevel_E"><code class="docutils literal notranslate"><span class="pre">derivativeLevel_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1BSpline.html#_CPPv4N6helpme7BSpline8splines_E"><code class="docutils literal notranslate"><span class="pre">splines_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1BSpline.html#_CPPv4N6helpme7BSpline18startingGridPoint_E"><code class="docutils literal notranslate"><span class="pre">startingGridPoint_</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html">Template Class FFTWAllocator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#nested-relationships">Nested Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#nested-types">Nested Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4I0EN6helpme13FFTWAllocatorE"><code class="docutils literal notranslate"><span class="pre">helpme::FFTWAllocator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator10value_typeE"><code class="docutils literal notranslate"><span class="pre">value_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator7pointerE"><code class="docutils literal notranslate"><span class="pre">pointer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator13const_pointerE"><code class="docutils literal notranslate"><span class="pre">const_pointer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator9referenceE"><code class="docutils literal notranslate"><span class="pre">reference</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator15const_referenceE"><code class="docutils literal notranslate"><span class="pre">const_reference</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator9size_typeE"><code class="docutils literal notranslate"><span class="pre">size_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator15difference_typeE"><code class="docutils literal notranslate"><span class="pre">difference_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4NK6helpme13FFTWAllocator7addressE9reference"><code class="docutils literal notranslate"><span class="pre">address()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4NK6helpme13FFTWAllocator7addressE15const_reference"><code class="docutils literal notranslate"><span class="pre">address()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator13FFTWAllocatorEv"><code class="docutils literal notranslate"><span class="pre">FFTWAllocator()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator13FFTWAllocatorERK13FFTWAllocator"><code class="docutils literal notranslate"><span class="pre">FFTWAllocator()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4I0EN6helpme13FFTWAllocator13FFTWAllocatorERK13FFTWAllocatorI1UE"><code class="docutils literal notranslate"><span class="pre">FFTWAllocator()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocatorD0Ev"><code class="docutils literal notranslate"><span class="pre">~FFTWAllocator()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocatoraSE13FFTWAllocator"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4I0EN6helpme13FFTWAllocatoraSER13FFTWAllocator13FFTWAllocatorI1UE"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4NK6helpme13FFTWAllocator8max_sizeEv"><code class="docutils literal notranslate"><span class="pre">max_size()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator8allocateE9size_typePKv"><code class="docutils literal notranslate"><span class="pre">allocate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator9constructE7pointerRK1T"><code class="docutils literal notranslate"><span class="pre">construct()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator7destroyE7pointer"><code class="docutils literal notranslate"><span class="pre">destroy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator10deallocateE7pointer9size_type"><code class="docutils literal notranslate"><span class="pre">deallocate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4I0EN6helpme13FFTWAllocator6rebindE"><code class="docutils literal notranslate"><span class="pre">helpme::FFTWAllocator::rebind</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1FFTWAllocator.html#_CPPv4N6helpme13FFTWAllocator6rebind5otherE"><code class="docutils literal notranslate"><span class="pre">other</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html">Template Class FFTWWrapper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4I0EN6helpme11FFTWWrapperE"><code class="docutils literal notranslate"><span class="pre">helpme::FFTWWrapper</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper11FFTWWrapperEv"><code class="docutils literal notranslate"><span class="pre">FFTWWrapper()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper11FFTWWrapperE6size_t"><code class="docutils literal notranslate"><span class="pre">FFTWWrapper()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper11FFTWWrapperERK11FFTWWrapper"><code class="docutils literal notranslate"><span class="pre">FFTWWrapper()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper11FFTWWrapperERR11FFTWWrapper"><code class="docutils literal notranslate"><span class="pre">FFTWWrapper()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapperaSERK11FFTWWrapper"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapperaSERR11FFTWWrapper"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapperD0Ev"><code class="docutils literal notranslate"><span class="pre">~FFTWWrapper()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper9transformEPNSt7complexI4RealEEP4Real"><code class="docutils literal notranslate"><span class="pre">transform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper9transformEP4RealPNSt7complexI4RealEE"><code class="docutils literal notranslate"><span class="pre">transform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper9transformEPNSt7complexI4RealEEi"><code class="docutils literal notranslate"><span class="pre">transform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper9transformEPNSt7complexI4RealEEPNSt7complexI4RealEEi"><code class="docutils literal notranslate"><span class="pre">transform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper12forwardPlan_E"><code class="docutils literal notranslate"><span class="pre">forwardPlan_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper12inversePlan_E"><code class="docutils literal notranslate"><span class="pre">inversePlan_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper19forwardInPlacePlan_E"><code class="docutils literal notranslate"><span class="pre">forwardInPlacePlan_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper19inverseInPlacePlan_E"><code class="docutils literal notranslate"><span class="pre">inverseInPlacePlan_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper18realToComplexPlan_E"><code class="docutils literal notranslate"><span class="pre">realToComplexPlan_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper18complexToRealPlan_E"><code class="docutils literal notranslate"><span class="pre">complexToRealPlan_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper13fftDimension_E"><code class="docutils literal notranslate"><span class="pre">fftDimension_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1FFTWWrapper.html#_CPPv4N6helpme11FFTWWrapper15transformFlags_E"><code class="docutils literal notranslate"><span class="pre">transformFlags_</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_structhelpme_1_1gammaComputer.html">Template Class gammaComputer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_structhelpme_1_1gammaComputer.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_structhelpme_1_1gammaComputer.html#_CPPv4I0_iEN6helpme13gammaComputerE"><code class="docutils literal notranslate"><span class="pre">helpme::gammaComputer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="class_structhelpme_1_1gammaComputer.html#_CPPv4N6helpme13gammaComputer5valueE"><code class="docutils literal notranslate"><span class="pre">value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_structhelpme_1_1incompleteGammaComputer.html">Template Class incompleteGammaComputer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_structhelpme_1_1incompleteGammaComputer.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_structhelpme_1_1incompleteGammaComputer.html#_CPPv4I0_iEN6helpme23incompleteGammaComputerE"><code class="docutils literal notranslate"><span class="pre">helpme::incompleteGammaComputer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="class_structhelpme_1_1incompleteGammaComputer.html#_CPPv4N6helpme23incompleteGammaComputer7computeE4Real"><code class="docutils literal notranslate"><span class="pre">compute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_structhelpme_1_1incompleteGammaVirialComputer.html">Template Class incompleteGammaVirialComputer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class_structhelpme_1_1incompleteGammaVirialComputer.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_structhelpme_1_1incompleteGammaVirialComputer.html#_CPPv4I0_iEN6helpme29incompleteGammaVirialComputerE"><code class="docutils literal notranslate"><span class="pre">helpme::incompleteGammaVirialComputer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="class_structhelpme_1_1incompleteGammaVirialComputer.html#_CPPv4N6helpme29incompleteGammaVirialComputer7computeE4Real"><code class="docutils literal notranslate"><span class="pre">compute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classhelpme_1_1Matrix.html">Template Class Matrix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1Matrix.html#nested-relationships">Nested Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classhelpme_1_1Matrix.html#nested-types">Nested Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1Matrix.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4I0EN6helpme6MatrixE"><code class="docutils literal notranslate"><span class="pre">helpme::Matrix</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix9SortOrderE"><code class="docutils literal notranslate"><span class="pre">SortOrder</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix9SortOrder9AscendingE"><code class="docutils literal notranslate"><span class="pre">Ascending</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix9SortOrder10DescendingE"><code class="docutils literal notranslate"><span class="pre">Descending</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6MatrixclEii"><code class="docutils literal notranslate"><span class="pre">operator()()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6MatrixclERKNSt4pairIiiEE"><code class="docutils literal notranslate"><span class="pre">operator()()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6MatrixclEii"><code class="docutils literal notranslate"><span class="pre">operator()()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6MatrixclERKNSt4pairIiiEE"><code class="docutils literal notranslate"><span class="pre">operator()()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6MatrixixEi"><code class="docutils literal notranslate"><span class="pre">operator[]()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6MatrixixEi"><code class="docutils literal notranslate"><span class="pre">operator[]()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix5beginEv"><code class="docutils literal notranslate"><span class="pre">begin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix3endEv"><code class="docutils literal notranslate"><span class="pre">end()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix6cbeginEv"><code class="docutils literal notranslate"><span class="pre">cbegin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix4cendEv"><code class="docutils literal notranslate"><span class="pre">cend()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix3rowE6size_t"><code class="docutils literal notranslate"><span class="pre">row()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix3colE6size_t"><code class="docutils literal notranslate"><span class="pre">col()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix5nRowsEv"><code class="docutils literal notranslate"><span class="pre">nRows()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix5nColsEv"><code class="docutils literal notranslate"><span class="pre">nCols()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix6MatrixEv"><code class="docutils literal notranslate"><span class="pre">Matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix6MatrixE6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">Matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix6MatrixERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">Matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix6MatrixENSt16initializer_listINSt16initializer_listI4RealEEEE"><code class="docutils literal notranslate"><span class="pre">Matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix6MatrixENSt16initializer_listI4RealEE"><code class="docutils literal notranslate"><span class="pre">Matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix6MatrixEP4Real6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">Matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4I0ENK6helpme6Matrix4castE6MatrixI7NewRealEv"><code class="docutils literal notranslate"><span class="pre">cast()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix11setConstantE4Real"><code class="docutils literal notranslate"><span class="pre">setConstant()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix7setZeroEv"><code class="docutils literal notranslate"><span class="pre">setZero()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix10isNearZeroE4Real"><code class="docutils literal notranslate"><span class="pre">isNearZero()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix7inverseEv"><code class="docutils literal notranslate"><span class="pre">inverse()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix15assertSymmetricERK4Real"><code class="docutils literal notranslate"><span class="pre">assertSymmetric()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix27applyOperationToEachElementERKNSt8functionIFvR4RealEEE"><code class="docutils literal notranslate"><span class="pre">applyOperationToEachElement()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix14applyOperationERKNSt8functionIFvR4RealEEE"><code class="docutils literal notranslate"><span class="pre">applyOperation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix14assertSameSizeERK6Matrix"><code class="docutils literal notranslate"><span class="pre">assertSameSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix12assertSquareEv"><code class="docutils literal notranslate"><span class="pre">assertSquare()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix8multiplyERK6Matrix"><code class="docutils literal notranslate"><span class="pre">multiply()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6MatrixmlERK6Matrix"><code class="docutils literal notranslate"><span class="pre">operator*()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6MatrixmlE4Real"><code class="docutils literal notranslate"><span class="pre">operator*()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13incrementWithERK6Matrix"><code class="docutils literal notranslate"><span class="pre">incrementWith()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6MatrixpLERK6Matrix"><code class="docutils literal notranslate"><span class="pre">operator+=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13incrementWithERK4Real"><code class="docutils literal notranslate"><span class="pre">incrementWith()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6MatrixpLERK4Real"><code class="docutils literal notranslate"><span class="pre">operator+=()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4I0_NSt9enable_ifINSt17is_floating_pointI1TE5valueEiE4typeEENK6helpme6Matrix12almostEqualsEbRK6Matrix4Real"><code class="docutils literal notranslate"><span class="pre">almostEquals()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4I0_NSt9enable_ifIXntNSt17is_floating_pointI1TE5valueEEiE4typeEENK6helpme6Matrix12almostEqualsEbRK6Matrix4Real"><code class="docutils literal notranslate"><span class="pre">almostEquals()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix3dotERK6Matrix"><code class="docutils literal notranslate"><span class="pre">dot()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix11writeToFileERKNSt6stringEiib"><code class="docutils literal notranslate"><span class="pre">writeToFile()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix5writeERNSt7ostreamE"><code class="docutils literal notranslate"><span class="pre">write()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix16transposeInPlaceEv"><code class="docutils literal notranslate"><span class="pre">transposeInPlace()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix5cloneEv"><code class="docutils literal notranslate"><span class="pre">clone()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix9transposeEv"><code class="docutils literal notranslate"><span class="pre">transpose()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix11diagonalizeE9SortOrder"><code class="docutils literal notranslate"><span class="pre">diagonalize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix6nRows_E"><code class="docutils literal notranslate"><span class="pre">nRows_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix6nCols_E"><code class="docutils literal notranslate"><span class="pre">nCols_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix14allocatedData_E"><code class="docutils literal notranslate"><span class="pre">allocatedData_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix5data_E"><code class="docutils literal notranslate"><span class="pre">data_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIteratorE"><code class="docutils literal notranslate"><span class="pre">helpme::Matrix::sliceIterator</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIterator13sliceIteratorEP4RealP4Real6size_t"><code class="docutils literal notranslate"><span class="pre">sliceIterator()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIterator5beginEv"><code class="docutils literal notranslate"><span class="pre">begin()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIterator3endEv"><code class="docutils literal notranslate"><span class="pre">end()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIterator6cbeginEv"><code class="docutils literal notranslate"><span class="pre">cbegin()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIterator4cendEv"><code class="docutils literal notranslate"><span class="pre">cend()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIteratorneERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">operator!=()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIteratormLE4Real"><code class="docutils literal notranslate"><span class="pre">operator*=()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIteratordVE4Real"><code class="docutils literal notranslate"><span class="pre">operator/=()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIteratormIE4Real"><code class="docutils literal notranslate"><span class="pre">operator-=()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIteratorpLE4Real"><code class="docutils literal notranslate"><span class="pre">operator+=()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIteratorppEv"><code class="docutils literal notranslate"><span class="pre">operator++()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIteratorixE6size_t"><code class="docutils literal notranslate"><span class="pre">operator[]()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIterator4sizeEv"><code class="docutils literal notranslate"><span class="pre">size()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIterator14assertSameSizeERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">assertSameSize()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIterator16assertContiguousERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">assertContiguous()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIteratormiERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">operator-()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIteratormIERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">operator-=()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4NK6helpme6Matrix13sliceIteratorpLERK13sliceIterator"><code class="docutils literal notranslate"><span class="pre">operator+=()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIteratormlEv"><code class="docutils literal notranslate"><span class="pre">operator*()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIterator6begin_E"><code class="docutils literal notranslate"><span class="pre">begin_</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIterator4end_E"><code class="docutils literal notranslate"><span class="pre">end_</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIterator4ptr_E"><code class="docutils literal notranslate"><span class="pre">ptr_</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classhelpme_1_1Matrix.html#_CPPv4N6helpme6Matrix13sliceIterator7stride_E"><code class="docutils literal notranslate"><span class="pre">stride_</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classhelpme_1_1PMEInstance.html">Template Class PMEInstance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4I0_NSt9enable_ifINSt17is_floating_pointI4RealE5valueEiE4typeEEN6helpme11PMEInstanceE"><code class="docutils literal notranslate"><span class="pre">helpme::PMEInstance</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16spreadParametersEiRK7RealMat"><code class="docutils literal notranslate"><span class="pre">spreadParameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance30filterAtomsAndBuildSplineCacheEiRK7RealMat"><code class="docutils literal notranslate"><span class="pre">filterAtomsAndBuildSplineCache()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance10cellVolumeEv"><code class="docutils literal notranslate"><span class="pre">cellVolume()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance18minimumImageDeltaRERKN6helpme6MatrixI4RealE13sliceIteratorERKN6helpme6MatrixI4RealE13sliceIteratorE"><code class="docutils literal notranslate"><span class="pre">minimumImageDeltaR()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance17setLatticeVectorsE4Real4Real4Real4Real4Real4Real11LatticeType"><code class="docutils literal notranslate"><span class="pre">setLatticeVectors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance26compressedForwardTransformEP4Real"><code class="docutils literal notranslate"><span class="pre">compressedForwardTransform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16forwardTransformEP4Real"><code class="docutils literal notranslate"><span class="pre">forwardTransform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16inverseTransformEP7Complex"><code class="docutils literal notranslate"><span class="pre">inverseTransform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance26compressedInverseTransformEP4Real"><code class="docutils literal notranslate"><span class="pre">compressedInverseTransform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance9convolveEEP4Real"><code class="docutils literal notranslate"><span class="pre">convolveE()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance9convolveEEP7Complex"><code class="docutils literal notranslate"><span class="pre">convolveE()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance10convolveEVEPK4RealRP4RealR7RealMat"><code class="docutils literal notranslate"><span class="pre">convolveEV()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance10convolveEVEP7ComplexR7RealMat"><code class="docutils literal notranslate"><span class="pre">convolveEV()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance9probeGridEPK4RealiRK7RealMatR7RealMatP4Real"><code class="docutils literal notranslate"><span class="pre">probeGrid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11computeESlfEiRK7RealMat"><code class="docutils literal notranslate"><span class="pre">computeESlf()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11computeEDirERK8PairListiRK7RealMatRK7RealMat"><code class="docutils literal notranslate"><span class="pre">computeEDir()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12computeEFDirERK8PairListiRK7RealMatRK7RealMatR7RealMat"><code class="docutils literal notranslate"><span class="pre">computeEFDir()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance13computeEFVDirERK8PairListiRK7RealMatRK7RealMatR7RealMatR7RealMat"><code class="docutils literal notranslate"><span class="pre">computeEFVDir()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11computeEAdjERK8PairListiRK7RealMatRK7RealMat"><code class="docutils literal notranslate"><span class="pre">computeEAdj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12computeEFAdjERK8PairListiRK7RealMatRK7RealMatR7RealMat"><code class="docutils literal notranslate"><span class="pre">computeEFAdj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance13computeEFVAdjERK8PairListiRK7RealMatRK7RealMatR7RealMatR7RealMat"><code class="docutils literal notranslate"><span class="pre">computeEFVAdj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance21computePAtAtomicSitesERK7RealMatRK7RealMatR7RealMat4Real"><code class="docutils literal notranslate"><span class="pre">computePAtAtomicSites()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11computePAdjEiRK7RealMatRK7RealMatRK7RealMatR7RealMatRb"><code class="docutils literal notranslate"><span class="pre">computePAdj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance13computePDPAdjEiRK7RealMatRK7RealMatRK7RealMatR7RealMatRb"><code class="docutils literal notranslate"><span class="pre">computePDPAdj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12computePVRecEiRK7RealMatRK7RealMatRK7RealMatiR7RealMatR7RealMat"><code class="docutils literal notranslate"><span class="pre">computePVRec()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11computePRecEiRK7RealMatRK7RealMatRK7RealMatiR7RealMat"><code class="docutils literal notranslate"><span class="pre">computePRec()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11computeERecEiRK7RealMatRK7RealMat"><code class="docutils literal notranslate"><span class="pre">computeERec()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12computeEFRecEiRK7RealMatRK7RealMatR7RealMat"><code class="docutils literal notranslate"><span class="pre">computeEFRec()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance13computeEFVRecEiRK7RealMatRK7RealMatR7RealMatR7RealMat"><code class="docutils literal notranslate"><span class="pre">computeEFVRec()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance36computeEFVRecIsotropicInducedDipolesEiRK7RealMatRK7RealMat16PolarizationTypeRK7RealMatR7RealMatR7RealMat"><code class="docutils literal notranslate"><span class="pre">computeEFVRecIsotropicInducedDipoles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11computeEAllERK8PairListRK8PairListiRK7RealMatRK7RealMat"><code class="docutils literal notranslate"><span class="pre">computeEAll()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12computeEFAllERK8PairListRK8PairListiRK7RealMatRK7RealMatR7RealMat"><code class="docutils literal notranslate"><span class="pre">computeEFAll()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance13computeEFVAllERK8PairListRK8PairListiRK7RealMatRK7RealMatR7RealMatR7RealMat"><code class="docutils literal notranslate"><span class="pre">computeEFVAll()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance5setupEi4Realiiii4Reali"><code class="docutils literal notranslate"><span class="pre">setup()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15setupCompressedEi4Realiiiiiii4Reali"><code class="docutils literal notranslate"><span class="pre">setupCompressed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4NK6helpme11PMEInstance16makeGridIteratorEiiii"><code class="docutils literal notranslate"><span class="pre">makeGridIterator()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance20updateAngMomIteratorEi"><code class="docutils literal notranslate"><span class="pre">updateAngMomIterator()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance23updateInfluenceFunctionEv"><code class="docutils literal notranslate"><span class="pre">updateInfluenceFunction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance17computePRecHelperEiRK7RealMatRK7RealMatRK7RealMatiR7RealMatR7RealMat"><code class="docutils literal notranslate"><span class="pre">computePRecHelper()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance20spreadParametersImplERKiP4RealRKiRK6SplineRK6SplineRK6SplineRK7RealMati"><code class="docutils literal notranslate"><span class="pre">spreadParametersImpl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4NK6helpme11PMEInstance13probeGridImplEPK4RealRK6SplineRK6SplineRK6SplineRK4RealP4Real"><code class="docutils literal notranslate"><span class="pre">probeGridImpl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance13probeGridImplEPK4RealRKiRK6SplineRK6SplineRK6SplineP4Real"><code class="docutils literal notranslate"><span class="pre">probeGridImpl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance13probeGridImplERKiPK4RealRKiRKiRK6SplineRK6SplineRK6SplineP4RealPK4RealP4Real"><code class="docutils literal notranslate"><span class="pre">probeGridImpl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4NK6helpme11PMEInstance17assertInitializedEv"><code class="docutils literal notranslate"><span class="pre">assertInitialized()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4NK6helpme11PMEInstance12makeBSplinesEPK4Reals"><code class="docutils literal notranslate"><span class="pre">makeBSplines()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance23checkMinimumImageCutoffEi"><code class="docutils literal notranslate"><span class="pre">checkMinimumImageCutoff()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12sanityChecksEiRK7RealMatRK7RealMati"><code class="docutils literal notranslate"><span class="pre">sanityChecks()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance24setupCalculationMetadataEi4Realiiiiiii4RealiPv9NodeOrderiii"><code class="docutils literal notranslate"><span class="pre">setupCalculationMetadata()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15gridDimensionA_E"><code class="docutils literal notranslate"><span class="pre">gridDimensionA_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15gridDimensionB_E"><code class="docutils literal notranslate"><span class="pre">gridDimensionB_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15gridDimensionC_E"><code class="docutils literal notranslate"><span class="pre">gridDimensionC_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14numKSumTermsA_E"><code class="docutils literal notranslate"><span class="pre">numKSumTermsA_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14numKSumTermsB_E"><code class="docutils literal notranslate"><span class="pre">numKSumTermsB_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14numKSumTermsC_E"><code class="docutils literal notranslate"><span class="pre">numKSumTermsC_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16myNumKSumTermsA_E"><code class="docutils literal notranslate"><span class="pre">myNumKSumTermsA_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16myNumKSumTermsB_E"><code class="docutils literal notranslate"><span class="pre">myNumKSumTermsB_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16myNumKSumTermsC_E"><code class="docutils literal notranslate"><span class="pre">myNumKSumTermsC_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance22complexGridDimensionA_E"><code class="docutils literal notranslate"><span class="pre">complexGridDimensionA_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance24myComplexGridDimensionA_E"><code class="docutils literal notranslate"><span class="pre">myComplexGridDimensionA_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12splineOrder_E"><code class="docutils literal notranslate"><span class="pre">splineOrder_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance9nThreads_E"><code class="docutils literal notranslate"><span class="pre">nThreads_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance25requestedNumberOfThreads_E"><code class="docutils literal notranslate"><span class="pre">requestedNumberOfThreads_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance7rPower_E"><code class="docutils literal notranslate"><span class="pre">rPower_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12scaleFactor_E"><code class="docutils literal notranslate"><span class="pre">scaleFactor_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance6kappa_E"><code class="docutils literal notranslate"><span class="pre">kappa_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance8boxVecs_E"><code class="docutils literal notranslate"><span class="pre">boxVecs_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance8recVecs_E"><code class="docutils literal notranslate"><span class="pre">recVecs_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14scaledRecVecs_E"><code class="docutils literal notranslate"><span class="pre">scaledRecVecs_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance18numAtomsPerThread_E"><code class="docutils literal notranslate"><span class="pre">numAtomsPerThread_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15angMomIterator_E"><code class="docutils literal notranslate"><span class="pre">angMomIterator_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14gridIteratorA_E"><code class="docutils literal notranslate"><span class="pre">gridIteratorA_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14gridIteratorB_E"><code class="docutils literal notranslate"><span class="pre">gridIteratorB_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14gridIteratorC_E"><code class="docutils literal notranslate"><span class="pre">gridIteratorC_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance22threadedGridIteratorC_E"><code class="docutils literal notranslate"><span class="pre">threadedGridIteratorC_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11splineModA_E"><code class="docutils literal notranslate"><span class="pre">splineModA_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11splineModB_E"><code class="docutils literal notranslate"><span class="pre">splineModB_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11splineModC_E"><code class="docutils literal notranslate"><span class="pre">splineModC_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance24cachedInfluenceFunction_E"><code class="docutils literal notranslate"><span class="pre">cachedInfluenceFunction_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14convolveEVFxn_E"><code class="docutils literal notranslate"><span class="pre">convolveEVFxn_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance24convolveEVCompressedFxn_E"><code class="docutils literal notranslate"><span class="pre">convolveEVCompressedFxn_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance26cacheInfluenceFunctionFxn_E"><code class="docutils literal notranslate"><span class="pre">cacheInfluenceFunctionFxn_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance8slfEFxn_E"><code class="docutils literal notranslate"><span class="pre">slfEFxn_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance8dirEFxn_E"><code class="docutils literal notranslate"><span class="pre">dirEFxn_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance8adjEFxn_E"><code class="docutils literal notranslate"><span class="pre">adjEFxn_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance9dirEFFxn_E"><code class="docutils literal notranslate"><span class="pre">dirEFFxn_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance9adjEFFxn_E"><code class="docutils literal notranslate"><span class="pre">adjEFFxn_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance10numNodesA_E"><code class="docutils literal notranslate"><span class="pre">numNodesA_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance10numNodesB_E"><code class="docutils literal notranslate"><span class="pre">numNodesB_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance10numNodesC_E"><code class="docutils literal notranslate"><span class="pre">numNodesC_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12myNodeRankA_E"><code class="docutils literal notranslate"><span class="pre">myNodeRankA_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12myNodeRankB_E"><code class="docutils literal notranslate"><span class="pre">myNodeRankB_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12myNodeRankC_E"><code class="docutils literal notranslate"><span class="pre">myNodeRankC_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance18myFirstGridPointA_E"><code class="docutils literal notranslate"><span class="pre">myFirstGridPointA_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance18myFirstGridPointB_E"><code class="docutils literal notranslate"><span class="pre">myFirstGridPointB_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance18myFirstGridPointC_E"><code class="docutils literal notranslate"><span class="pre">myFirstGridPointC_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15firstKSumTermA_E"><code class="docutils literal notranslate"><span class="pre">firstKSumTermA_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15firstKSumTermB_E"><code class="docutils literal notranslate"><span class="pre">firstKSumTermB_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15firstKSumTermC_E"><code class="docutils literal notranslate"><span class="pre">firstKSumTermC_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance17myGridDimensionA_E"><code class="docutils literal notranslate"><span class="pre">myGridDimensionA_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance17myGridDimensionB_E"><code class="docutils literal notranslate"><span class="pre">myGridDimensionB_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance17myGridDimensionC_E"><code class="docutils literal notranslate"><span class="pre">myGridDimensionC_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16subsetOfCAlongA_E"><code class="docutils literal notranslate"><span class="pre">subsetOfCAlongA_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16subsetOfCAlongB_E"><code class="docutils literal notranslate"><span class="pre">subsetOfCAlongB_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16subsetOfBAlongC_E"><code class="docutils literal notranslate"><span class="pre">subsetOfBAlongC_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance21cacheLineSizeInReals_E"><code class="docutils literal notranslate"><span class="pre">cacheLineSizeInReals_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance6cellA_E"><code class="docutils literal notranslate"><span class="pre">cellA_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance6cellB_E"><code class="docutils literal notranslate"><span class="pre">cellB_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance6cellC_E"><code class="docutils literal notranslate"><span class="pre">cellC_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance10cellAlpha_E"><code class="docutils literal notranslate"><span class="pre">cellAlpha_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance9cellBeta_E"><code class="docutils literal notranslate"><span class="pre">cellBeta_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance10cellGamma_E"><code class="docutils literal notranslate"><span class="pre">cellGamma_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance19unitCellHasChanged_E"><code class="docutils literal notranslate"><span class="pre">unitCellHasChanged_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance16kappaHasChanged_E"><code class="docutils literal notranslate"><span class="pre">kappaHasChanged_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance24gridDimensionHasChanged_E"><code class="docutils literal notranslate"><span class="pre">gridDimensionHasChanged_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance33reciprocalSumDimensionHasChanged_E"><code class="docutils literal notranslate"><span class="pre">reciprocalSumDimensionHasChanged_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance20algorithmHasChanged_E"><code class="docutils literal notranslate"><span class="pre">algorithmHasChanged_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance22splineOrderHasChanged_E"><code class="docutils literal notranslate"><span class="pre">splineOrderHasChanged_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance22scaleFactorHasChanged_E"><code class="docutils literal notranslate"><span class="pre">scaleFactorHasChanged_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance17rPowerHasChanged_E"><code class="docutils literal notranslate"><span class="pre">rPowerHasChanged_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance19numNodesHasChanged_E"><code class="docutils literal notranslate"><span class="pre">numNodesHasChanged_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance14algorithmType_E"><code class="docutils literal notranslate"><span class="pre">algorithmType_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12latticeType_E"><code class="docutils literal notranslate"><span class="pre">latticeType_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11workSpace1_E"><code class="docutils literal notranslate"><span class="pre">workSpace1_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11workSpace2_E"><code class="docutils literal notranslate"><span class="pre">workSpace2_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11fftHelperA_E"><code class="docutils literal notranslate"><span class="pre">fftHelperA_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11fftHelperB_E"><code class="docutils literal notranslate"><span class="pre">fftHelperB_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance11fftHelperC_E"><code class="docutils literal notranslate"><span class="pre">fftHelperC_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance12splineCache_E"><code class="docutils literal notranslate"><span class="pre">splineCache_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance15fractionalPhis_E"><code class="docutils literal notranslate"><span class="pre">fractionalPhis_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance17splinesPerThread_E"><code class="docutils literal notranslate"><span class="pre">splinesPerThread_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance25compressionCoefficientsA_E"><code class="docutils literal notranslate"><span class="pre">compressionCoefficientsA_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance25compressionCoefficientsB_E"><code class="docutils literal notranslate"><span class="pre">compressionCoefficientsB_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance25compressionCoefficientsC_E"><code class="docutils literal notranslate"><span class="pre">compressionCoefficientsC_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance7mValsA_E"><code class="docutils literal notranslate"><span class="pre">mValsA_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance7mValsB_E"><code class="docutils literal notranslate"><span class="pre">mValsB_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance7mValsC_E"><code class="docutils literal notranslate"><span class="pre">mValsC_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4N6helpme11PMEInstance13gridAtomList_E"><code class="docutils literal notranslate"><span class="pre">gridAtomList_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4I_iEN6helpme11PMEInstance14convolveEVImplE4Realbiiiiiii4RealP7ComplexRK7RealMat4Real4RealPK4RealPK4RealPK4RealPKiPKiPKiR7RealMati"><code class="docutils literal notranslate"><span class="pre">convolveEVImpl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4I_iEN6helpme11PMEInstance26cacheInfluenceFunctionImplEviiiiii4RealR7RealVecRK7RealMat4Real4RealPK4RealPK4RealPK4RealPKiPKiPKii"><code class="docutils literal notranslate"><span class="pre">cacheInfluenceFunctionImpl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4I_iEN6helpme11PMEInstance8dirEImplE4Real4Real4Real"><code class="docutils literal notranslate"><span class="pre">dirEImpl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4I_iEN6helpme11PMEInstance9dirEFImplENSt5tupleI4Real4RealEE4Real4Real4Real"><code class="docutils literal notranslate"><span class="pre">dirEFImpl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4I_iEN6helpme11PMEInstance8adjEImplE4Real4Real4Real"><code class="docutils literal notranslate"><span class="pre">adjEImpl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4I_iEN6helpme11PMEInstance9adjEFImplENSt5tupleI4Real4RealEE4Real4Real4Real"><code class="docutils literal notranslate"><span class="pre">adjEFImpl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classhelpme_1_1PMEInstance.html#_CPPv4I_iEN6helpme11PMEInstance8slfEImplE4Reali4Real4Real"><code class="docutils literal notranslate"><span class="pre">slfEImpl()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classsplineCacheEntry.html">Class splineCacheEntry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classsplineCacheEntry.html#class-documentation">Class Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classsplineCacheEntry.html#_CPPv416splineCacheEntry"><code class="docutils literal notranslate"><span class="pre">splineCacheEntry</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="enums">
+<h3>Enums<a class="headerlink" href="#enums" title="Link to this heading">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="enum_helpme_8h_1a51cde3faab477dd22811f194283ff534.html">Enum AlgorithmType</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_helpme_8h_1a51cde3faab477dd22811f194283ff534.html#enum-documentation">Enum Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="enum_helpme_8h_1a51cde3faab477dd22811f194283ff534.html#_CPPv4N6helpme13AlgorithmTypeE"><code class="docutils literal notranslate"><span class="pre">AlgorithmType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="enum_helpme_8h_1a51cde3faab477dd22811f194283ff534.html#_CPPv4N6helpme13AlgorithmType9UndefinedE"><code class="docutils literal notranslate"><span class="pre">Undefined</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_helpme_8h_1a51cde3faab477dd22811f194283ff534.html#_CPPv4N6helpme13AlgorithmType3PMEE"><code class="docutils literal notranslate"><span class="pre">PME</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_helpme_8h_1a51cde3faab477dd22811f194283ff534.html#_CPPv4N6helpme13AlgorithmType13CompressedPMEE"><code class="docutils literal notranslate"><span class="pre">CompressedPME</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584.html">Enum LatticeType</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584.html#enum-documentation">Enum Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584.html#_CPPv4N6helpme11LatticeTypeE"><code class="docutils literal notranslate"><span class="pre">LatticeType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584.html#_CPPv4N6helpme11LatticeType9UndefinedE"><code class="docutils literal notranslate"><span class="pre">Undefined</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584.html#_CPPv4N6helpme11LatticeType8XAlignedE"><code class="docutils literal notranslate"><span class="pre">XAligned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_helpme_8h_1ada505b6207eea52aca1b36217ab38584.html#_CPPv4N6helpme11LatticeType11ShapeMatrixE"><code class="docutils literal notranslate"><span class="pre">ShapeMatrix</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="enum_helpme_8h_1a2196fee10c55373e383cf857b14412c3.html">Enum NodeOrder</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_helpme_8h_1a2196fee10c55373e383cf857b14412c3.html#enum-documentation">Enum Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="enum_helpme_8h_1a2196fee10c55373e383cf857b14412c3.html#_CPPv4N6helpme9NodeOrderE"><code class="docutils literal notranslate"><span class="pre">NodeOrder</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="enum_helpme_8h_1a2196fee10c55373e383cf857b14412c3.html#_CPPv4N6helpme9NodeOrder9UndefinedE"><code class="docutils literal notranslate"><span class="pre">Undefined</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_helpme_8h_1a2196fee10c55373e383cf857b14412c3.html#_CPPv4N6helpme9NodeOrder3ZYXE"><code class="docutils literal notranslate"><span class="pre">ZYX</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="enum_helpme_8h_1a4fc4f8282a7e47f5d842c715ea72b059.html">Enum PolarizationType</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enum_helpme_8h_1a4fc4f8282a7e47f5d842c715ea72b059.html#enum-documentation">Enum Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="enum_helpme_8h_1a4fc4f8282a7e47f5d842c715ea72b059.html#_CPPv4N6helpme16PolarizationTypeE"><code class="docutils literal notranslate"><span class="pre">PolarizationType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="enum_helpme_8h_1a4fc4f8282a7e47f5d842c715ea72b059.html#_CPPv4N6helpme16PolarizationType6MutualE"><code class="docutils literal notranslate"><span class="pre">Mutual</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="enum_helpme_8h_1a4fc4f8282a7e47f5d842c715ea72b059.html#_CPPv4N6helpme16PolarizationType6DirectE"><code class="docutils literal notranslate"><span class="pre">Direct</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_gridsize_8h_1aa3f765da5cede2c9dd980dd017ea482a.html">Template Function helpme::allDivisors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_gridsize_8h_1aa3f765da5cede2c9dd980dd017ea482a.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_gridsize_8h_1aa3f765da5cede2c9dd980dd017ea482a.html#_CPPv4I0EN6helpme11allDivisorsEb1TRKNSt16initializer_listI1TEE"><code class="docutils literal notranslate"><span class="pre">allDivisors()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_helpme_8h_1aaa4a78096ea81a5bf563e895cdaf6269.html">Function helpme::cartAddress</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_helpme_8h_1aaa4a78096ea81a5bf563e895cdaf6269.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_helpme_8h_1aaa4a78096ea81a5bf563e895cdaf6269.html#_CPPv4N6helpme11cartAddressEiii"><code class="docutils literal notranslate"><span class="pre">cartAddress()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_cartesiantransform_8h_1a347e94f6ebf33fc9794b2dc3a4ad62a5.html">Function helpme::cartesianAddress</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_cartesiantransform_8h_1a347e94f6ebf33fc9794b2dc3a4ad62a5.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_cartesiantransform_8h_1a347e94f6ebf33fc9794b2dc3a4ad62a5.html#_CPPv4N6helpme16cartesianAddressEiii"><code class="docutils literal notranslate"><span class="pre">cartesianAddress()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_cartesiantransform_8h_1a256bfb8cf9356b69d856a27dccfd2e33.html">Template Function helpme::cartesianTransform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_cartesiantransform_8h_1a256bfb8cf9356b69d856a27dccfd2e33.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_cartesiantransform_8h_1a256bfb8cf9356b69d856a27dccfd2e33.html#_CPPv4I0EN6helpme18cartesianTransformE6MatrixI4RealEibRK6MatrixI4RealERK6MatrixI4RealE"><code class="docutils literal notranslate"><span class="pre">cartesianTransform()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fletcher_8h_1a2bbabb174c1355716ad9df5df662433d.html">Template Function helpme::compute_fletcher_checksum16</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fletcher_8h_1a2bbabb174c1355716ad9df5df662433d.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_fletcher_8h_1a2bbabb174c1355716ad9df5df662433d.html#_CPPv4I0EN6helpme27compute_fletcher_checksum16E8uint16_tPK4Real6size_t"><code class="docutils literal notranslate"><span class="pre">compute_fletcher_checksum16()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fletcher_8h_1a08b980c39ff76d028da19e0812423c9a.html">Template Function helpme::compute_fletcher_checksum32</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fletcher_8h_1a08b980c39ff76d028da19e0812423c9a.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_fletcher_8h_1a08b980c39ff76d028da19e0812423c9a.html#_CPPv4I0EN6helpme27compute_fletcher_checksum32E8uint32_tPK4Real6size_t"><code class="docutils literal notranslate"><span class="pre">compute_fletcher_checksum32()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_fletcher_8h_1a1331638675e33795086e972eac269939.html">Template Function helpme::compute_fletcher_checksum64</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_fletcher_8h_1a1331638675e33795086e972eac269939.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_fletcher_8h_1a1331638675e33795086e972eac269939.html#_CPPv4I0EN6helpme27compute_fletcher_checksum64E8uint64_tPK4Real6size_t"><code class="docutils literal notranslate"><span class="pre">compute_fletcher_checksum64()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_tensor__utils_8h_1aa914531b506590c7e190f316613e7757.html">Template Function helpme::contractABxCWithDxC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_tensor__utils_8h_1aa914531b506590c7e190f316613e7757.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_gridsize_8h_1a9c4101833a2cc86ce601f86b04e3a266.html">Template Function helpme::findGridSize</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_gridsize_8h_1a9c4101833a2cc86ce601f86b04e3a266.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_gridsize_8h_1a9c4101833a2cc86ce601f86b04e3a266.html#_CPPv4I0EN6helpme12findGridSizeEi1TRKNSt16initializer_listI1TEE"><code class="docutils literal notranslate"><span class="pre">findGridSize()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_string__utils_8h_1aef57d45b9222018896b91592aef25a7d.html">Template Function helpme::formatNumber</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_string__utils_8h_1aef57d45b9222018896b91592aef25a7d.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_string__utils_8h_1aef57d45b9222018896b91592aef25a7d.html#_CPPv4I0_NSt9enable_ifINSt17is_floating_pointI1TE5valueEiE4typeEEN6helpme12formatNumberENSt6stringERK1Tii"><code class="docutils literal notranslate"><span class="pre">formatNumber()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_lapack__wrapper_8h_1aef145a683586d54c5754b683096213c4.html">Template Function helpme::JacobiCyclicDiagonalization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_lapack__wrapper_8h_1aef145a683586d54c5754b683096213c4.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_lapack__wrapper_8h_1aef145a683586d54c5754b683096213c4.html#_CPPv4I0EN6helpme27JacobiCyclicDiagonalizationEvP4RealP4RealPK4Reali"><code class="docutils literal notranslate"><span class="pre">JacobiCyclicDiagonalization()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_cartesiantransform_8h_1ac82d4a439d1917bf45f99c6b3e773f1c.html">Template Function helpme::makeCartesianRotationMatrix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_cartesiantransform_8h_1ac82d4a439d1917bf45f99c6b3e773f1c.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_cartesiantransform_8h_1ac82d4a439d1917bf45f99c6b3e773f1c.html#_CPPv4I0EN6helpme27makeCartesianRotationMatrixE6MatrixI4RealEiRK6MatrixI4RealE"><code class="docutils literal notranslate"><span class="pre">makeCartesianRotationMatrix()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_cartesiantransform_8h_1a060e019d9442546d5e5168ee0a5c146f.html">Template Function helpme::matrixVectorProduct</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_cartesiantransform_8h_1a060e019d9442546d5e5168ee0a5c146f.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_cartesiantransform_8h_1a060e019d9442546d5e5168ee0a5c146f.html#_CPPv4I0EN6helpme19matrixVectorProductEvRK6MatrixI4RealEPK4RealP4Real"><code class="docutils literal notranslate"><span class="pre">matrixVectorProduct()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_helpme_8h_1a871c5c618f66191ab3a8d5d6a88257fd.html">Function helpme::nCartesian</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_helpme_8h_1a871c5c618f66191ab3a8d5d6a88257fd.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_helpme_8h_1a871c5c618f66191ab3a8d5d6a88257fd.html#_CPPv4N6helpme10nCartesianEi"><code class="docutils literal notranslate"><span class="pre">nCartesian()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_gamma_8h_1ae3220144f11764cfb80fd0b52cdc8d1c.html">Template Function helpme::nonTemplateGammaComputer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_gamma_8h_1ae3220144f11764cfb80fd0b52cdc8d1c.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_gamma_8h_1ae3220144f11764cfb80fd0b52cdc8d1c.html#_CPPv4I0EN6helpme24nonTemplateGammaComputerE4Reali"><code class="docutils literal notranslate"><span class="pre">nonTemplateGammaComputer()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_memory_8h_1a88c8090bcb1e9078a040f3f72ec70f16.html">Template Function helpme::operator!=</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_memory_8h_1a88c8090bcb1e9078a040f3f72ec70f16.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_memory_8h_1a88c8090bcb1e9078a040f3f72ec70f16.html#_CPPv4I00EN6helpmeneEbRK13FFTWAllocatorI2T1ERK13FFTWAllocatorI2T2E"><code class="docutils literal notranslate"><span class="pre">operator!=()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_matrix_8h_1afc0baf32ac937a2d68f7f98ae66cabc4.html">Template Function helpme::operator&lt;&lt;(std::ostream&amp;, Matrix&lt;Real&gt; const&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_matrix_8h_1afc0baf32ac937a2d68f7f98ae66cabc4.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_matrix_8h_1afc0baf32ac937a2d68f7f98ae66cabc4.html#_CPPv4I0EN6helpmelsERNSt7ostreamERNSt7ostreamERK6MatrixI4RealE"><code class="docutils literal notranslate"><span class="pre">operator&lt;&lt;()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_mpi__wrapper_8h_1a05382ee67d55f47b99cbe6479b217a5d.html">Template Function helpme::operator&lt;&lt;(std::ostream&amp;, const std::unique_ptr&lt;MPIWrapper&lt;Real&gt;&gt;&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_mpi__wrapper_8h_1a05382ee67d55f47b99cbe6479b217a5d.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_mpi__wrapper_8h_1a05382ee67d55f47b99cbe6479b217a5d.html#_CPPv4I0EN6helpmelsERNSt7ostreamERNSt7ostreamERKNSt10unique_ptrI10MPIWrapperI4RealEEE"><code class="docutils literal notranslate"><span class="pre">operator&lt;&lt;()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_memory_8h_1a0b2f28447bc7134d62cdcc76455aa915.html">Template Function helpme::operator==</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_memory_8h_1a0b2f28447bc7134d62cdcc76455aa915.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_memory_8h_1a0b2f28447bc7134d62cdcc76455aa915.html#_CPPv4I00EN6helpmeeqEbRK13FFTWAllocatorI2T1ERK13FFTWAllocatorI2T2E"><code class="docutils literal notranslate"><span class="pre">operator==()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_tensor__utils_8h_1af32cd01638ca35b3cffa9ca4a4b712d5.html">Template Function helpme::permuteABCtoACB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_tensor__utils_8h_1af32cd01638ca35b3cffa9ca4a4b712d5.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_tensor__utils_8h_1a51a39b3d3aac289b016c8afb39d9afd9.html">Template Function helpme::permuteABCtoCBA</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_tensor__utils_8h_1a51a39b3d3aac289b016c8afb39d9afd9.html#function-documentation">Function Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_gamma_8h_1af69fa5014260f0318885ae090808ae9b.html">Template Function helpme::screened_erf</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_gamma_8h_1af69fa5014260f0318885ae090808ae9b.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_gamma_8h_1af69fa5014260f0318885ae090808ae9b.html#_CPPv4I0EN6helpme12screened_erfE4Real4Real"><code class="docutils literal notranslate"><span class="pre">screened_erf()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_gamma_8h_1a77f6384117afcfa71cbb3b27b579d21b.html">Template Function helpme::screened_erfc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_gamma_8h_1a77f6384117afcfa71cbb3b27b579d21b.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_gamma_8h_1a77f6384117afcfa71cbb3b27b579d21b.html#_CPPv4I0EN6helpme13screened_erfcE4Real4Real"><code class="docutils literal notranslate"><span class="pre">screened_erfc()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_string__utils_8h_1a1ce7000d3e3817d45cb40bdf2be06d9d.html">Template Function helpme::stringify</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_string__utils_8h_1a1ce7000d3e3817d45cb40bdf2be06d9d.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_string__utils_8h_1a1ce7000d3e3817d45cb40bdf2be06d9d.html#_CPPv4I0EN6helpme9stringifyENSt6stringEP1T6size_t6size_tii"><code class="docutils literal notranslate"><span class="pre">stringify()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function_matrix_8h_1af7e32876fd7852b062331d7b405a8198.html">Template Function helpme::transposeMemoryInPlace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_matrix_8h_1af7e32876fd7852b062331d7b405a8198.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_matrix_8h_1af7e32876fd7852b062331d7b405a8198.html#_CPPv4I0EN6helpme22transposeMemoryInPlaceEv14RandomIterator14RandomIteratori"><code class="docutils literal notranslate"><span class="pre">transposeMemoryInPlace()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="defines">
+<h3>Defines<a class="headerlink" href="#defines" title="Link to this heading">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_helpme_8h_1a3457e9c167e8c5fc5e78409291a671c8.html">Define ENABLE_KERNEL_WITH_INVERSE_R_EXPONENT_OF</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_helpme_8h_1a3457e9c167e8c5fc5e78409291a671c8.html#define-documentation">Define Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="define_helpme_8h_1a3457e9c167e8c5fc5e78409291a671c8.html#c.ENABLE_KERNEL_WITH_INVERSE_R_EXPONENT_OF"><code class="docutils literal notranslate"><span class="pre">ENABLE_KERNEL_WITH_INVERSE_R_EXPONENT_OF</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_gamma_8h_1ac9bd36966441fb675ed2dcc2a4503569.html">Define HELPME_ERF_VAL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_gamma_8h_1ac9bd36966441fb675ed2dcc2a4503569.html#define-documentation">Define Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="define_gamma_8h_1ac9bd36966441fb675ed2dcc2a4503569.html#c.HELPME_ERF_VAL"><code class="docutils literal notranslate"><span class="pre">HELPME_ERF_VAL</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_gamma_8h_1a13deb336ed7209c93b54b8c8cd493c3e.html">Define HELPME_PI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_gamma_8h_1a13deb336ed7209c93b54b8c8cd493c3e.html#define-documentation">Define Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="define_gamma_8h_1a13deb336ed7209c93b54b8c8cd493c3e.html#c.HELPME_PI"><code class="docutils literal notranslate"><span class="pre">HELPME_PI</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_gamma_8h_1a6ffe0d727158120ca49b38a1fed8c5d0.html">Define HELPME_SQRTPI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_gamma_8h_1a6ffe0d727158120ca49b38a1fed8c5d0.html#define-documentation">Define Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="define_gamma_8h_1a6ffe0d727158120ca49b38a1fed8c5d0.html#c.HELPME_SQRTPI"><code class="docutils literal notranslate"><span class="pre">HELPME_SQRTPI</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_gamma_8h_1a5aada0be6b5613c6f01cb54962c77f7f.html">Define HELPME_SQRTTWO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_gamma_8h_1a5aada0be6b5613c6f01cb54962c77f7f.html#define-documentation">Define Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="define_gamma_8h_1a5aada0be6b5613c6f01cb54962c77f7f.html#c.HELPME_SQRTTWO"><code class="docutils literal notranslate"><span class="pre">HELPME_SQRTTWO</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="define_mpi__wrapper_8h_1a48497a4ae8b25b3b7c0f0bdad766a564.html">Define PRINT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define_mpi__wrapper_8h_1a48497a4ae8b25b3b7c0f0bdad766a564.html#define-documentation">Define Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="define_mpi__wrapper_8h_1a48497a4ae8b25b3b7c0f0bdad766a564.html#c.PRINT"><code class="docutils literal notranslate"><span class="pre">PRINT</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="typedefs">
+<h3>Typedefs<a class="headerlink" href="#typedefs" title="Link to this heading">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_memory_8h_1a406b75ea7a95d56e638065f2876a36ae.html">Typedef helpme::vector</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_memory_8h_1a406b75ea7a95d56e638065f2876a36ae.html#typedef-documentation">Typedef Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="typedef_memory_8h_1a406b75ea7a95d56e638065f2876a36ae.html#_CPPv4I0EN6helpme6vectorE"><code class="docutils literal notranslate"><span class="pre">vector</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_helpme_8h_1aec129751426309d6ba3b31546c9d48f4.html">Typedef PMEInstanceD</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_helpme_8h_1aec129751426309d6ba3b31546c9d48f4.html#typedef-documentation">Typedef Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="typedef_helpme_8h_1aec129751426309d6ba3b31546c9d48f4.html#_CPPv412PMEInstanceD"><code class="docutils literal notranslate"><span class="pre">PMEInstanceD</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="typedef_helpme_8h_1a6eef86d57d6da6e5bc38401a93c3ba85.html">Typedef PMEInstanceF</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_helpme_8h_1a6eef86d57d6da6e5bc38401a93c3ba85.html#typedef-documentation">Typedef Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="typedef_helpme_8h_1a6eef86d57d6da6e5bc38401a93c3ba85.html#_CPPv412PMEInstanceF"><code class="docutils literal notranslate"><span class="pre">PMEInstanceF</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="namespace_helpme.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Namespace helpme</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../_autosummary/helpme_py.PMEInstanceF.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">helpme_py.PMEInstanceF</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2017, Andrew C. Simmonett
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">C++ API Documentation</a><ul>
+<li><a class="reference internal" href="#class-hierarchy">Class Hierarchy</a></li>
+<li><a class="reference internal" href="#file-hierarchy">File Hierarchy</a></li>
+<li><a class="reference internal" href="#full-api">Full API</a><ul>
+<li><a class="reference internal" href="#namespaces">Namespaces</a></li>
+<li><a class="reference internal" href="#classes-and-structs">Classes and Structs</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#enums">Enums</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#functions">Functions</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#defines">Defines</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#typedefs">Typedefs</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    </body>
+</html>
