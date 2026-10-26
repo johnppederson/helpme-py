@@ -2264,17 +2264,78 @@ class PMEInstance {
     }
 
     /*!
+     * \brief makeGridProbeFactors calculates probe factors for the PME grid in reciprocal space.
+     * \param gridDimension the size of the grid along an axis.
+     * \return the set of probe factors along an axis.
+     */
+    std::vector<Complex> makeGridProbeFactors(int gridDimension) const {
+        constexpr float EPS = 1e-6f;
+
+        if (gridDimension <= 0) {
+            throw std::invalid_argument("Invalid PME grid dimension.");
+        }
+
+        // Match makeBSplines() at an integer mesh coordinate:
+        // the starting grid index is j-1 and the displacement
+        // is 1 - EPS * gridDimension.
+        const Real delta =
+            Real(1) - Real(EPS) * Real(gridDimension);
+        if (delta < Real(0) || delta >= Real(1)) {
+            throw std::invalid_argument(
+                "PME grid dimension incompatible with spline offset."
+            );
+        }
+        Spline spline(
+            0,
+            delta,
+            splineOrder_,
+            0
+        );
+        const Real* weights = spline[0];
+        std::vector<Complex> factors(gridDimension);
+        const Real twoPi = Real(2) * Real(HELPME_PI);
+        for (int k = 0; k < gridDimension; ++k) {
+            Complex factor(0, 0);
+            for (int t = 0; t < splineOrder_; ++t) {
+                const Real angle =
+                    twoPi * Real(k) * Real(t - 1)
+                    / Real(gridDimension);
+                factor += weights[t] * Complex(
+                    std::cos(angle),
+                    std::sin(angle)
+                );
+            }
+            factors[k] = factor;
+        }
+        return factors;
+    }
+
+    /*!
      * \brief convolveE performs the convolution of a standard PME transformed grid
      * \param transformedGrid the pointer to the complex array holding the transformed grid in YXZ ordering.
+     * \param probeGridNodes whether or not apply a probe for the nodes of the PME grid.
      * \return the reciprocal space energy.
      */
-    Real convolveE(Complex *transformedGrid) {
+    Real convolveE(Complex *transformedGrid, bool probeGridNodes=false) {
         updateInfluenceFunction();
         size_t nxz = (size_t)myNumKSumTermsA_ * myNumKSumTermsC_;
         size_t nyxz = myNumKSumTermsB_ * nxz;
         bool iAmNodeZero = (myNodeRankA_ == 0 && myNodeRankB_ == 0 && myNodeRankC_ == 0);
         Real *influenceFunction = cachedInfluenceFunction_.data();
         bool useConjugateSymmetry = algorithmType_ == AlgorithmType::PME;
+
+        // Grid node probing is intended for conventional PME.
+        if (probeGridNodes && !useConjugateSymmetry) {
+            throw std::logic_error("Grid-node probing requires conventional PME.");
+        }
+
+        // Fourier transforms of the B-spline probing stencils.
+        std::vector<Complex> probeA, probeB, probeC;
+        if (probeGridNodes) {
+            probeA = makeGridProbeFactors(gridDimensionA_);
+            probeB = makeGridProbeFactors(gridDimensionB_);
+            probeC = makeGridProbeFactors(gridDimensionC_);
+        }
 
         Real energy = 0;
         if (rPower_ > 3 && iAmNodeZero) {
@@ -2290,6 +2351,8 @@ class PMEInstance {
         for (size_t yxz = 0; yxz < nyxz; ++yxz) {
             size_t xz = yxz % nxz;
             int kx = firstKSumTermA_ + xz / numCTerms;
+            int ky = firstKSumTermB_ + yxz / nxz;
+            int kz = firstKSumTermC_ + xz % numCTerms;
             // We only loop over the first nx/2+1 x values; this
             // accounts for the "missing" complex conjugate values.
             Real permPrefac = useConjugateSymmetry && kx != 0 && kx != complexGridDimensionA_ - 1 ? 2 : 1;
@@ -2297,6 +2360,10 @@ class PMEInstance {
                                     transformedGrid[yxz].imag() * transformedGrid[yxz].imag();
             energy += permPrefac * structFactorNorm * influenceFunction[yxz];
             transformedGrid[yxz] *= influenceFunction[yxz];
+            if (probeGridNodes) {
+                Complex probeFactor = probeA[kx] * probeB[ky] * probeC[kz];
+                transformedGrid[yxz] *= probeFactor;
+            }
         }
         return energy / 2;
     }
@@ -3141,12 +3208,10 @@ class PMEInstance {
         Real *potentialGrid;
         if (algorithmType_ == AlgorithmType::PME) {
             auto gridAddress = forwardTransform(realGrid);
-            convolveE(gridAddress);
+            convolveE(gridAddress, true);
             potentialGrid = inverseTransform(gridAddress);
         } else if (algorithmType_ == AlgorithmType::CompressedPME) {
-            auto gridAddress = compressedForwardTransform(realGrid);
-            convolveE(gridAddress);
-            potentialGrid = compressedInverseTransform(gridAddress);
+            std::logic_error("Compressed PME algorithm not yet supported in helpme::computePRecGrid");
         } else {
             std::logic_error("Unknown algorithm in helpme::computePRecGrid");
         }
