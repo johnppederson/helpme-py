@@ -499,12 +499,29 @@ param positionJ </p>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6helpme11PMEInstance9convolveEEP7Complex">
-<span id="_CPPv3N6helpme11PMEInstance9convolveEEP7Complex"></span><span id="_CPPv2N6helpme11PMEInstance9convolveEEP7Complex"></span><span id="helpme::PMEInstance::convolveE__ComplexP"></span><span class="target" id="classhelpme_1_1PMEInstance_1a1ee46fe450f90b43050bf6483ee6e696"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_NSt9enable_ifINSt17is_floating_pointI4RealE5valueEiE4typeEEN6helpme11PMEInstanceE" title="helpme::PMEInstance::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">convolveE</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Complex</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">transformedGrid</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme11PMEInstance9convolveEEP7Complex" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK6helpme11PMEInstance20makeGridProbeFactorsEi">
+<span id="_CPPv3NK6helpme11PMEInstance20makeGridProbeFactorsEi"></span><span id="_CPPv2NK6helpme11PMEInstance20makeGridProbeFactorsEi"></span><span id="helpme::PMEInstance::makeGridProbeFactors__iC"></span><span class="target" id="classhelpme_1_1PMEInstance_1a38447276e251d30ba81909651c8040c9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Complex</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">makeGridProbeFactors</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">gridDimension</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6helpme11PMEInstance20makeGridProbeFactorsEi" title="Link to this definition">¶</a><br /></dt>
+<dd><p>makeGridProbeFactors calculates probe factors for the PME grid in reciprocal space. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>gridDimension</strong> – the size of the grid along an axis. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the set of probe factors along an axis. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6helpme11PMEInstance9convolveEEP7Complexb">
+<span id="_CPPv3N6helpme11PMEInstance9convolveEEP7Complexb"></span><span id="_CPPv2N6helpme11PMEInstance9convolveEEP7Complexb"></span><span id="helpme::PMEInstance::convolveE__ComplexP.b"></span><span class="target" id="classhelpme_1_1PMEInstance_1ae65774dc15b8e113a74eded9bd102e7b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_NSt9enable_ifINSt17is_floating_pointI4RealE5valueEiE4typeEEN6helpme11PMEInstanceE" title="helpme::PMEInstance::Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">convolveE</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Complex</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">transformedGrid</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">probeGridNodes</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6helpme11PMEInstance9convolveEEP7Complexb" title="Link to this definition">¶</a><br /></dt>
 <dd><p>convolveE performs the convolution of a standard PME transformed grid </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>transformedGrid</strong> – the pointer to the complex array holding the transformed grid in YXZ ordering. </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>transformedGrid</strong> – the pointer to the complex array holding the transformed grid in YXZ ordering. </p></li>
+<li><p><strong>probeGridNodes</strong> – whether or not apply a probe for the nodes of the PME grid. </p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the reciprocal space energy. </p>
@@ -2176,7 +2193,8 @@ param positionJ </p>
 <li><a class="reference internal" href="#_CPPv4N6helpme11PMEInstance16inverseTransformEP7Complex"><code class="docutils literal notranslate"><span class="pre">inverseTransform()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N6helpme11PMEInstance26compressedInverseTransformEP4Real"><code class="docutils literal notranslate"><span class="pre">compressedInverseTransform()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N6helpme11PMEInstance9convolveEEP4Real"><code class="docutils literal notranslate"><span class="pre">convolveE()</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4N6helpme11PMEInstance9convolveEEP7Complex"><code class="docutils literal notranslate"><span class="pre">convolveE()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK6helpme11PMEInstance20makeGridProbeFactorsEi"><code class="docutils literal notranslate"><span class="pre">makeGridProbeFactors()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N6helpme11PMEInstance9convolveEEP7Complexb"><code class="docutils literal notranslate"><span class="pre">convolveE()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N6helpme11PMEInstance10convolveEVEPK4RealRP4RealR7RealMat"><code class="docutils literal notranslate"><span class="pre">convolveEV()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N6helpme11PMEInstance10convolveEVEP7ComplexR7RealMat"><code class="docutils literal notranslate"><span class="pre">convolveEV()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N6helpme11PMEInstance9probeGridEPK4RealiRK7RealMatR7RealMatP4Real"><code class="docutils literal notranslate"><span class="pre">probeGrid()</span></code></a></li>
