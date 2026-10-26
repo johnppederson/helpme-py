@@ -4,15 +4,15 @@
 
 # helPME-py: A Python Utility for Particle Mesh Ewald Based on helPME
 
-[![C](https://img.shields.io/badge/C-17+-00599C?logo=c&logoColor=white)](#)
-[![C++](https://img.shields.io/badge/C++-17+-%2300599C.svg?logo=c%2B%2B&logoColor=white)](#)
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=fff)](#)
+[C](https://img.shields.io/badge/C-17+-00599C?logo=c&logoColor=white)
+[C++](https://img.shields.io/badge/C++-17+-%2300599C.svg?logo=c%2B%2B&logoColor=white)
+[Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=fff)
 [![License](https://img.shields.io/badge/license-BDS--3--clause-blue.svg)](https://opensource.org/license/bsd-3-clause)
 
-[![Build](https://github.com/johnppederson/helpme-py/actions/workflows/test_and_coverage.yml/badge.svg)](#)
-[![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/johnppederson/4c2e0c473552016c70f6cc0f0a44a9c1/raw/coverage.json)](#)
-[![Deployment](https://github.com/johnppederson/helpme-py/actions/workflows/build_and_deploy.yml/badge.svg)](#)
-[![Docs](https://github.com/johnppederson/helpme-py/actions/workflows/docs.yml/badge.svg)](#)
+[![Build](https://github.com/johnppederson/helpme-py/actions/workflows/test_and_coverage.yml/badge.svg)](https://github.com/johnppederson/helpme-py/actions)
+[![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/johnppederson/4c2e0c473552016c70f6cc0f0a44a9c1/raw/coverage.json)](https://github.com/johnppederson/helpme-py/actions)
+[![Deployment](https://github.com/johnppederson/helpme-py/actions/workflows/build_and_deploy.yml/badge.svg)](https://pypi.org/project/helpme-py/)
+[![Docs](https://github.com/johnppederson/helpme-py/actions/workflows/docs.yml/badge.svg)](https://johnppederson.com/helpme-py/)
 
 ## About
 

@@ -45,7 +45,7 @@ extensions = [
 # Options for extlinks
 extlinks = {
     'repo':      ('https://github.com/johnppederson/helpme-py/tree/master/%s', None),
-    'testcase':  ('https://github.com/johnppederson/helpme-py/tree/master/test/%s', 'sample %s')
+    'testcase':  ('https://github.com/johnppederson/helpme-py/tree/master/tests/%s', 'sample %s')
 }
 
 # Options for breathe.
