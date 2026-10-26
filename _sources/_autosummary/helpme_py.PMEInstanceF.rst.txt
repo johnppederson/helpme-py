@@ -30,6 +30,7 @@
       ~PMEInstanceF.compute_PDP_adj
       ~PMEInstanceF.compute_P_adj
       ~PMEInstanceF.compute_P_rec
+      ~PMEInstanceF.compute_P_rec_grid
       ~PMEInstanceF.set_lattice_vectors
       ~PMEInstanceF.setup
       ~PMEInstanceF.setup_compressed
@@ -109,6 +110,10 @@
    
    
    .. automethod:: PMEInstanceF.compute_P_rec
+    
+   
+   
+   .. automethod:: PMEInstanceF.compute_P_rec_grid
     
    
    
